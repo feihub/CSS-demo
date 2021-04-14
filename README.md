@@ -2,7 +2,6 @@
 
 | Demo Name | Content |
 | :-------- | :------ |
-| demo1	| CSS |
 | demo1	| CSS简介/语法/选择器 |
 | demo2	| CSS使用/注释/CSS浏览器调试 |
 | demo3	| CSS颜色/背景/边框/外边距/内边距/高度宽度/box模型/轮廓/文本/字体 |
