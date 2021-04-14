@@ -1,0 +1,100 @@
+﻿<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 折叠面板</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.panel-default {
+		border: 0;
+	}
+	.panel-heading {
+		border-bottom: 0!important;
+	}
+	.panel-default>.panel-heading {
+		background-color: #FFFFFF!important;
+	}
+	
+	
+	
+	
+</style>
+
+<ol>
+	<li>
+		<h3>什么是CSS</h3>
+		<ul>
+			<li>CSS是一种标记性语言，用来描述如何显示HTML元素的</li>
+			<li>可以实现页面结构和表现的分离，HTML控制网页结构，CSS控制样式</li>
+		</ul>
+	</li>
+	<li>
+		<h3>CSS语法</h3>
+		<ul style="list-style: none"> 
+			<li>选择器 {属性: 属性值; 属性: 属性值...}</li> eg: h1 {color: red; font-color: 14px;} (请勿在属性值和单位之间添加空格[例如: font-size: 14 px;])
+		</ul>
+	</li>
+	<li>
+		<h3>CSS选择器</h3>
+			
+
+<div class="panel-group" id="accordion">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion"  href="#collapseOne">简单选择器（根据名称、id、类来选取元素</a>&nbsp;
+				<span style="color: red"> *id 名称不能以数字开头</span>
+				
+			</h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body; border-top:0">
+				<ol>
+					<li><a href="example\simple-selector\element-selector.html" target="_blank">CSS 元素选择器</a></li>
+					<li><a href="example\simple-selector\id-selector.html" target="_blank">CSS id 选择器</a></li>
+					<li><a href="example\simple-selector\class-selector.html" target="_blank">CSS 类选择器</a></li>
+					<li><a href="example\simple-selector\universal-selector.html" target="_blank">CSS 通用选择器</a></li>
+					<li><a href="example\simple-selector\grouping-selector.html" target="_blank">CSS 分组选择器</a>(h1、h2、p元素具有相同的样式定义，最好对选择器进行分组， 以最大程度的缩减代码。选择器分组用逗号来分隔)</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+					组合器选择器（根据它们之间的特定关系来选取元素）
+				</a>
+			</h4>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+				<ol>
+					<li><a href="example\combinator-selector\descendant-selector.html" target="_blank">后代选择器 (空格)</a></li>
+					<li><a href="example\combinator-selector\child-selector.html" target="_blank">子选择器 (>)</a></li>
+					<li><a href="example\combinator-selector\adjacent-sibling-selector.html" target="_blank">相邻兄弟选择器 (+)</a></li>
+					<li><a href="example\combinator-selector\general-sibling-selector.html" target="_blank">通用兄弟选择器 (~)</a></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">伪类选择器（根据特定状态选取元素）</a>
+			</h4>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+				Nihil anim keffiyeh helvetica, craft beer labore wes anderson.
+			</div>
+		</div>
+	</div>
+</div>
+
+	</li>
+</ol>
+
+</html>
