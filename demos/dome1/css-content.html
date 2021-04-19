@@ -75,7 +75,7 @@
 					<li><a href="example\combinator-selector\descendant-selector.html" target="_blank">后代选择器 (空格)</a></li>
 					<li><a href="example\combinator-selector\child-selector.html" target="_blank">子选择器 (>)</a></li>
 					<li><a href="example\combinator-selector\adjacent-sibling-selector.html" target="_blank">相邻兄弟选择器 (+)</a></li>
-					<li><a href="example\combinator-selector\general-sibling-selector.html" target="_blank">通用兄弟选择器 (~)</a></li>
+					<li><a href="example\combinator-selector\general-sibling-selector.html" target="_blank">通用兄弟选择器 (~), A~B选择A元素之后所有同层级B元素</a></li>
 				</ol>
 			</div>
 		</div>
@@ -88,7 +88,61 @@
 		</div>
 		<div id="collapseThree" class="panel-collapse collapse">
 			<div class="panel-body">
-				Nihil anim keffiyeh helvetica, craft beer labore wes anderson.
+				<p> 主要是用于定义元素的特殊状态：</p>
+				<ul>
+					<li>设置鼠标悬停在元素上时的样式</li>
+					<li>为已访问和未访问的链接设置不同样式</li>
+					<li>设置元素获得焦点是的样式</li>
+				</ul><br>
+				<p> 伪类的语法： selector:: pseudo-element { property: value } </p>
+				<br>
+				<ul>
+					<li><a href="" target="_blank">锚伪类（链接能够以不同的方式显示）+</a></li>
+					<li><a href="" target="_blank">伪类和CSS类结合使用</a></li>
+					<li><a href="" target="_blank">简单的工具提示悬停</a></li>
+					<li>CSS- :first-child伪类（伪类与指定元素匹配：该元素是另一个元素的第一个子元素）<br>
+						<ul> 
+							<li><a href="" target="_blank">选择器匹配作为任何元素的第一个子元素的任何< p >元素</a></li>
+							<li><a href="" target="_blank">匹配所有< p > 元素中的首个 < i > 元素</a></li>
+							<li><a href="" target="_blank"> 匹配所有首个< p > 元素中的所有 < i > 元素</a></li>
+						<ul>
+					</li>
+					<li>CSS-lang伪类，伪类允许为不同的语言定义特殊的规则。<a href="" target="_blank">:lang为属性为lang="en"的< p >元素定义引号</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">伪元素选择器（选取元素的一部分并设置其样式）</a>
+			</h4>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p> 主要是用于定义元素的特殊状态：</p>
+				<ul>
+					<li>设置鼠标悬停在元素上时的样式</li>
+					<li>为已访问和未访问的链接设置不同样式</li>
+					<li>设置元素获得焦点是的样式</li>
+				</ul><br>
+				<p> 伪类的语法： selector:: pseudo-element { property: value } </p>
+				<br>
+				<ul>
+					<li><a href="" target="_blank">锚伪类（链接能够以不同的方式显示）+</a></li>
+					<li><a href="" target="_blank">伪类和CSS类结合使用</a></li>
+					<li><a href="" target="_blank">简单的工具提示悬停</a></li>
+					<li>CSS- :first-child伪类（伪类与指定元素匹配：该元素是另一个元素的第一个子元素）<br>
+						<ul> 
+							<li><a href="" target="_blank">选择器匹配作为任何元素的第一个子元素的任何< p >元素</a></li>
+							<li><a href="" target="_blank">匹配所有< p > 元素中的首个 < i > 元素</a></li>
+							<li><a href="" target="_blank"> 匹配所有首个< p > 元素中的所有 < i > 元素</a></li>
+						<ul>
+					</li>
+					<li>CSS-lang伪类，伪类允许为不同的语言定义特殊的规则。<a href="" target="_blank">:lang为属性为lang="en"的< p >元素定义引号</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>

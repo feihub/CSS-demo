@@ -2,6 +2,10 @@
 <html>
 <head>
 <style>
+div { 
+	float: left;
+	width: 50%;
+}
 * {
   text-align: center;
   color: blue;
@@ -9,12 +13,33 @@
 </style>
 </head>
 <body>
-
-<h1>Hello world!</h1>
-
-<p>页面上的每个元素都会受到样式的影响。</p>
-<p id="para1">我也是！</p>
-<p>还有我！</p>
+<div>
+	<h1>Hello world!</h1>
+	<p>页面上的每个元素都会受到样式的影响。</p>
+	<p id="para1">我也是！</p>
+	<p>还有我！</p>
+</div>
+<div style="text-align: left; color: black;">
+	Code:
+	<xmp style="text-align: left; color: black;">
+		<html>
+			<head>
+			<style>
+			* {
+			  text-align: center;
+			  color: blue;
+			}
+			</style>
+			</head>
+			<body>
+				<h1>Hello world!</h1>
+				<p>页面上的每个元素都会受到样式的影响。</p>
+				<p id="para1">我也是！</p>
+				<p>还有我！</p>
+			</body>
+		</html>
+	</xmp>
+</div>
 
 </body>
 </html>

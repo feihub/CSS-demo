@@ -2,6 +2,10 @@
 <html>
 <head>
 <style>
+div { 
+	float: left;
+	width: 50%;
+}
 p {
   text-align: center;
   color: red;
@@ -9,10 +13,32 @@ p {
 </style>
 </head>
 <body>
+	<div>
+		<p>每个p标签都会受到样式的影响。</p>
+		<p id="para1">p标签！</p>
+		<p>还是p标签！</p>
 
-<p>每个p标签都会受到样式的影响。</p>
-<p id="para1">p标签！</p>
-<p>还是p标签！</p>
+	</div>
+	<div>
+		Code:
+		<xmp>
+			<html>
+			<head>
+			<style>
+			p {
+			  text-align: center;
+			  color: red;
+			} 
+			</style>
+			</head>
+			<body>
+				<p>每个p标签都会受到样式的影响。</p>
+				<p id="para1">p标签！</p>
+				<p>还是p标签！</p>
+			</body>
+			</html>		
+		</xmp>
+	</div>
 
 </body>
 </html>

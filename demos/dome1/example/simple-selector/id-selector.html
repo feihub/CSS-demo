@@ -2,6 +2,10 @@
 <html>
 <head>
 <style>
+div { 
+	float: left;
+	width: 50%;
+}
 #para1 {
   text-align: center;
   color: red;
@@ -10,8 +14,32 @@
 </head>
 <body>
 
-<p id="para1">Hello World!</p>
-<p>本段不受样式的影响。</p>
+<div>
+	<p id="para1">Hello World!</p>
+	<p>本段不受样式的影响。</p>
+</div>
+
+<div>
+	Code:
+	<xmp>
+		<html>
+		<head>
+		<style>
+			#para1 {
+			  text-align: center;
+			  color: red;
+			}
+		</style>
+		</head>
+		<body>
+			<p id="para1">Hello World!</p>
+			<p>本段不受样式的影响。</p>
+		</body>
+		</html>
+	</xmp>
+	
+</div>
+
 
 </body>
 </html>

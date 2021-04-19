@@ -2,25 +2,65 @@
 <html>
 <head>
 <style>
+.in-row {
+	float: left;
+	width: 50%;
+}
+
 div ~ p {
   background-color: yellow;
 }
 </style>
 </head>
 <body>
+<div  class="in-row">
+	<h1>通用兄弟选择器</h1>
+	<p>通用的兄弟选择器（~）选择指定元素的所有同级元素。</p>
 
-<h1>通用兄弟选择器</h1>
-<p>通用的兄弟选择器（~）选择指定元素的所有同级元素。</p>
+	<p>段落 1。</p>
 
-<p>段落 1。</p>
+	<div>
+	  <p>段落 2。</p>
+	</div>
 
-<div>
-  <p>段落 2。</p>
+	<p>段落 3。</p>
+	<code>一些代码。</code>
+	<p>段落 4。</p>
 </div>
 
-<p>段落 3。</p>
-<code>一些代码。</code>
-<p>段落 4。</p>
 
+<div  class="in-row">
+	Code:
+	<xmp>
+		<html>
+		<head>
+			<style>
+			div ~ p {
+			  background-color: yellow;
+			}
+		</style>
+		</head>
+		<body>
+			<h1>通用兄弟选择器</h1>
+			<p>通用的兄弟选择器（~）选择指定元素的所有同级元素。</p>
+			<p>段落 1。</p>
+			<div>
+			  <p>段落 2。</p>
+			</div>
+			<p>段落 3。</p>
+			<code>一些代码。</code>
+			<p>段落 4。</p>
+		</body>
+		</html>
+	</xmp>
+
+</div>
 </body>
 </html>
+
+
+
+
+
+
+
