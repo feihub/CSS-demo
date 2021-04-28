@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <style>
+
+            div {
+                float: left;
+                width: 48%;
+            }
+            p.one {
+            border-style: solid;
+            border-width: 3px;
+            width: 200px;
+            }
+
+            p.one-1 {
+            border-style: solid;
+            border-width: 5px 10px;
+            width: 200px;
+            }
+
+            p.one-2 {
+            border-style: solid;
+            border-width: 5px 20px 15px; /* 上边框、左右边框、下边框*/
+            width: 200px;
+            }
+
+            p.one-3 {
+            border-style: solid;
+            border-width: 5px 10px 15px 20px; /* 上、右、下 左*/
+            width: 200px;
+            }
+
+            p.two {
+            border-left-style: solid;/*border-right-style border-top-style border-bottom-style*/
+            border-width: 5px;
+            width: 200px;
+            }
+
+            p.three {
+            border-left-style: solid;
+            border-top-style: solid;
+            border-width: 5px;
+            width: 200px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>border-width 属性</h1>
+            <p>此属性规定四条边框的宽度：</p>
+            <p class="one">文本。</p>
+            <span>border-width 属性可以设置一到四个值（用于上边框、右边框、下边框和左边框）：</span>
+            <p class="one-1">文本。</p>
+            <p class="one-2">文本。</p>
+            <p class="one-3">文本。</p>
+            <p class="two">文本。</p>
+            <p class="three">文本。</p>
+            <p><b>注释：</b> <span style="color: red;"> border-color 属性单独使用时不起作用。请首先使用 border-style 属性设置样式。</span></p>
+        </div>
+
+        <div>
+            Code:
+            <xmp>
+                <html>
+                    <head>
+                        <style>
+                            p.one {
+                            border-style: solid;
+                            border-width: 3px;
+                            width: 200px;
+                            }
+
+                            p.one-1 {
+                            border-style: solid;
+                            border-width: 5px 10px;
+                            width: 200px;
+                            }
+
+                            p.one-2 {
+                            border-style: solid;
+                            border-width: 5px 20px 15px; /* 上边框、左右边框、下边框*/
+                            width: 200px;
+                            }
+
+                            p.one-3 {
+                            border-style: solid;
+                            border-width: 5px 10px 15px 20px; /* 上、右、下 左*/
+                            width: 200px;
+                            }
+
+                            p.two {
+                            border-left-style: solid;/*border-right-style border-top-style border-bottom-style*/
+                            border-width: 5px;
+                            width: 200px;
+                            }
+
+                            p.three {
+                            border-left-style: solid;
+                            border-top-style: solid;
+                            border-width: 5px;
+                            width: 200px;
+                            }
+
+                        </style>
+                    </head>
+                    <body>
+                        <h1>border-width 属性</h1>
+                        <p>此属性规定四条边框的宽度：</p>
+                        <p class="one">文本。</p>
+                        <span>border-width 属性可以设置一到四个值（用于上边框、右边框、下边框和左边框）：</span>
+                        <p class="one-1">文本。</p>
+                        <p class="one-2">文本。</p>
+                        <p class="one-3">文本。</p>
+                        <p class="two">文本。</p>
+                        <p class="three">文本。</p>
+                        <p><b>注释：</b> <span style="color: red;"> border-color 属性单独使用时不起作用。请首先使用 border-style 属性设置样式。</span></p>
+                    </body>
+                </html>
+            </xmp>
+        </div>
+        
+    </body>
+</html>

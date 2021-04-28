@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+    [title~=flower] {
+    border: 5px solid yellow;
+    }
+    div { 
+        float: left;
+        width: 50%;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <h1>CSS [attribute~="value"] 选择器</h1>
+        <p>title 属性包含 "flower" 的所有图像会有黄色边框。</p>
+        
+        <img src="../assets/klematis.jpg" title="klematis flower" width="150" height="113"><br><br>
+        <img src="../assets/flower.gif" title="flower" width="224" height="162"><br><br>
+        <img src="../assets/tree.png" title="tree" width="200" height="358"><br><br>
+    </div>
+
+    <div>
+        COde:
+        <xmp>
+            <html>
+                <head>
+                <style>
+                    [title~=flower] {
+                    border: 5px solid yellow;
+                    }
+                </style>
+                </head>
+                <body>
+                <h1>CSS [attribute~="value"] 选择器</h1>
+                <p>title 属性包含 "flower" 的所有图像会有黄色边框。</p>
+                <img src="/i/photo/klematis.jpg" title="klematis flower" width="150" height="113"><br><br>
+                <img src="/i/photo/flower.gif" title="flower" width="224" height="162"><br><br>
+                <img src="/i/photo/tree.png" title="tree" width="200" height="358"><br><br>
+                
+                </body>
+                </html> 
+        </xmp>
+    </div>
+
+</body>
+</html>

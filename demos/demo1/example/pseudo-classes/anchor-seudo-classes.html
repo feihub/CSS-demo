@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div { 
+	float: left;
+	width: 50%;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+    <div>
+        <h1>CSS 链接</h1>
+        <p><b><a href="" target="_blank">这是一个链接</a></b></p>
+        <p><b>注释：</b>在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后才能生效。</p>
+        <p><b>注释：</b>在 CSS 定义中，a:active 必须位于 a:hover 之后才能生效。</p>
+    </div>
+
+    <div>
+        Code:
+	    <xmp>
+            <html>
+            <head>
+            <style>
+            /* unvisited link */
+            a:link {
+            color: red;
+            }
+
+            /* visited link */
+            a:visited {
+            color: green;
+            }
+
+            /* mouse over link */
+            a:hover {
+            color: hotpink;
+            }
+
+            /* selected link */
+            a:active {
+            color: blue;
+            }
+            </style>
+            </head>
+            <body>
+            <h1>CSS 链接</h1>
+            <p><b><a href="" target="_blank">这是一个链接</a></b></p>
+            <p><b>注释：</b>在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后才能生效。</p>
+            <p><b>注释：</b>在 CSS 定义中，a:active 必须位于 a:hover 之后才能生效。</p>
+            </body>
+            </html>
+
+        </xmp>
+    </div>
+
+</body>
+</html>

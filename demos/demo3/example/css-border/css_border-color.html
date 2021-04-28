@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+            div {
+                float: left;
+                width: 45%;
+            }
+            p.one {
+                border-style: solid;
+                border-color: red green blue yellow; /* 上红、右绿、下蓝、左黄 */
+                width: 300px;
+            }
+            p.two {
+                border-style: solid;
+                border-color: #0000ff; /* 蓝色 */
+                width: 300px;
+            }
+            p.three {
+                border-style: solid;
+                border-color: rgb(187, 187, 187); /* 灰色 */
+                width: 300px;
+            }
+            p.four {
+                border-style: solid;
+                border-color: hsl(0, 0%, 73%); /* 灰色 */
+                width: 300px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div style="margin-left: 2%;">
+            <h1>border-color 属性</h1>
+            <p>border-color 属性和边框宽度属性类似，可接受一到四个值（依次对应上、右、下、左边框）：</p>
+            <p class="one">多色的实线边框</p>
+            <p class="two">使用十六进制值（HEX）指定边框颜色</p>
+            <p class="three">使用RGB值指定边框颜色</p>
+            <p class="four">使用 HSL 值指定边框颜色</p>
+        </div>
+        <div>
+            Code: 
+            <xmp>
+                <html>
+                    <head>
+                        <style>
+                            p.one {
+                                border-style: solid;
+                                border-color: red green blue yellow; /* 上红、右绿、下蓝、左黄 */
+                                width: 300px;
+                            }
+                            p.two {
+                                border-style: solid;
+                                border-color: #0000ff; /* 蓝色 */
+                                width: 300px;
+                            }
+                            p.three {
+                                border-style: solid;
+                                border-color: rgb(187, 187, 187); /* 灰色 */
+                                width: 300px;
+                            }
+                            p.four {
+                                border-style: solid;
+                                border-color: hsl(0, 0%, 73%); /* 灰色 */
+                                width: 300px;
+                            }
+
+                        </style>
+                    </head>
+                    <body>
+                        <h1>border-color 属性</h1>
+                        <p>border-color 属性和边框宽度属性类似，可接受一到四个值（依次对应上、右、下、左边框）：</p>
+                        <p class="one">多色的实线边框</p>
+                        <p class="two">使用十六进制值（HEX）指定边框颜色</p>
+                        <p class="three">使用RGB值指定边框颜色</p>
+                        <p class="four">使用 HSL 值指定边框颜色</p>
+                    </body>
+                </html>
+            </xmp>
+        </div>
+        
+    </body>
+</html>

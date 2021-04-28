@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+    h1::after {
+        content: url(../assets/card.svg);
+    }
+    div { 
+        float: left;
+        width: 50%;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <h1>这是一个标题</h1>
+
+        <p>::after 伪元素在一个元素之后插入内容。</p>
+        
+        <h1>这是一个标题</h1>
+    </div>
+    <div>
+        Code:
+        <xmp>
+            <html>
+            <head>
+                <style>
+                    h1::after {
+                        content: url(/i/photo/smile.gif);
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>这是一个标题</h1>
+                <p>::after 伪元素在一个元素之后插入内容。</p>
+                <h1>这是一个标题</h1>
+            </body>
+            </html>
+        </xmp>
+    </div>
+
+</body>
+</html>

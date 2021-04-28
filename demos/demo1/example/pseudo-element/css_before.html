@@ -1,0 +1,40 @@
+<html>
+<head>
+<style>
+    div { 
+        float: left;
+        width: 50%;
+    }
+    h1::before {
+    content: url(../assets/card.svg);
+    }
+</style>
+</head>
+<body>
+    <div>
+        <h1>这是一个标题</h1>
+        <p>::before 伪元素在一个元素的内容之前插入内容。</p>
+        <h1>这是一个标题</h1>
+    </div>
+    <div>
+        Code:
+        <xmp>
+            <html>
+                <head>
+                    <style>
+                        h1::before {
+                            content: "../assets/card.svg";
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>这是一个标题</h1>
+                    <p>::before 伪元素在一个元素的内容之前插入内容。</p>
+                    <h1>这是一个标题</h1>
+                </body>
+            </html>
+        </xmp>
+    </div>
+    
+</body>
+</html>
