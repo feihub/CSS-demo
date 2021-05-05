@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-div { 
-	float: left;
-	width: 50%;
-}
-#para1 {
-  text-align: center;
-  color: red;
-}
-</style>
+    <style>
+        div {
+            float: left;
+            width: 50%;
+        }
+
+        #para1 {
+            text-align: center;
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
 
-<div>
-	<p id="para1">Hello World!</p>
-	<p>本段不受样式的影响。</p>
-</div>
+    <div>
+        <p id="para1">Hello World!</p>
+        <p>本段不受样式的影响。</p>
+    </div>
 
-<div>
-	Code:
-	<xmp>
-		<html>
-		<head>
-		<style>
-			#para1 {
-			  text-align: center;
-			  color: red;
-			}
-		</style>
-		</head>
-		<body>
-			<p id="para1">Hello World!</p>
-			<p>本段不受样式的影响。</p>
-		</body>
-		</html>
-	</xmp>
-	
-</div>
+    <div>
+        Code:
+        <code>
+        <pre>
+            &lt;html&gt;
+            &lt;head&gt;
+            &lt;style&gt;
+                #para1 {
+                  text-align: center;
+                  color: red;
+                }
+            &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p id=&quot;para1&quot;&gt;Hello World!&lt;/p&gt;
+                &lt;p&gt;本段不受样式的影响。&lt;/p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+    </pre>
+</code>
+
+    </div>
 
 
 </body>
+
 </html>
