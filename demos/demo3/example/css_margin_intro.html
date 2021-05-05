@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <style>
@@ -75,83 +76,86 @@
         
         <div class="body-div">
             Code:
-            <xmp>
-    <html>
-        <head>
-            <style>
-                .div-1 {
-                    margin: 70px;
-                    border: 1px solid #4CAF50;
-                }
-                .div-2 {
-                    border: 1px solid black;
-                    margin-top: 100px;
-                    margin-bottom: 100px;
-                    margin-right: 150px;
-                    margin-left: 80px;
-                    background-color: lightblue;
-                }
-                .div-3 {
-                    border: 1px solid black;
-                    margin: 25px 50px 75px 100px;
-                    background-color: lightblue;
-                }
-                .div-4 {
-                    border: 1px solid black;
-                    margin: 25px 50px 75px;
-                    background-color: lightblue;
-                }
-                .div-5 {
-                    border: 1px solid black;
-                    margin: 25px 50px;
-                    background-color: lightblue;
-                }
-                .div-6 {
-                    width: 300px;
-                    margin: auto;
-                    border: 1px solid black;
-                }
-                .div-7 {
-                    border: 1px solid red;
-                    margin-left: 100px;
-                }
-                p.ex1 {
-                    margin-left: inherit;
-                }
-            </style>
-        </head>
-        <body>
-            <h3>CSS 外边距</h3>
-            <div class="div-1">本元素的外边距为 70 像素。</div>
+            <code>
+                <pre>
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;style&gt;
+                        .div-1 {
+                            margin: 70px;
+                            border: 1px solid #4CAF50;
+                        }
+                        .div-2 {
+                            border: 1px solid black;
+                            margin-top: 100px;
+                            margin-bottom: 100px;
+                            margin-right: 150px;
+                            margin-left: 80px;
+                            background-color: lightblue;
+                        }
+                        .div-3 {
+                            border: 1px solid black;
+                            margin: 25px 50px 75px 100px;
+                            background-color: lightblue;
+                        }
+                        .div-4 {
+                            border: 1px solid black;
+                            margin: 25px 50px 75px;
+                            background-color: lightblue;
+                        }
+                        .div-5 {
+                            border: 1px solid black;
+                            margin: 25px 50px;
+                            background-color: lightblue;
+                        }
+                        .div-6 {
+                            width: 300px;
+                            margin: auto;
+                            border: 1px solid black;
+                        }
+                        .div-7 {
+                            border: 1px solid red;
+                            margin-left: 100px;
+                        }
+                        p.ex1 {
+                            margin-left: inherit;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h3&gt;CSS 外边距&lt;/h3&gt;
+                    &lt;div class=&quot;div-1&quot;&gt;本元素的外边距为 70 像素。&lt;/div&gt;
+                    
+                    &lt;h3&gt;使用单独的外边距属性&lt;/h3&gt;
+                    &lt;div class=&quot;div-2&quot;&gt;这个 div 元素的上外边距为 100 像素，右外边距是 150 像素，
+                        下外边距是 100 像素，左外边距是 80 像素。&lt;/div&gt;
+                    
+                        &lt;h3&gt;简写属性 margin - 4 个值&lt;/h3&gt;
+                    &lt;div class=&quot;div-3&quot;&gt;这个 div 元素的上外边距是 25 像素，右外边距是 50 像素，
+                        下外边距是 75 像素，左外边距是 100 像素。&lt;/div&gt;
+                    
+                        &lt;h3&gt;简写属性 margin - 3 个值&lt;/h3&gt;
+                    &lt;div class=&quot;div-4&quot;&gt;div 元素的上外边距是 25 像素，左右外边距是 50 像素，
+                        而下外边距是 75 像素。&lt;/div&gt;
+                    
+                        &lt;h3&gt;简写属性 margin - 2 个值&lt;/h3&gt;
+                    &lt;div class=&quot;div-5&quot;&gt;div 元素的上下外边距是 25 像素，左右外边距是 50 像素。&lt;/div&gt;
+                    
+                    &lt;h3&gt;使用 margin:auto&lt;/h3&gt;
+                    &lt;p&gt;您可以将 margin 属性设置为 auto 以自动将元素在其容器中水平居中。然后，
+                        该元素将占据指定的宽度，剩余空间将在左右外边距之间平均分配：&lt;/p&gt;
+                    &lt;div&gt;由于 margin: auto;，这个 div 将水平居中。&lt;/div&gt;
+                    
+                    &lt;h3&gt;使用继承值&lt;/h3&gt;
+                    &lt;p&gt;左外边距继承自父元素：&lt;/p&gt;
+                    &lt;div class=&quot;div-7&quot;&gt;
+                        &lt;p class=&quot;ex1&quot;&gt;本段落继承了 div 元素的左外边距。&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;
             
-            <h3>使用单独的外边距属性</h3>
-            <div class="div-2">这个 div 元素的上外边距为 100 像素，右外边距是 150 像素，
-                下外边距是 100 像素，左外边距是 80 像素。</div>
-            
-                <h3>简写属性 margin - 4 个值</h3>
-            <div class="div-3">这个 div 元素的上外边距是 25 像素，右外边距是 50 像素，
-                下外边距是 75 像素，左外边距是 100 像素。</div>
-            
-                <h3>简写属性 margin - 3 个值</h3>
-            <div class="div-4">div 元素的上外边距是 25 像素，左右外边距是 50 像素，
-                而下外边距是 75 像素。</div>
-            
-                <h3>简写属性 margin - 2 个值</h3>
-            <div class="div-5">div 元素的上下外边距是 25 像素，左右外边距是 50 像素。</div>
-            
-            <h3>使用 margin:auto</h3>
-            <p>您可以将 margin 属性设置为 auto 以自动将元素在其容器中水平居中。然后，
-                该元素将占据指定的宽度，剩余空间将在左右外边距之间平均分配：</p>
-            <div>由于 margin: auto;，这个 div 将水平居中。</div>
-            
-            <h3>使用继承值</h3>
-            <p>左外边距继承自父元素：</p>
-            <div class="div-7">
-                <p class="ex1">本段落继承了 div 元素的左外边距。</p>
-            </div>
-        </body>
-    </html>
-            </xmp>
+        </pre>
+    </code>
         </div>
         
 
