@@ -1,15 +1,19 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-<style>
-    div { 
-        float: left;
-        width: 50%;
-    }
-    h1::before {
-    content: url(../assets/card.svg);
-    }
-</style>
+    <style>
+        div {
+            float: left;
+            width: 50%;
+        }
+
+        h1::before {
+            content: url(../assets/card.svg);
+        }
+    </style>
 </head>
+
 <body>
     <div>
         <h1>这是一个标题</h1>
@@ -18,23 +22,26 @@
     </div>
     <div>
         Code:
-        <xmp>
-            <html>
-                <head>
-                    <style>
+        <code>
+            <pre>
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;style&gt;
                         h1::before {
-                            content: "../assets/card.svg";
+                            content: &quot;../assets/card.svg&quot;;
                         }
-                    </style>
-                </head>
-                <body>
-                    <h1>这是一个标题</h1>
-                    <p>::before 伪元素在一个元素的内容之前插入内容。</p>
-                    <h1>这是一个标题</h1>
-                </body>
-            </html>
-        </xmp>
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;这是一个标题&lt;/h1&gt;
+                    &lt;p&gt;::before 伪元素在一个元素的内容之前插入内容。&lt;/p&gt;
+                    &lt;h1&gt;这是一个标题&lt;/h1&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+    </code>
     </div>
-    
+
 </body>
+
 </html>
