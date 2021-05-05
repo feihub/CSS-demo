@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-div { 
-	float: left;
-	width: 50%;
-}
+    <style>
+        div {
+            float: left;
+            width: 50%;
+        }
 
-/* unvisited link */
-a:link {
-  color: red;
-}
+        /* unvisited link */
+        a:link {
+            color: red;
+        }
 
-/* visited link */
-a:visited {
-  color: green;
-}
+        /* visited link */
+        a:visited {
+            color: green;
+        }
 
-/* mouse over link */
-a:hover {
-  color: hotpink;
-}
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+        }
 
-/* selected link */
-a:active {
-  color: blue;
-}
-</style>
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+    </style>
 </head>
+
 <body>
 
     <div>
@@ -39,41 +41,44 @@ a:active {
 
     <div>
         Code:
-	    <xmp>
-            <html>
-            <head>
-            <style>
-            /* unvisited link */
-            a:link {
-            color: red;
-            }
+        <code>
+            <pre>
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;style&gt;
+                    /* unvisited link */
+                    a:link {
+                    color: red;
+                    }
+        
+                    /* visited link */
+                    a:visited {
+                    color: green;
+                    }
+        
+                    /* mouse over link */
+                    a:hover {
+                    color: hotpink;
+                    }
+        
+                    /* selected link */
+                    a:active {
+                    color: blue;
+                    }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;CSS 链接&lt;/h1&gt;
+                    &lt;p&gt;&lt;b&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;这是一个链接&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+                    &lt;p&gt;&lt;b&gt;注释：&lt;/b&gt;在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后才能生效。&lt;/p&gt;
+                    &lt;p&gt;&lt;b&gt;注释：&lt;/b&gt;在 CSS 定义中，a:active 必须位于 a:hover 之后才能生效。&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
 
-            /* visited link */
-            a:visited {
-            color: green;
-            }
-
-            /* mouse over link */
-            a:hover {
-            color: hotpink;
-            }
-
-            /* selected link */
-            a:active {
-            color: blue;
-            }
-            </style>
-            </head>
-            <body>
-            <h1>CSS 链接</h1>
-            <p><b><a href="" target="_blank">这是一个链接</a></b></p>
-            <p><b>注释：</b>在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后才能生效。</p>
-            <p><b>注释：</b>在 CSS 定义中，a:active 必须位于 a:hover 之后才能生效。</p>
-            </body>
-            </html>
-
-        </xmp>
+        </pre>
+    </code>
     </div>
 
 </body>
+
 </html>
