@@ -13,7 +13,7 @@
 
 <body>
     <div class="container-fluid bg-light">
-        <div class="list-group">
+        <div class="list-group-flush ">
             <div class="list-group-item">
                 <h3>CSS</h3>
                 <ul class="list-group">
@@ -34,15 +34,15 @@
                 <div class="accordion" id="accordion">
                     <div class="accordion-item">
                         <div class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <h4>
+                                <h6>
                                     <span>简单选择器（根据名称、id、类来选取元素</span>&nbsp;
                                     <span style="color: red"> *id 名称不能以数字开头</span>）
-                                </h4>
+                                </h6>
                             </button>
                         </div>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                             data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <ol class="list-group">
@@ -66,9 +66,9 @@
                         <div class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <h4>
-                                    <span>组合器选择器（根据它们之间的特定关系来选取元素</span>
-                                </h4>
+                                <h6>
+                                    <span>组合器选择器（根据它们之间的特定关系来选取元素）</span>
+                                </h6>
                             </button>
                         </div>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
@@ -92,9 +92,9 @@
                         <div class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <h4>
+                                <h6>
                                     伪类选择器（根据特定状态选取元素）
-                                </h4>
+                                </h6>
                             </button>
                         </div>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
@@ -135,9 +135,9 @@
                         <div class="accordion-header" id="headingFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                <h4>
+                                <h6>
                                     伪元素选择器（选取元素的一部分并设置其样式）
-                                </h4>
+                                </h6>
                             </button>
                         </div>
 
@@ -169,9 +169,9 @@
                         <div class="accordion-header" id="headingFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                <h4>
+                                <h6>
                                     属性选择器（根据属性或属性值来选取元素）
-                                </h4>
+                                </h6>
                             </button>
                         </div>
                     </div>
