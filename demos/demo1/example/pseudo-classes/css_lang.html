@@ -1,43 +1,50 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-<style>
-q:lang(en) {
-  quotes: "~" "~";
-}
-div { 
-	float: left;
-	width: 50%;
-}
-</style>
-</head>
-<body>
-<div>
-<p>Some text <q lang="en">A quote in a paragraph</q> Some text.</p>
-
-<p>在本例中，:lang 为 lang="en" 的 q 元素定义引号：</p>
-</div>
-<div>
-    Code:
-    <xmp>
-        <html>
-        <head>
-        <style>
+    <style>
         q:lang(en) {
-        quotes: "~" "~";
+            quotes: "~""~";
         }
-        </style>
-        </head>
-        <body>
 
+        div {
+            float: left;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
         <p>Some text <q lang="en">A quote in a paragraph</q> Some text.</p>
 
         <p>在本例中，:lang 为 lang="en" 的 q 元素定义引号：</p>
-
-        </body>
-        </html>
-    </xmp>
-</div>
+    </div>
+    <div>
+        Code:
+        <code>
+        <pre>
+            &lt;html&gt;
+            &lt;head&gt;
+                &lt;style&gt;
+                q:lang(en) {
+                quotes: &quot;~&quot; &quot;~&quot;;
+                }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+    
+                &lt;p&gt;Some text &lt;q lang=&quot;en&quot;&gt;A quote in a paragraph&lt;/q&gt; Some text.&lt;/p&gt;
+        
+                &lt;p&gt;在本例中，:lang 为 lang=&quot;en&quot; 的 q 元素定义引号：&lt;/p&gt;
+    
+            &lt;/body&gt;
+            &lt;/html&gt;
+    </pre>
+</code>
+    </div>
 
 
 </body>
+
 </html>
