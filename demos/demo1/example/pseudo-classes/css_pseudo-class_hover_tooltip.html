@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-.div-line { 
-	float: left;
-	width: 50%;
-}
+    <style>
+        .div-line {
+            float: left;
+            width: 50%;
+        }
 
-p {
-  display: none;
-  background-color: yellow;
-  padding: 20px;
-}
+        p {
+            display: none;
+            background-color: yellow;
+            padding: 20px;
+        }
 
-div:hover p {
-  display: block;
-}
-</style>
+        div:hover p {
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
     <div class="div-line">
         <div>鼠标移到我上面来显示 p 元素
@@ -26,34 +28,37 @@ div:hover p {
     </div>
     <div class="div-line">
         Code:
-        <xmp>
-            <html>
-            <head>
-            <style>
-            p {
-            display: none;
-            background-color: yellow;
-            padding: 20px;
-            }
+        <code>
+            <pre>
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;style&gt;
+                    p {
+                    display: none;
+                    background-color: yellow;
+                    padding: 20px;
+                    }
+        
+                    div:hover p {
+                    display: block;
+                    }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+    
+                    &lt;div&gt;鼠标移到我上面来显示 p 元素
+                    &lt;p&gt;哈哈！我在这里！&lt;/p&gt;
+                    &lt;/div&gt;
+    
+                &lt;/body&gt;
+                &lt;/html&gt;
 
-            div:hover p {
-            display: block;
-            }
-            </style>
-            </head>
-            <body>
-
-            <div>鼠标移到我上面来显示 p 元素
-            <p>哈哈！我在这里！</p>
-            </div>
-
-            </body>
-            </html>
-
-        </xmp>
+        </pre>
+    </code>
 
     </div>
 
 
 </body>
+
 </html>
