@@ -1,185 +1,228 @@
-﻿<html>
+<!DOCTYPE html>
+<html>
+
 <head>
-	<meta charset="utf-8"> 
-	<title>demo3</title>
-	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <title>demo3</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 </head>
-<style>
-	.panel-default {
-		border: 0;
-	}
-	.panel-heading {
-		border-bottom: 0!important;
-	}
-	.panel-default>.panel-heading {
-		background-color: #FFFFFF!important;
-	}
-</style>
-<ol>
-	<li>
-		<h3>CSS 颜色(是通过使用预定义的颜色名称，或 RGB、HEX、HSL、RGBA、HSLA 值。)</h3>
-		<ul>
-			<li>CSS 颜色名(使用颜色名称来指定颜色)</li>
-			<li>CSS RGB 颜色: rgb(red, green, blue) 每个参数 (red、green 以及 blue) 定义了 0 到 255 之间的颜色强度。</li>
-			<li>CSS HEX 颜色: 使用 #rrggbb 格式的十六进制值指定颜色[rr（红色）、gg（绿色）和 bb（蓝色）是介于 00 和 ff 之间的十六进制值,与十进制 0-255 相同]</li>
-			<li>
-				CSS HSL 颜色: 使用色相、饱和度和明度（HSL）来指定颜色. 格式: hsla(hue, saturation, lightness)
+
+<body>
+    <div class="container-fluid bg-light">
+        <ol>
+            <li>
+                <h3>CSS 颜色(是通过使用预定义的颜色名称，或 RGB、HEX、HSL、RGBA、HSLA 值。)</h3>
                 <ul>
-                    <li>色相（hue）是色轮上从 0 到 360 的度数。0 是红色，120 是绿色，240 是蓝色。</li>
-                    <li>饱和度（saturation）是一个百分比值，0％ 表示灰色阴影，而 100％ 是全色。</li>
-                    <li>亮度（lightness）也是百分比，0％ 是黑色，50％ 是既不明也不暗，100％是白色。</li>
+                    <li>CSS 颜色名(使用颜色名称来指定颜色)</li>
+                    <li>CSS RGB 颜色: rgb(red, green, blue) 每个参数 (red、green 以及 blue) 定义了 0 到 255 之间的颜色强度。</li>
+                    <li>CSS HEX 颜色: 使用 #rrggbb 格式的十六进制值指定颜色[rr（红色）、gg（绿色）和 bb（蓝色）是介于 00 和 ff 之间的十六进制值,与十进制 0-255 相同]
+                    </li>
+                    <li>
+                        CSS HSL 颜色: 使用色相、饱和度和明度（HSL）来指定颜色. 格式: hsla(hue, saturation, lightness)
+                        <ul>
+                            <li>色相（hue）是色轮上从 0 到 360 的度数。0 是红色，120 是绿色，240 是蓝色。</li>
+                            <li>饱和度（saturation）是一个百分比值，0％ 表示灰色阴影，而 100％ 是全色。</li>
+                            <li>亮度（lightness）也是百分比，0％ 是黑色，50％ 是既不明也不暗，100％是白色。</li>
+                        </ul>
+                    </li>
+                    <li>CSS RGBA 值: 具有 alpha 通道的 RGB 颜色值的扩展 - 它指定了颜色的不透明度. rgba(red, green, blue, alpha)[alpha 参数是介于
+                        0.0（完全透明）和 1.0（完全不透明）之间的数字]</li>
+                    <li>CSS HSLA 值: 具有 Alpha 通道的 HSL 颜色值的扩展 - 它指定了颜色的不透明度. hsla(hue, saturation, lightness, alpha)[alpha
+                        参数是介于 0.0（完全透明）和 1.0（完全不透明）之间的数字]</li>
                 </ul>
-			</li>
-			<li>CSS RGBA 值: 具有 alpha 通道的 RGB 颜色值的扩展 - 它指定了颜色的不透明度. rgba(red, green, blue, alpha)[alpha 参数是介于 0.0（完全透明）和 1.0（完全不透明）之间的数字]</li>
-			<li>CSS HSLA 值: 具有 Alpha 通道的 HSL 颜色值的扩展 - 它指定了颜色的不透明度. hsla(hue, saturation, lightness, alpha)[alpha 参数是介于 0.0（完全透明）和 1.0（完全不透明）之间的数字]</li>
-		</ul>
-		<a href="example\css_color.html" target="_blank"><h4>e.g.</h4></a>
-	</li>
-	<li>
-		<h3>背景-用于定义元素的背景效果</h3>
-		<ul>
-			<li>CSS background-color: 指定元素的背景色 &nbsp;&nbsp;e.g.</li>
-			<li>
+                <a href="example\css_color.html" target="_blank">
+                    <h4>e.g.</h4>
+                </a>
+            </li>
+            <li>
+                <h3>背景-用于定义元素的背景效果</h3>
+                <ul>
+                    <li>CSS background-color: 指定元素的背景色 &nbsp;&nbsp;e.g.</li>
+                    <li>
 
-				<div>
-					CSS background-image: 指定用作元素背景的图像
-					<ol>
-						<li><a href="example\background-repeat\background-repeat-xy.html" target="_blank">默认情况下，图像会重复，以覆盖整个元素: background-image: url("...");</a></li>
-						<li><a href="example\background-repeat\background-repeat-x.html" target="_blank">图像仅在水平方向重复: background-repeat: repeat-x;</a></li>
-						<li><a href="example\background-repeat\background-no-repeat.html" target="_blank">只显示一次背景图像: background-repeat: no-repeat</a></li>
-						<li><a href="example\background-repeat\background-image_position.html" target="_blank">指定背景图像的位置: background-position: </a></li>
-						<li>背景图像是应该滚动还是固定的（不会随页面的其余部分一起滚动） 
-							<a href="example\background_attachment\background_attachment_1.html" target="_blank">固定背景图像</a>&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="example\background_attachment\background_attachment_2.html" target="_blank">图像应随页面的其余部分一起滚动</a>
-						</li>
-					</ol>
-				</div>
-			</li>
-			<li>
-				CSS 背景简写(在一个属性中指定所有背景属性,它被称为简写属性),使用简写属性在一条声明中设置背景属性：e.g. background: #ffffff url("tree.png") no-repeat right top;<br>
-				在使用简写属性时，属性值的顺序为：
-				<ul>
-					<li>background-color</li>
-					<li>background-image</li>
-					<li>background-repeat</li>
-					<li>background-attachment</li>
-					<li>background-position</li>
-				</ul>
-				属性值之一缺失并不要紧，只要按照此顺序设置其他值即可 &nbsp;&nbsp;&nbsp; <a href="example\css_background_shorthand.html" target="_blank"> .e.g </a>
-			</li>
+                        <div>
+                            CSS background-image: 指定用作元素背景的图像
+                            <ol>
+                                <li><a href="example\background-repeat\background-repeat-xy.html"
+                                        target="_blank">默认情况下，图像会重复，以覆盖整个元素: background-image: url("...");</a></li>
+                                <li><a href="example\background-repeat\background-repeat-x.html"
+                                        target="_blank">图像仅在水平方向重复:
+                                        background-repeat: repeat-x;</a></li>
+                                <li><a href="example\background-repeat\background-no-repeat.html"
+                                        target="_blank">只显示一次背景图像:
+                                        background-repeat: no-repeat</a></li>
+                                <li><a href="example\background-repeat\background-image_position.html"
+                                        target="_blank">指定背景图像的位置: background-position: </a></li>
+                                <li>背景图像是应该滚动还是固定的（不会随页面的其余部分一起滚动）
+                                    <a href="example\background_attachment\background_attachment_1.html"
+                                        target="_blank">固定背景图像</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="example\background_attachment\background_attachment_2.html"
+                                        target="_blank">图像应随页面的其余部分一起滚动</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>
+                        CSS 背景简写(在一个属性中指定所有背景属性,它被称为简写属性),使用简写属性在一条声明中设置背景属性：e.g. background: #ffffff url("tree.png")
+                        no-repeat right top;<br>
+                        在使用简写属性时，属性值的顺序为：
+                        <ul>
+                            <li>background-color</li>
+                            <li>background-image</li>
+                            <li>background-repeat</li>
+                            <li>background-attachment</li>
+                            <li>background-position</li>
+                        </ul>
+                        属性值之一缺失并不要紧，只要按照此顺序设置其他值即可 &nbsp;&nbsp;&nbsp; <a href="example\css_background_shorthand.html"
+                            target="_blank"> .e.g </a>
+                    </li>
 
-		</ul>
-	</li>
-	<li>
-		<h3>CSS 边框</h3>
-		CSS border 属性允许指定元素边框的样式、宽度和颜色。
-		<ul>
-			<li>边框样式- border-style 属性指定要显示的边框类型 &nbsp;&nbsp;&nbsp; <a href="example\css-border\css_border-style.html" target="_blank"> .e.g</a></li>
-			<li>边框宽度- border-width 指定四个边框的宽度&nbsp;&nbsp;&nbsp; <a href="example\css-border\css_border-width.html" target="_blank"> .e.g</a></li>
-			<li>边框颜色- border-color 设置四个边框的颜色
-				<p>可以通过name,HEX(十六进制值), RGB值, HSL值, transparent 设置边框颜色， 如果未设置 border-color，则它将继承元素的颜色&nbsp;&nbsp;&nbsp;
-					<a href="example\css-border\css_border-color.html" target="_blank"> .e.g</a>
-				 </p>
-			</li>
-			<li>简写边框属性 -> border: width style(必需) color; , eg:p {border: 5px solid red;}. 可以只为一个边指定所有单个边框属性-> border-left: 6px solid red; </li>
-			<li>圆角边框border-radius向元素添加圆角边框&nbsp;&nbsp;&nbsp; <a href="example\css_border_round.html" target="_blank"> .e.g</a></li>
-		</ul>
-	</li>
-	<li>
-		<h3>CSS 边距</h3>
-		<ul>
-			<li><strong>外边距</strong>: margin 为元素边框之外的周围创建空间 <a href="example\css_margin_intro.html" target="_blank">.e.g</a><br>
-				也可为每一侧指定外边距（margin-top，margin-right，margin-bottom，margin-left） 
-				所有外边距属性都可以设置以下值：
-				<ul>
-					<li>auto - 浏览器来计算外边距</li>
-					<li>length - 以 px、pt、cm 等单位指定外边距</li>
-					<li>% - 指定以包含元素宽度的百分比计的外边距</li>
-					<li>inherit - 指定应从父元素继承外边距</li>
-				</ul>
-				<p style="color: red;">允许负值。</p>
-				<p>Margin - 简写属性, 如果 margin 属性有四个值：margin: 上外边距 右外边距 下外边距 左外边距; eg. margin: 25px 50px 75px 100px; </p>
-			</li>
-			<li><strong>外边距合并</strong>: 当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
-				<ul>
-					<li>当一个元素出现在另一个元素上面时，第一个元素的下外边距与第二个元素的上外边距会发生合并&nbsp;&nbsp; <a href="example\margin_collapsing\eg_css_margin_collapsing1.html" target="_blank">.e.g</a><br> </li>
-					<li>一个空元素，它有外边距，但是没有边框或填充。在这种情况下，上外边距与下外边距就碰到了一起，会发生合并&nbsp;&nbsp; <a href="example\margin_collapsing\eg_css_margin_collapsing2.html" target="_blank">.e.g</a><br> </li>
-				</ul>
-			</li>
-			<li><strong>内边距</strong>: padding 在任何定义的边界内的元素内容周围生成空间。
-				和margin类似，可为每一侧指定内边距（padding-top，padding-right，padding-bottom，padding-left）
-				所有内边距属性都可以设置以下值：
-				<ul>
-					<li>length - 以 px、pt、cm 等单位指定内边距</li>
-					<li>% - 指定以包含元素宽度的百分比计的内边距</li>
-					<li>inherit - 指定应从父元素继承内边距</li>
-				</ul>
-				<p style="color: red;">不允许负值。</p>
-				<p>Padding - 简写属性和margin类似</p>
-				<p>内边距和元素宽度：<br>
-					 width 属性指定元素内容区域的宽度。内容区域是元素（盒模型）的内边距、边框和外边距内的部分
-					 如果 &#60;div&#62;元素的宽度为300px。左右内边距都为25px，则&#60;div&#62; 元素的实际宽度将是 350px（300px + 左内边距 25px + 右内边距 25px）<br>
-					 若要将宽度保持为300px，无论填充量如何，可以使用 box-sizing 属性。这将导致元素保持其宽度。如果增加内边距，则可用的内容空间会减少。
-					 <a href="example\css_padding_width.html" target="_blank"><strong>.e.g</strong></a>
-				</p>
-			</li>
-		</ul>
-	</li>
-	<li>
-		<h3>高度和宽度</h3>
-		<p>height 和 width 属性用于设置元素的高度和宽度。
-		   height 和 width 属性不包括内边距、边框或外边距。它设置的是元素内边距、边框以及外边距内的区域的高度或宽度。
-		   <a href="example\css_height_width.html" target="_blank"><strong>.e.g</strong></a>
-		</p>
-		<ul>
-			height 和 width 属性可设置如下值：
-			<li>auto - 默认。浏览器计算高度和宽度。</li>
-			<li>length - 以 px、cm 等定义高度/宽度。</li>
-			<li>% - 以包含块的百分比定义高度/宽度。</li>
-			<li>initial - 将高度/宽度设置为默认值。</li>
-			<li>inherit - 从其父值继承高度/宽度。</li>
-		</ul>
-		另外，还可以设置元素的最大最小宽度高度， max-width, min-width, max-height, min-height.
-	</li>
-	<li>
-		<h3>框模型</h3>
-		<div style="float: left; width: 55%; padding-right: 5%;">
-			<p>所有 HTML 元素都可以视为方框。CSS 框模型实质上是一个包围每个 HTML 元素的框。它包括：外边距、边框、内边距以及实际的内容，如右图所示。</p>
-			<p>元素框的最内部分是实际的内容，直接包围内容的是内边距。内边距呈现了元素的背景。内边距的边缘是边框。边框以外是外边距，外边距默认是透明的，因此不会遮挡其后的任何元素。</p>
-			<p><span style="color: red; font-weight: 700;">提示：</span> 背景应用于由内容和内边距、边框组成的区域。</p> 
-			<p><span style="color: red; font-weight: 700;">提示：</span> 内边距、边框和外边距可以应用于一个元素的所有边，也可以应用于单独的边。</p> 
-			<p><span style="color: red; font-weight: 700;">提示：</span> 外边距可以是负值，而且在很多情况下都要使用负值的外边距。</p> 
-			<p>
-				元素的总宽度：<br>
-				元素总宽度 = 宽度 + 左内边距 + 右内边距 + 左边框 + 右边框 + 左外边距 + 右外边距<br>
-				元素的总高度：<br>
-				元素总高度 = 高度 + 上内边距 + 下内边距 + 上边框 + 下边框 + 上外边距 + 下外边距
-			</p>
-		</div>
-		<div style="float: right; width: 40%;"><img src="assets/css_boxmodel.png" alt="" style="max-width: 400px; max-height: 400px;"></div>
-		<div style="clear: both;"></div>
-	</li>
-	<li>
-		<h3>轮廓</h3>
-		<p>在元素周围绘制的一条线，在边框之外，以凸显元素</p>
-		<ul>CSS 拥有如下轮廓属性：
-			<li>outline-style &nbsp;&nbsp;&nbsp;<a href="example\outline\css_outline_style.html" target="_blank">轮廓样式</a></li>
-			<li>outline-width &nbsp;&nbsp;&nbsp;<a href="example\outline\css_outline_width.html" target="_blank">指定轮廓的宽度</a></li>
-			<li>outline-color &nbsp;&nbsp;&nbsp;<a href="example\outline\css_outline_color.html" target="_blank">轮廓颜色</a></li>
-			<li>outline-offset &nbsp;&nbsp;&nbsp;<a href="example\outline\css_outline_offset.html" target="_blank">轮廓偏移</a></li>
-			<li>outline 是用于设置各个轮廓属性的简写属性outline-width, outline-style（必需）,outline-color, outline 属性可指定一个、两个或三个值。值的顺序无关紧要， 与border属性类似。 </li>
-		</ul>
-		<p><span style="color: red; font-weight: 700;">注意：</span>除非设置了 outline-style 属性，否则其他轮廓属性（在下一章中将详细介绍）都不会有任何作用！</p>
-		<p><span style="color: red; font-weight: 700;">注意：</span>轮廓与边框不同！不同之处在于：轮廓是在元素边框之外绘制的，并且可能与其他内容重叠。同样，轮廓也不是元素尺寸的一部分；元素的总宽度和高度不受轮廓线宽度的影响。</p>
-	</li>
-	<li>
-		<h3>文本</h3>
-		<ul>
-			<li>文本对齐: text-align 属性用于设置文本的水平对齐方式。文本可以左对齐或右对齐，或居中对齐。 <a href="example\text\css_text_align.html">.e.g</a></li>
-		</ul>
-	</li>
-</ol>
-<br><br><br>
+                </ul>
+            </li>
+            <li>
+                <h3>CSS 边框</h3>
+                CSS border 属性允许指定元素边框的样式、宽度和颜色。
+                <ul>
+                    <li>边框样式- border-style 属性指定要显示的边框类型 &nbsp;&nbsp;&nbsp; <a
+                            href="example\css-border\css_border-style.html" target="_blank"> .e.g</a></li>
+                    <li>边框宽度- border-width 指定四个边框的宽度&nbsp;&nbsp;&nbsp; <a
+                            href="example\css-border\css_border-width.html" target="_blank"> .e.g</a></li>
+                    <li>边框颜色- border-color 设置四个边框的颜色
+                        <p>可以通过name,HEX(十六进制值), RGB值, HSL值, transparent 设置边框颜色， 如果未设置
+                            border-color，则它将继承元素的颜色&nbsp;&nbsp;&nbsp;
+                            <a href="example\css-border\css_border-color.html" target="_blank"> .e.g</a>
+                        </p>
+                    </li>
+                    <li>简写边框属性 -> border: width style(必需) color; , eg:p {border: 5px solid red;}. 可以只为一个边指定所有单个边框属性->
+                        border-left: 6px solid red; </li>
+                    <li>圆角边框border-radius向元素添加圆角边框&nbsp;&nbsp;&nbsp; <a href="example\css_border_round.html"
+                            target="_blank"> .e.g</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3>CSS 边距</h3>
+                <ul>
+                    <li><strong>外边距</strong>: margin 为元素边框之外的周围创建空间 <a href="example\css_margin_intro.html"
+                            target="_blank">.e.g</a><br>
+                        也可为每一侧指定外边距（margin-top，margin-right，margin-bottom，margin-left）
+                        所有外边距属性都可以设置以下值：
+                        <ul>
+                            <li>auto - 浏览器来计算外边距</li>
+                            <li>length - 以 px、pt、cm 等单位指定外边距</li>
+                            <li>% - 指定以包含元素宽度的百分比计的外边距</li>
+                            <li>inherit - 指定应从父元素继承外边距</li>
+                        </ul>
+                        <p style="color: red;">允许负值。</p>
+                        <p>Margin - 简写属性, 如果 margin 属性有四个值：margin: 上外边距 右外边距 下外边距 左外边距; eg. margin: 25px 50px 75px
+                            100px;
+                        </p>
+                    </li>
+                    <li><strong>外边距合并</strong>: 当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
+                        <ul>
+                            <li>当一个元素出现在另一个元素上面时，第一个元素的下外边距与第二个元素的上外边距会发生合并&nbsp;&nbsp; <a
+                                    href="example\margin_collapsing\eg_css_margin_collapsing1.html"
+                                    target="_blank">.e.g</a><br> </li>
+                            <li>一个空元素，它有外边距，但是没有边框或填充。在这种情况下，上外边距与下外边距就碰到了一起，会发生合并&nbsp;&nbsp; <a
+                                    href="example\margin_collapsing\eg_css_margin_collapsing2.html"
+                                    target="_blank">.e.g</a><br> </li>
+                        </ul>
+                    </li>
+                    <li><strong>内边距</strong>: padding 在任何定义的边界内的元素内容周围生成空间。
+                        和margin类似，可为每一侧指定内边距（padding-top，padding-right，padding-bottom，padding-left）
+                        所有内边距属性都可以设置以下值：
+                        <ul>
+                            <li>length - 以 px、pt、cm 等单位指定内边距</li>
+                            <li>% - 指定以包含元素宽度的百分比计的内边距</li>
+                            <li>inherit - 指定应从父元素继承内边距</li>
+                        </ul>
+                        <p style="color: red;">不允许负值。</p>
+                        <p>Padding - 简写属性和margin类似</p>
+                        <p>内边距和元素宽度：<br>
+                            width 属性指定元素内容区域的宽度。内容区域是元素（盒模型）的内边距、边框和外边距内的部分
+                            如果 &#60;div&#62;元素的宽度为300px。左右内边距都为25px，则&#60;div&#62; 元素的实际宽度将是 350px（300px + 左内边距 25px +
+                            右内边距
+                            25px）<br>
+                            若要将宽度保持为300px，无论填充量如何，可以使用 box-sizing 属性。这将导致元素保持其宽度。如果增加内边距，则可用的内容空间会减少。
+                            <a href="example\css_padding_width.html" target="_blank"><strong>.e.g</strong></a>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>高度和宽度</h3>
+                <p>height 和 width 属性用于设置元素的高度和宽度。
+                    height 和 width 属性不包括内边距、边框或外边距。它设置的是元素内边距、边框以及外边距内的区域的高度或宽度。
+                    <a href="example\css_height_width.html" target="_blank"><strong>.e.g</strong></a>
+                </p>
+                <ul>
+                    height 和 width 属性可设置如下值：
+                    <li>auto - 默认。浏览器计算高度和宽度。</li>
+                    <li>length - 以 px、cm 等定义高度/宽度。</li>
+                    <li>% - 以包含块的百分比定义高度/宽度。</li>
+                    <li>initial - 将高度/宽度设置为默认值。</li>
+                    <li>inherit - 从其父值继承高度/宽度。</li>
+                </ul>
+                另外，还可以设置元素的最大最小宽度高度， max-width, min-width, max-height, min-height.
+            </li>
+            <li>
+                <h3>框模型</h3>
+                <div style="float: left; width: 55%; padding-right: 5%;">
+                    <p>所有 HTML 元素都可以视为方框。CSS 框模型实质上是一个包围每个 HTML 元素的框。它包括：外边距、边框、内边距以及实际的内容，如右图所示。</p>
+                    <p>元素框的最内部分是实际的内容，直接包围内容的是内边距。内边距呈现了元素的背景。内边距的边缘是边框。边框以外是外边距，外边距默认是透明的，因此不会遮挡其后的任何元素。</p>
+                    <p><span style="color: red; font-weight: 700;">提示：</span> 背景应用于由内容和内边距、边框组成的区域。</p>
+                    <p><span style="color: red; font-weight: 700;">提示：</span> 内边距、边框和外边距可以应用于一个元素的所有边，也可以应用于单独的边。</p>
+                    <p><span style="color: red; font-weight: 700;">提示：</span> 外边距可以是负值，而且在很多情况下都要使用负值的外边距。</p>
+                    <p>
+                        元素的总宽度：<br>
+                        元素总宽度 = 宽度 + 左内边距 + 右内边距 + 左边框 + 右边框 + 左外边距 + 右外边距<br>
+                        元素的总高度：<br>
+                        元素总高度 = 高度 + 上内边距 + 下内边距 + 上边框 + 下边框 + 上外边距 + 下外边距
+                    </p>
+                </div>
+                <div style="float: right; width: 40%;"><img src="assets/css_boxmodel.png" alt=""
+                        style="max-width: 400px; max-height: 400px;"></div>
+                <div style="clear: both;"></div>
+            </li>
+            <li>
+                <h3>轮廓</h3>
+                <p>在元素周围绘制的一条线，在边框之外，以凸显元素</p>
+                <ul>CSS 拥有如下轮廓属性：
+                    <li>outline-style &nbsp;&nbsp;&nbsp;<a href="example\outline\css_outline_style.html"
+                            target="_blank">轮廓样式</a></li>
+                    <li>outline-width &nbsp;&nbsp;&nbsp;<a href="example\outline\css_outline_width.html"
+                            target="_blank">指定轮廓的宽度</a></li>
+                    <li>outline-color &nbsp;&nbsp;&nbsp;<a href="example\outline\css_outline_color.html"
+                            target="_blank">轮廓颜色</a></li>
+                    <li>outline-offset &nbsp;&nbsp;&nbsp;<a href="example\outline\css_outline_offset.html"
+                            target="_blank">轮廓偏移</a></li>
+                    <li>outline 是用于设置各个轮廓属性的简写属性outline-width, outline-style（必需）,outline-color, outline
+                        属性可指定一个、两个或三个值。值的顺序无关紧要， 与border属性类似。 </li>
+                </ul>
+                <p><span style="color: red; font-weight: 700;">注意：</span>除非设置了 outline-style
+                    属性，否则其他轮廓属性（在下一章中将详细介绍）都不会有任何作用！</p>
+                <p><span
+                        style="color: red; font-weight: 700;">注意：</span>轮廓与边框不同！不同之处在于：轮廓是在元素边框之外绘制的，并且可能与其他内容重叠。同样，轮廓也不是元素尺寸的一部分；元素的总宽度和高度不受轮廓线宽度的影响。
+                </p>
+            </li>
+            <li>
+                <h3>文本</h3>
+                <ul>
+                    <li>文本对齐: text-align 属性用于设置文本的水平对齐方式。文本可以左对齐或右对齐，或居中对齐。 <a
+                            href="example\text\css_text_align.html">.e.g</a></li>
+                </ul>
+            </li>
+        </ol>
+        <br><br><br>
+
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>
