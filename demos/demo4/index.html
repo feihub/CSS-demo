@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>demo4</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="./content/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container-fluid bg-light">
+        <ol>
+            <br>
+            <li>
+                <h3>
+                    CSS 图标
+                    <a href="app/icon/icon.html" target="_blank">
+                        E.G
+                    </a>
+                </h3>
+            </li>
+            <ul>
+                <li>
+                    向 HTML 页面添加图标的最简单方法是使用图标库. 将指定的图标类的名称添加到任何行内 HTML 元素（如 < i> 或 < span>).
+                </li>
+                <li>
+                    图标库中的所有图标都是可缩放矢量，可以使用 CSS进行自定义（大小、颜色、阴影等）。我们Demo中使用的图标库是Font Awesome.
+                </li>
+                <li>
+                    在<a href="http://www.fontawesome.com.cn/faicons/" target="_blank">
+                        官网</a>中,我们可以搜索我们想要的图标,然后获取对相应的class或者整个源码,直接粘贴进我们的代码中
+                </li>
+
+            </ul>
+            <br>
+            <li>
+                <h3>
+                    CSS 链接
+                    <a href="app/link/link.html" target="_blank"> E.G </a>
+                </h3>
+            </li>
+            <ul>
+                <li>
+                    通过 CSS，可以用不同的方式设置链接的样式.
+                </li>
+                <li>
+                    链接可以使用任何 CSS 属性（例如 color、font-family、background 等）来设置样式。
+                </li>
+                <li>
+                    此外，可以根据链接处于什么状态来设置链接的不同样式。
+
+                    四种链接状态分别是：
+                </li>
+                <ul>
+                    <li>a:link - 正常的，未访问的链接</li>
+                    <li>a:visited - 用户访问过的链接</li>
+                    <li>a:hover - 用户将鼠标悬停在链接上时</li>
+                    <li>a:active - 链接被点击时</li>
+                </ul>
+                <li>
+                    如果为多个链接状态设置样式，请遵循如下顺序规则：
+
+                </li>
+                <ul>
+                    <li>
+                        a:hover 必须 a:link 和 a:visited 之后
+                    </li>
+                    <li>
+                        a:active 必须在 a:hover 之后
+                    </li>
+                </ul>
+                <li>
+                    text-decoration 属性主要用于从链接中删除下划线
+                </li>
+                <li>
+                    background-color 属性可用于指定链接的背景色
+                </li>
+            </ul>
+            <br>
+            <li>
+                <h3>
+                    CSS 列表
+                    <a href="app/list/list.html" target="_blank"> E.G </a>
+                </h3>
+            </li>
+            <ul>
+                <li>
+                    在 HTML 中，列表主要有两种类型：
+                </li>
+                <ul>
+                    <li>
+                        无序列表（< ul>）- 列表项用的是项目符号标记
+                    </li>
+                    <li>
+                        有序列表（< ol>）- 列表项用的是数字或字母标记
+                    </li>
+                </ul>
+                <li>
+                    CSS 列表属性使您可以：
+                </li>
+                <ul>
+                    <li>为有序列表设置不同的列表项标记</li>
+                    <li>为无序列表设置不同的列表项标记</li>
+                    <li>将图像设置为列表项标记</li>
+                    <li>为列表和列表项添加背景色</li>
+                </ul>
+                <li>
+                    list-style-type 属性指定列表项标记的类型
+                </li>
+                <li>list-style-image 属性将图像指定为列表项标记</li>
+            </ul>
+            <br>
+            <li>
+                <h3>
+                    CSS 表格
+                    <a href="app/table/table.html" target="_blank"> E.G </a>
+                </h3>
+            </li>
+            <ul>
+                <li>
+                    使用 CSS 可以极大地改善 HTML 表格的外观
+                </li>  
+                <li>
+                    如需在 CSS 中设置表格边框，请使用 border 属性。
+                </li>
+                <li>
+                    在某些情况下，上表似乎很小。如果您需要一个可以覆盖整个屏幕（全宽）的表格，请为 < table> 元素添加 width: 100%：
+                </li>  
+                <li>
+                    border-collapse 属性设置是否将表格边框折叠为单一边框
+                </li>
+                <li>
+                    如果只希望表格周围有边框，则仅需为 < table> 指定 border 属性
+                </li>
+                <li>
+                    表格的宽度和高度由 width 和 height 属性定义
+                </li>
+                <li>
+                    text-align 属性设置 < th> 或 < td> 中内容的水平对齐方式（左、右或居中）。
+
+                        默认情况下，< th> 元素的内容居中对齐，而 < td> 元素的内容左对齐
+                </li>
+                <li>
+                    vertical-align 属性设置 < th> 或 < td> 中内容的垂直对齐方式（上、下或居中）。
+
+                        默认情况下，表中内容的垂直对齐是居中（< th> 和 < td> 元素都是）
+                </li>
+                <li>
+                    如需控制边框和表格内容之间的间距，请在 < td> 和 < th> 元素上使用 padding 属性
+                </li>
+                <li>
+                    向 < th> 和 < td> 添加 border-bottom 属性，以实现水平分隔线
+                </li>
+                <li>
+                    在 < tr> 元素上使用 :hover 选择器，以突出显示鼠标悬停时的表格行
+                </li>
+                <li>
+                    为了实现斑马纹表格效果，请使用 nth-child() 选择器，并为所有偶数（或奇数）表行添加 background-color
+                </li>
+                <li>
+                    如果屏幕太小而无法显示全部内容，则响应式表格会显示水平滚动条.在 < table> 元素周围添加带有 overflow-x:auto 的容器元素（例如 < div>），以实现响应式效果
+                </li>
+            </ul>
+            <br>
+        </ol>
+    </div>
+</body>
