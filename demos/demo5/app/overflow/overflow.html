@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Overflow Demo</title>
+    <style>
+        .div-line {
+            width: 45%;
+            float: left;
+        }
+
+        h5 {
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-line">
+        <h1>Overflow</h1>
+        <ol>
+            <li>
+                <h4>overflow: visible;</h4>
+                <div
+                    style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black; overflow: visible;">
+                    当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。
+                </div>
+            </li>
+            <br>
+            <br>
+            <br>
+            <li>
+                <h4>overflow: hidden;</h4>
+                <div
+                    style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black; overflow: hidden;">
+                    当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。
+                </div>
+            </li>
+            <br>
+            <li>
+                <h4>overflow: scroll;</h4>
+                <div
+                    style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black; overflow: scroll;">
+                    当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。
+                </div>
+                <br>
+                <div
+                    style="background-color: #eee;width: 300px; height: 100px;border: 1px dotted black; overflow: scroll;">
+                    当您想更好地控制布局时。
+                </div>
+            </li>
+            <br>
+            <li>
+                <h4>overflow: auto;</h4>
+                <div
+                    style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black; overflow: auto;">
+                    当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。
+                </div>
+                <br>
+                <div
+                    style="background-color: #eee;width: 300px; height: 100px;border: 1px dotted black; overflow: auto;">
+                    当您想更好地控制布局时。
+                </div>
+            </li>
+            <br>
+            <li>
+                <h4>overflow-x 与 overflow-y;</h4>
+                <div style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black;  overflow-x: hidden; 
+                    overflow-y: scroll;">
+                    overflow-x: hidden; overflow-y: scroll;当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。
+                </div>
+                <br>
+                <div
+                    style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black;  overflow-x: scroll;white-space: nowrap;overflow-y: hidden;">
+                    overflow-x: scroll; overflow-y: hidden;white-space: nowrap;当您想更好地控制布局时，可以使用 overflow 属性。overflow
+                    属性规定如果内容溢出元素框会发生什么情况。
+                </div>
+            </li>
+            <br>
+        </ol>
+
+
+    </div>
+
+    <div class="div-line">
+        Code:
+
+        <code>
+            <pre>
+                &lt;html&gt;
+
+                &lt;body&gt;
+                    &lt;div class="div-line"&gt;
+                        &lt;h1&gt;Overflow&lt;/h1&gt;
+                        &lt;ol&gt;
+                            &lt;li&gt;
+                                &lt;h4&gt;overflow: visible;&lt;/h4&gt;
+                                &lt;div
+                                    style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black; overflow: visible;"&gt;
+                                    当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                            &lt;br&gt;
+                            &lt;br&gt;
+                            &lt;br&gt;
+                            &lt;li&gt;
+                                &lt;h4&gt;overflow: hidden;&lt;/h4&gt;
+                                &lt;div
+                                    style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black; overflow: hidden;"&gt;
+                                    当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                            &lt;br&gt;
+                            &lt;li&gt;
+                                &lt;h4&gt;overflow: scroll;&lt;/h4&gt;
+                                &lt;div
+                                    style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black; overflow: scroll;"&gt;
+                                    当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。
+                                &lt;/div&gt;
+                                &lt;br&gt;
+                                &lt;div
+                                    style="background-color: #eee;width: 300px; height: 100px;border: 1px dotted black; overflow: scroll;"&gt;
+                                    当您想更好地控制布局时。
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                            &lt;br&gt;
+                            &lt;li&gt;
+                                &lt;h4&gt;overflow: auto;&lt;/h4&gt;
+                                &lt;div
+                                    style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black; overflow: auto;"&gt;
+                                    当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。
+                                &lt;/div&gt;
+                                &lt;br&gt;
+                                &lt;div
+                                    style="background-color: #eee;width: 300px; height: 100px;border: 1px dotted black; overflow: auto;"&gt;
+                                    当您想更好地控制布局时。
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                            &lt;br&gt;
+                            &lt;li&gt;
+                                &lt;h4&gt;overflow-x 与 overflow-y;&lt;/h4&gt;
+                                &lt;div style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black;  overflow-x: hidden; 
+                                    overflow-y: scroll;"&gt;
+                                    overflow-x: hidden; overflow-y: scroll;当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。
+                                &lt;/div&gt;
+                                &lt;br&gt;
+                                &lt;div
+                                    style="background-color: #eee;width: 200px; height: 50px;border: 1px dotted black;  overflow-x: scroll;white-space: nowrap;overflow-y: hidden;"&gt;
+                                    overflow-x: scroll; overflow-y: hidden;white-space: nowrap;当您想更好地控制布局时，可以使用 overflow 属性。overflow
+                                    属性规定如果内容溢出元素框会发生什么情况。
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                            &lt;br&gt;
+                        &lt;/ol&gt;
+                
+                
+                    &lt;/div&gt;
+                
+                
+                &lt;/body&gt;
+                
+                &lt;/html&gt;
+        </pre>
+        </code>
+    </div>
+
+
+</body>
+
+</html>
