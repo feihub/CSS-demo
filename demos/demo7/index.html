@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS inline-block/对齐/组合器</title>
+    <!-- 引入Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container-fluid bg-light">
+        <h3>1. CSS中的display属性</h3>
+        <p>display 属性规定是否/如何显示元素。每个 HTML 元素都有一个默认的 display 值，具体取决于它的元素类型。大多数元素的默认 display 值为 block 或 inline。</p>
+        <ul>
+            <li><a class="inline-a" href="./block.html" target="_blank">block 块级元素</a></li>
+            <p>块级元素总是从新行开始，并占据可用的全部宽度。常用的块级元素有：
+                <ul>
+                    <li>&lt;p&gt;</li>
+                    <li>&lt;div&gt;</li>
+                    <li>&lt;h1&gt-&lt;h6&gt;</li>
+                    <li>&lt;ul&gt;&lt;ol&gt;&lt;li&gt;</li>
+                    <li>&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;</li>
+                    <li>&lt;header&gt;</li>
+                    <li>&lt;footer&gt;</li>
+                    <li>&lt;section&gt;</li>
+                </ul>
+            </p>
+            <li><a href="./inline.html" target="_blank">inline 行内元素</a></li>
+            <p>行内元素不会换行，仅占用所需的宽度。常用的行内元素有：</p>
+                <ul>
+                    <li>&lt;a&gt;</li>
+                    <li>&lt;span&gt;</li>
+                    <li>&lt;img&gt;</li>
+                    <li>&lt;button&gt;</li>
+                    <li>&lt;input&gt;</li>
+                    <li>&lt;textarea&gt;</li>
+                    <li>&lt;select&gt;</li>
+                    <li>&lt;label&gt;</li>
+                </ul>
+            <li><a href="./inline-block.html" target="_blank">inline-block</a></li>
+            <p>与 display: inline 相比，主要区别在于 display: inline-block 允许在元素上设置宽度和高度。</p>
+        </ul>
+    </div>
+</body>
+</html>
