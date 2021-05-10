@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Clear Float Demo</title>
+    <style>
+        .div-line {
+            width: 45%;
+            float: left;
+        }
+
+        h5 {
+            margin: 2px;
+        }
+
+        .div1 {
+            float: left;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border: 3px solid #73AD21;
+        }
+
+        .div2 {
+            border: 1px solid red;
+        }
+
+        .div3 {
+            float: left;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border: 3px solid #73AD21;
+        }
+
+        .div4 {
+            border: 1px solid red;
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-line">
+        <h1>Clear Float</h1>
+        <ol>
+            <li>
+                <h3>不使用clear</h3>
+                <div class="div1">div1</div>
+                <div class="div2">div2 - 请注意，在 HTML 代码中 div2 在 div1 之后。不过，由于 div1 向左浮动，div2 中的文本会流动到 div1 周围。</div>
+                <br><br>
+            </li>
+            <br>
+            <li>
+                <h3>使用clear</h3>
+                <div class="div3">div3</div>
+                <div class="div4">div4 - 在此处，clear: left; 把 div4 移动到浮动的 div3 下方。值 "left" 会清除向左浮动的元素。您也可以清除 "right" 和
+                    "both"。</div>
+            </li>
+        </ol>
+
+        <h1>Clearfix</h1>
+        <ol>
+            <li>
+                <p>如果一个元素比包含它的元素高，并且它是浮动的，它将“溢出”到其容器之外：
+
+                    然后我们可以向包含元素添加 overflow: auto;，来解决此问题</p>
+
+            </li>
+            <li>
+                <h3>不使用clearfix</h3>
+                <p>在本例中，图像高于包含它的元素，然而它被浮动了，所以它会在容器之外溢出：</p>
+
+                <div style="border: 3px solid #4CAF50;padding: 5px;">
+                    <img class="img1" src="../../content/images/demo.jpg" alt="demo" width="180" height="167"
+                        style="float: right;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
+                    interdum...
+                </div>
+            </li>
+            <li>
+                <p style="clear:right">请为包含元素添加一个带有 overflow: auto; 的 clearfix 类，以解决此问题：</p>
+
+                <div class="clearfix" style="border: 3px solid #4CAF50;padding: 5px;overflow: auto;">
+                    <img class="img2" src="../../content/images/demo.jpg" alt="demo" width="180" height="167"
+                        style="float: right;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
+                    interdum...
+                </div>
+            </li>
+        </ol>
+
+    </div>
+
+    <div class="div-line">
+        Code:
+
+        <code>
+            <pre>
+                &lt;html&gt;
+
+                &lt;head&gt;
+                    &lt;style&gt;
+                
+                        .div1 {
+                            float: left;
+                            width: 100px;
+                            height: 50px;
+                            margin: 10px;
+                            border: 3px solid #73AD21;
+                        }
+                
+                        .div2 {
+                            border: 1px solid red;
+                        }
+                
+                        .div3 {
+                            float: left;
+                            width: 100px;
+                            height: 50px;
+                            margin: 10px;
+                            border: 3px solid #73AD21;
+                        }
+                
+                        .div4 {
+                            border: 1px solid red;
+                            clear: left;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                
+                &lt;body&gt;
+                    &lt;div class="div-line"&gt;
+                        &lt;h1&gt;Clear Float&lt;/h1&gt;
+                        &lt;ol&gt;
+                            &lt;li&gt;
+                                &lt;h3&gt;不使用clear&lt;/h3&gt;
+                                &lt;div class="div1"&gt;div1&lt;/div&gt;
+                                &lt;div class="div2"&gt;div2 - 请注意，在 HTML 代码中 div2 在 div1 之后。不过，由于 div1 向左浮动，div2 中的文本会流动到 div1 周围。&lt;/div&gt;
+                                &lt;br&gt;&lt;br&gt;
+                            &lt;/li&gt;
+                            &lt;br&gt;
+                            &lt;li&gt;
+                                &lt;h3&gt;使用clear&lt;/h3&gt;
+                                &lt;div class="div3"&gt;div3&lt;/div&gt;
+                                &lt;div class="div4"&gt;div4 - 在此处，clear: left; 把 div4 移动到浮动的 div3 下方。值 "left" 会清除向左浮动的元素。您也可以清除 "right" 和
+                                    "both"。&lt;/div&gt;
+                            &lt;/li&gt;
+                        &lt;/ol&gt;
+                
+                        &lt;h1&gt;Clearfix&lt;/h1&gt;
+                        &lt;ol&gt;
+                            &lt;li&gt;
+                                &lt;p&gt;如果一个元素比包含它的元素高，并且它是浮动的，它将“溢出”到其容器之外：
+                
+                                    然后我们可以向包含元素添加 overflow: auto;，来解决此问题&lt;/p&gt;
+                
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;h3&gt;不使用clearfix&lt;/h3&gt;
+                                &lt;p&gt;在本例中，图像高于包含它的元素，然而它被浮动了，所以它会在容器之外溢出：&lt;/p&gt;
+                
+                                &lt;div style="border: 3px solid #4CAF50;padding: 5px;"&gt;
+                                    &lt;img class="img1" src="../../content/images/demo.jpg" alt="demo" width="180" height="167"
+                                        style="float: right;"&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
+                                    interdum...
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;p style="clear:right"&gt;请为包含元素添加一个带有 overflow: auto; 的 clearfix 类，以解决此问题：&lt;/p&gt;
+                
+                                &lt;div class="clearfix" style="border: 3px solid #4CAF50;padding: 5px;overflow: auto;"&gt;
+                                    &lt;img class="img2" src="../../content/images/demo.jpg" alt="demo" width="180" height="167"
+                                        style="float: right;"&gt;
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
+                                    interdum...
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                        &lt;/ol&gt;
+                
+                    &lt;/div&gt;
+                
+                
+                &lt;/body&gt;
+                
+                &lt;/html&gt;
+        </pre>
+        </code>
+    </div>
+
+
+</body>
+
+</html>
