@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直对齐块元素</title>
+    <style>
+        .div_line {
+            width: 45%;
+            float: left;
+            background-color: blanchedalmond;
+        }
+        .block_1 {
+            padding: 60px 0;
+            border: 3px solid black;
+        }
+        .block_2 {
+            /* 同时将 justify-content 和 align-items 属性设置为center，将使其在中心（在两个轴上）对齐。 */
+            display: flex;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid black;
+        }
+        .block_3 {
+            height: 100px;
+            position: relative;
+            border: 3px solid black;
+        }
+        .content {
+            margin: 0px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); 
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line">
+        <h1>1. 使用 padding 属性将 div 元素垂直居中</h1>
+        <div class="block_1">
+            <p>元素垂直居中</p>
+        </div>
+    
+        <h1>2. 使用flex将 div 元素垂直和水平居中</h1>
+        <div class="block_2">
+            <p>垂直和水平居中</p>
+        </div>
+    
+        <h1>3. 使用position和transform将 div 元素垂直和水平居中</h1>
+        <div class="block_3">
+            <p class="content">垂直和水平居中</p>
+        </div>
+    </div>
+
+    <div class="div_line" style="background-color: #fff; padding-left: 15px;">
+        Code:
+        <code>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;垂直对齐块元素&lt;/title&gt;
+    &lt;style&gt;
+        .div_line {
+            width: 45%;
+            float: left;
+            background-color: blanchedalmond;
+        }
+        .block_1 {
+            padding: 60px 0;
+            border: 3px solid black;
+        }
+        .block_2 {
+            /* 同时将 justify-content 和 align-items 属性设置为center，将使其在中心（在两个轴上）对齐。 */
+            display: flex;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid black;
+        }
+        .block_3 {
+            height: 100px;
+            position: relative;
+            border: 3px solid black;
+        }
+        .content {
+            margin: 0px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); 
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;div_line&quot;&gt;
+        &lt;h1&gt;1. 使用 padding 属性将 div 元素垂直居中&lt;/h1&gt;
+        &lt;div class=&quot;block_1&quot;&gt;
+            &lt;p&gt;元素垂直居中&lt;/p&gt;
+        &lt;/div&gt;
+    
+        &lt;h1&gt;2. 使用flex将 div 元素垂直和水平居中&lt;/h1&gt;
+        &lt;div class=&quot;block_2&quot;&gt;
+            &lt;p&gt;垂直和水平居中&lt;/p&gt;
+        &lt;/div&gt;
+    
+        &lt;h1&gt;3. 使用position和transform将 div 元素垂直和水平居中&lt;/h1&gt;
+        &lt;div class=&quot;block_3&quot;&gt;
+            &lt;p class=&quot;content&quot;&gt;垂直和水平居中&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;div_line&quot; style=&quot;background-color: #fff;&quot;&gt;
+        Code:
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

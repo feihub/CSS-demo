@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子选择器</title>
+    <style>
+        /* 子选择器 > */
+        div > p {
+            background-color: olivedrab;
+        }
+    </style>
+</head>
+<body>
+    <h1>子选择器</h1>
+    <p>子选择器 (>) 选择属于指定元素子元素的所有元素。</p>
+    <div>
+        <p>div 中的内容1</p>
+        <p>div 中的内容2</p>
+        <section><p>div 中的内容3</p></section> <!-- 非子但属后代 所以不会被选择 -->
+    </div>
+    <p>内容4不在 div 中</p>
+
+    <div class="div_line" style="font-size: 15px;">
+    Code:
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        /* 子选择器 > */
+        div &gt; p {
+            background-color: olivedrab;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;子选择器&lt;/h1&gt;
+    &lt;p&gt;子选择器 (&gt;) 选择属于指定元素子元素的所有元素。&lt;/p&gt;
+    &lt;div&gt;
+        &lt;p&gt;div 中的内容1&lt;/p&gt;
+        &lt;p&gt;div 中的内容2&lt;/p&gt;
+        &lt;section&gt;&lt;p&gt;div 中的内容3&lt;/p&gt;&lt;/section&gt; &lt;!-- 非子但属后代 所以不会被选择--&gt;
+    &lt;/div&gt;
+    &lt;p&gt;内容4不在 div 中&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    </div>
+</body>
+</html>

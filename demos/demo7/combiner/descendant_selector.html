@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+    <style>
+        /* p为div的后代元素 */
+        div p{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>后代选择器</h1>
+    <p>后代选择器匹配作为指定元素后代的所有元素。</p>
+    <div>
+        <p>div中的内容1</p>
+        <p><span>div中的内容2</span></p>
+    </div>
+    <p>不在div中的内容4</p>
+    <div class="div-line" style="font-size: 15px;">
+        Code:
+        <code>
+            <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+        &lt;style&gt;
+            /* p为div的后代元素 */
+            div p{
+                background-color: bisque;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;后代选择器&lt;/h1&gt;
+        &lt;p&gt;后代选择器匹配作为指定元素后代的所有元素。&lt;/p&gt;
+        &lt;div&gt;
+            &lt;p&gt;div中的内容1&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;div中的内容2&lt;/span&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;不在div中的内容4&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

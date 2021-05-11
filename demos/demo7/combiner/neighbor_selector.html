@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相邻兄弟选择器</title>
+    <style>
+        /* 仅选择紧随div之后的p元素 */
+        div + p {
+            background-color: peru;
+        }
+    </style>
+</head>
+<body>
+    <h1>相邻兄弟选择器(+)</h1>
+    <p>相邻兄弟选择器匹配所有作为指定元素的相邻同级的元素。兄弟（同级）元素必须具有相同的父元素，“相邻”的意思是<b>“紧随其后”</b>。</p>
+     <p>下面的例子仅选择紧随div元素之后的p元素：</p>
+    <div>
+        <p>div中的p标签1</p>
+        <p>div中的p标签2</p>
+    </div>
+    <p>p标签3，不在div中</p>
+
+    <!-- p标签4的背景颜色不会改变，因为它没有紧随div之后 -->
+    <p>p标签4，不在div中</p> 
+
+    <div>
+        Code：
+        <code>
+            <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;相邻兄弟选择器&lt;/title&gt;
+        &lt;style&gt;
+            /* 仅选择紧随div之后的p元素w */
+            div + p {
+                background-color: peru;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;相邻兄弟选择器(+)&lt;/h1&gt;
+        &lt;p&gt;相邻兄弟选择器匹配所有作为指定元素的相邻同级的元素。兄弟（同级）元素必须具有相同的父元素，“相邻”的意思是&lt;b&gt;“紧随其后”&lt;/b&gt;。
+            下面的例子仅选择紧随div元素之后的所有p元素：&lt;/p&gt;
+        &lt;div&gt;
+            &lt;p&gt;div中的p标签1&lt;/p&gt;
+            &lt;p&gt;div中的p标签2&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;p标签3，不在div中&lt;/p&gt;
+
+        &lt;!-- p标签4的背景颜色不会改变，因为它没有紧随div之后 --&gt;
+        &lt;p&gt;p标签4，不在div中&lt;/p&gt; 
+    &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

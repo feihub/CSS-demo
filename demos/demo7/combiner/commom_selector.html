@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通用兄弟选择器</title>
+    <style>
+        /* 选择与div同级的所有p元素 */
+        div ~ p {
+            background-color: peru;
+        }
+    </style>
+</head>
+<body>
+    <h1>通用兄弟选择器(~)</h1>
+    <p>通用兄弟选择器匹配属于指定元素的同级元素的所有元素。</p>
+    <p>下面的例子选择属于div元素的同级元素的所有p元素：</p>
+    <div>
+        <p>div中的p标签1</p>
+        <p>div中的p标签2</p>
+    </div>
+    <p>p标签3，不在div中</p>
+    <p>p标签4，不在div中</p> 
+    <div style="font-size: 15px;">
+        Code:
+        <code>
+            <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;通用兄弟选择器&lt;/title&gt;
+        &lt;style&gt;
+            /* 选择与div同级的所有p元素 */
+            div ~ p {
+                background-color: peru;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;通用兄弟选择器(~)&lt;/h1&gt;
+        &lt;p&gt;通用兄弟选择器匹配属于指定元素的同级元素的所有元素。&lt;/p&gt;
+        &lt;p&gt;下面的例子选择属于div元素的同级元素的所有p元素：&lt;/p&gt;
+        &lt;div&gt;
+            &lt;p&gt;div中的p标签1&lt;/p&gt;
+            &lt;p&gt;div中的p标签2&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;p标签3，不在div中&lt;/p&gt;
+        &lt;p&gt;p标签4，不在div中&lt;/p&gt; 
+    &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

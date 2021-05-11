@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居中对齐块元素</title>
+    <style>
+        .center {
+            margin: auto;
+            /* 如果未设置宽度或者宽度为100%，则居中对齐无效 */
+            width: 50%;
+            border: 5px solid black;
+            padding: 10px;
+        }
+        
+        img {
+            /* img本身是行内元素 如果这里未设置为块元素，则居中对齐无效 */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .right {
+            position: absolute;
+            right: 0px;
+            width: 300px;
+            border: 3px solid #73AD21;
+        }  
+        .right2 {
+            float: right;
+            width: 300px;
+            border: 3px solid #73AD21;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>1. 水平居中对齐块元素:</h1>
+        <p>要使块元素（例如div）水平居中，可以使用 margin: auto。设置元素的宽度防止其延伸到容器的边缘。然后，元素将占用指定的宽度，剩余空间将在两个外边距之间平均分配：</p>
+        <div class="center">
+            <p>块元素居中</p>
+        </div> 
+    
+        <h1>2. 水平居中图像:</h1>
+        <p>要使图像居中，需将左右外边距设置为auto，并使其成为一个块元素。</p>
+        <img src="../img/ncs-icon.jfif" style="width:20%"/>
+
+        <h1>3. 水平左右对齐:</h1>
+        <p>1. 使用position: absolute;</p>
+        <div class="right">
+            <p>块元素向右对齐</p>
+        </div>
+
+        <br>
+        <br>
+        <p>2. 使用float</p>
+        <div class="right2">
+            <p>块元素向右对齐</p>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        Code:
+        <code>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;居中对齐元素&lt;/title&gt;
+    &lt;style&gt;
+        .center {
+            margin: auto;
+            /* 如果未设置宽度或者宽度为100%，则居中对齐无效 */
+            width: 50%;
+            border: 5px solid black;
+            padding: 10px;
+        }
+        
+        img {
+            /* img本身是行内元素 如果这里未设置为块元素，则居中对齐无效 */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .right {
+            position: absolute;
+            right: 0px;
+            width: 300px;
+            border: 3px solid #73AD21;
+        }  
+        .right2 {
+            float: right;
+            width: 300px;
+            border: 3px solid #73AD21;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;h1&gt;1. 水平居中对齐块元素:&lt;/h1&gt;
+        &lt;p&gt;要使块元素（例如div）水平居中，可以使用 margin: auto。设置元素的宽度防止其延伸到容器的边缘。然后，元素将占用指定的宽度，剩余空间将在两个外边距之间平均分配：&lt;/p&gt;
+        &lt;div class=&quot;center&quot;&gt;
+            &lt;p&gt;块元素居中&lt;/p&gt;
+        &lt;/div&gt; 
+    
+        &lt;h1&gt;2. 水平居中图像:&lt;/h1&gt;
+        &lt;p&gt;要使图像居中，需将左右外边距设置为auto，并使其成为一个块元素。&lt;/p&gt;
+        &lt;img src=&quot;../img/ncs-icon.jfif&quot; style=&quot;width:20%&quot; /&gt;
+
+        &lt;h1&gt;3. 水平左右对齐:&lt;/h1&gt;
+        &lt;p&gt;1. 使用position: absolute;&lt;/p&gt;
+        &lt;div class=&quot;right&quot;&gt;
+            &lt;p&gt;块元素向右对齐&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;p&gt;2. 使用float&lt;/p&gt;
+        &lt;div class=&quot;right2&quot;&gt;
+            &lt;p&gt;块元素向右对齐&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>
