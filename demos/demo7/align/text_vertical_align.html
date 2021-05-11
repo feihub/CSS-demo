@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS文本对齐</title>
+    <style>
+        .div-line {
+            width: 45%;
+            float: left;
+        }
+        .align {
+            background-color: burlywood;
+        }
+        img {
+            border: 1px solid black;
+        }
+        img.top {
+            vertical-align: top;
+        }
+        .middle {
+            vertical-align: middle;
+        }
+        .bottom {
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body> 
+    <div>
+        <div class="div-line">
+            <h1>垂直对齐：</h1>
+            <p>一幅 <img src="../img/ncs-icon.jfif" alt="ncs-icon" width="180" height="167"> 默认对齐方式的图像。</p><br>
+            <p>一幅 <img class="top" src="../img/ncs-icon.jfif" alt="ncs-icon" width="180" height="167"> 上对齐的图像。</p><br>
+            <p>一幅 <img class="middle" src="../img/ncs-icon.jfif" alt="ncs-icon" width="180" height="167"> 居中对齐的图像。</p><br>
+            <p>一幅 <img class="bottom" src="../img/ncs-icon.jfif" alt="ncs-icon" width="180" height="167"> 下对齐的图像。</p><br>
+        </div>
+        <div class="div-line" style="font-size: 14px;">
+            Code:
+            <code>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;CSS文本对齐&lt;/title&gt;
+    &lt;style&gt;
+        .div-line {
+            width: 45%;
+            float: left;
+        }
+        .align {
+            background-color: burlywood;
+        }
+        img {
+            border: 1px solid black;
+        }
+        img.top {
+            vertical-align: top;
+        }
+        .middle {
+            vertical-align: middle;
+        }
+        .bottom {
+            vertical-align: bottom;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt; 
+    &lt;div&gt;
+        &lt;div class=&quot;div-line&quot;&gt;
+            &lt;h1&gt;垂直对齐：&lt;/h1&gt;
+            &lt;p&gt;一幅 &lt;img src=&quot;../img/ncs-icon.jfif&quot; alt=&quot;ncs-icon&quot; width=&quot;180&quot; height=&quot;167&quot;&gt; 默认对齐方式的图像。&lt;/p&gt;&lt;br&gt;
+            &lt;p&gt;一幅 &lt;img class=&quot;top&quot; src=&quot;../img/ncs-icon.jfif&quot; alt=&quot;ncs-icon&quot; width=&quot;180&quot; height=&quot;167&quot;&gt; 上对齐的图像。&lt;/p&gt;&lt;br&gt;
+            &lt;p&gt;一幅 &lt;img class=&quot;middle&quot; src=&quot;../img/ncs-icon.jfif&quot; alt=&quot;ncs-icon&quot; width=&quot;180&quot; height=&quot;167&quot;&gt; 居中对齐的图像。&lt;/p&gt;&lt;br&gt;
+            &lt;p&gt;一幅 &lt;img class=&quot;bottom&quot; src=&quot;../img/ncs-icon.jfif&quot; alt=&quot;ncs-icon&quot; width=&quot;180&quot; height=&quot;167&quot;&gt; 下对齐的图像。&lt;/p&gt;&lt;br&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+            </code>
+        </div>
+    </div>
+</body>
+</html>

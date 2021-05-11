@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS文本对齐</title>
+    <style>
+        .div-line {
+            width: 45%;
+            float: left;
+        }
+        .justify {
+            width: 370px;
+            height: 300px;
+            /* 拉伸线条，使每行的宽度都相等 */
+            text-align: justify;
+            border: 1px splid black;
+            background-color: burlywood;
+        }
+        .align {
+            background-color: burlywood;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: left;
+        }
+        h3 {
+            text-align: right;
+        }
+        .direction {
+            background-color: burlywood;
+        }
+        .dir{
+            /* 设置文本方向为从右往左 */
+            direction: rtl;
+            /* 文字翻转 */
+            unicode-bidi: bidi-override;
+        }
+    </style>
+</head>
+<body> 
+    <div>
+        <div class="div-line">
+            <p>本例展示了居中对齐以及左右对齐的文本（如果文本方向是从左到右，则默认为左对齐；如果文本方向是从右到左，则默认是右对齐）：</p>
+            <div class="align">
+                <h1 class="center">文本居中对齐</h3>
+                <h2>文本向左对齐</h2>
+                <h3>文本向右对齐</h3>
+            </div>
+            <div class="justify">
+                <p>当text-align属性设置"justify"后，将拉伸每一行，使每行具有相等的宽度（比如报纸和杂志）。</p>
+                <h4>text-align: justify实例:</h1>
+                <p>CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。</p>
+            </div>
+            <div class="direction">
+                <p>direction 和 unicode-bidi 属性可用于更改元素的文本方向： </p>   
+                <p>这是默认文本方向</p>
+                <p class="dir">这是从右向左文本方向</p>
+            </div>
+        </div>   
+        <div class="div-line" style="margin-left: 20px;">
+            Code:
+            <code>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;CSS文本对齐&lt;/title&gt;
+    &lt;style&gt;
+        .justify {
+            width: 370px;
+            height: 300px;
+            /* 拉伸线条，使每行的宽度都相等 */
+            text-align: justify;
+            border: 1px splid black;
+            background-color: burlywood;
+        }
+        .align {
+            background-color: burlywood;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: left;
+        }
+        h3 {
+            text-align: right;
+        }
+        .direction {
+            background-color: burlywood;
+        }
+        .dir{
+            /* 设置文本方向为从右往左 */
+            direction: rtl;
+            /* 文字翻转 */
+            unicode-bidi: bidi-override;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt; 
+    &lt;div&gt;
+        &lt;div class=&quot;content&quot; style=&quot;width: 50%;&quot;&gt;
+            &lt;p&gt;本例展示了居中对齐以及左右对齐的文本（如果文本方向是从左到右，则默认为左对齐；如果文本方向是从右到左，则默认是右对齐）：&lt;/p&gt;
+            &lt;div class=&quot;align&quot;&gt;
+                &lt;h1 class=&quot;center&quot;&gt;文本居中对齐&lt;/h3&gt;
+                &lt;h2&gt;文本向左对齐&lt;/h2&gt;
+                &lt;h3&gt;文本向右对齐&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;justify&quot;&gt;
+                &lt;p&gt;当text-align属性设置&quot;justify&quot;后，将拉伸每一行，使每行具有相等的宽度（比如报纸和杂志）。&lt;/p&gt;
+                &lt;h4&gt;text-align: justify实例:&lt;/h1&gt;
+                &lt;p&gt;CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;direction&quot;&gt;
+                &lt;p&gt;direction 和 unicode-bidi 属性可用于更改元素的文本方向： &lt;/p&gt;   
+                &lt;p&gt;这是默认文本方向&lt;/p&gt;
+                &lt;p class=&quot;dir&quot;&gt;这是从右向左文本方向&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+            </code>
+        </div>
+    </div>
+
+</body>
+</html>
+
