@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航栏</title>
+    <style>
+        ul {
+            /*  清除项目符号, 导航条不需要列表项标记 */
+            list-style-type: none;
+            /*  清除浏览器的默认设置 */
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="default_nav">
+        <h3>导航栏基本上就是链接列表，因此我们通常使用ul和li元素来创建导航栏</h3>
+        <p>以下是一个最简单的导航栏例子:</p>
+        <div>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">HTML</a></li>
+                <li><a href="">CSS</a></li>
+                <li><a href="">Javascript</a></li>
+                <li><a href="">Vue</a></li>
+                <li><a href="">React</a></li>
+                <li><a href="">Angular</a></li>
+            </ul>
+        </div>
+        <p>在实际开发中, 根据系统UI设计,导航栏一般有<a href=""><b>垂直导航栏</b></a>和<a href=""><b>水平导航栏</b></a>两种,且将单调的HTML菜单转换为美观的导航栏</p>
+        <br>
+        <br>
+        <div class="div_line">
+            Code:
+            <code>
+                <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;导航栏&lt;/title&gt;
+        &lt;style&gt;
+            ul {
+                /*  清除项目符号, 导航条不需要列表项标记 */
+                list-style-type: none;
+                /*  清除浏览器的默认设置 */
+                margin: 0;
+                padding: 0;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;default_nav&quot;&gt;
+            &lt;h3&gt;导航栏基本上就是链接列表，因此我们通常使用ul和li元素来创建导航栏&lt;/h3&gt;
+            &lt;p&gt;以下是一个最简单的导航栏例子:&lt;/p&gt;
+            &lt;div class=&quot;div_line&quot;&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;HOME&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Javascript&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Vue&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;React&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Angular&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+                </pre>
+            </code>
+        </div>
+    </div>
+</body>
+</html>

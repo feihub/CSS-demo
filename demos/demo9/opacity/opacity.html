@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS不透明度/透明度</title>
     <style>
+        .div_line {
+            width: 50%;
+            float: left;
+        }
+        /* 1. 使用opacity方法设置透明度 */
         .img_1 {
             opacity: 0.1;
         }
@@ -14,20 +18,113 @@
         .img_3 {
             opacity: 1.0;
         }
+        /* 2. opacity和:hover结合的方法实现鼠标悬停时更改透明度的效果 */
         .opacity_hover:hover {
             opacity: 0.3;
+        }
+        /* 3. 使用RGBA方式设置透明度 */
+        .box_1 {
+            background-color: rgba(230, 227, 90, 0.4);
+        }
+        .box_2 {
+            background-color: rgba(230, 227, 90, 0.6);
+        }
+        .box_3 {
+            background-color: rgba(230, 227, 90, 0.8);
+        }
+        .box_4 {
+            background-color: rgba(230, 227, 90, 1.0);
         }
     </style>
 </head>
 <body>
-    <h3>1. opacity属性的取值范围为0.0 - 1.0，数值越低，透明度越高。</h3>
-    <img class="img_1" src="../img/ncs-img.png" alt="">
-    <img class="img_2" src="../img/ncs-img.png" alt="">
-    <img class="img_3" src="../img/ncs-img.png" alt="">
+    <div class="div_line">
+        <h3>1. opacity属性的取值范围为0.0 - 1.0，数值越低，透明度越高。</h3>
+        <img class="img_1" src="../img/ncs-img.png" alt="">
+        <img class="img_2" src="../img/ncs-img.png" alt="">
+        <img class="img_3" src="../img/ncs-img.png" alt="">
+    
+        <h3>2. opacity属性可与伪类：hover结合，实现鼠标悬停在图片上时更改透明度的效果</h3>
+        <img  class="opacity_hover" src="../img/ncs-img.png" alt="">
+        <img  class="opacity_hover" src="../img/ncs-img.png" alt="">
+        <img  class="opacity_hover" src="../img/ncs-img.png" alt="">
+    
+        <h3>3. 使用RGBA设置透明度</h3>
+        <p>RGBA仅设置背景色，不会更改文本的透明度。</p>
+        <p>RGBA 颜色值指定为：rgba(red, green, blue, alpha)。 alpha的取值范围为0.0 - 1.0</p>
+        <div class="box_1"><p>20% opacity</p></div>
+        <div class="box_2"><p>40% opacity</p></div>
+        <div class="box_3"><p>60% opacity</p></div>
+        <div class="box_4"><p>80% opacity</p></div>
+    </div>
 
-    <h3>2. opacity属性可与伪类：hover结合，实现鼠标悬停在图片上时更改透明度的效果</h3>
-    <img  class="opacity_hover" src="../img/ncs-img.png" alt="">
-    <img  class="opacity_hover" src="../img/ncs-img.png" alt="">
-    <img  class="opacity_hover" src="../img/ncs-img.png" alt="">
+    <div class="div_line">
+        Code:
+        <code>
+            <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot;&gt;
+                    &lt;title&gt;CSS不透明度/透明度&lt;/title&gt;
+                    &lt;style&gt;
+                        .div_line {
+                            width: 50%;
+                            float: left;
+                        }
+                        /* 1. 使用opacity方法设置透明度 */
+                        .img_1 {
+                            opacity: 0.1;
+                        }
+                        .img_2 {
+                            opacity: 0.5;
+                        }
+                        .img_3 {
+                            opacity: 1.0;
+                        }
+                        /* 2. opacity和:hover结合的方法实现鼠标悬停时更改透明度的效果 */
+                        .opacity_hover:hover {
+                            opacity: 0.3;
+                        }
+                        /* 3. 使用RGBA方式设置透明度 */
+                        .box_1 {
+                            background-color: rgba(230, 227, 90, 0.4);
+                        }
+                        .box_2 {
+                            background-color: rgba(230, 227, 90, 0.6);
+                        }
+                        .box_3 {
+                            background-color: rgba(230, 227, 90, 0.8);
+                        }
+                        .box_4 {
+                            background-color: rgba(230, 227, 90, 1.0);
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div class=&quot;div_line&quot;&gt;
+                        &lt;h3&gt;1. opacity属性的取值范围为0.0 - 1.0，数值越低，透明度越高。&lt;/h3&gt;
+                        &lt;img class=&quot;img_1&quot; src=&quot;../img/ncs-img.png&quot; alt=&quot;&quot;&gt;
+                        &lt;img class=&quot;img_2&quot; src=&quot;../img/ncs-img.png&quot; alt=&quot;&quot;&gt;
+                        &lt;img class=&quot;img_3&quot; src=&quot;../img/ncs-img.png&quot; alt=&quot;&quot;&gt;
+                    
+                        &lt;h3&gt;2. opacity属性可与伪类：hover结合，实现鼠标悬停在图片上时更改透明度的效果&lt;/h3&gt;
+                        &lt;img  class=&quot;opacity_hover&quot; src=&quot;../img/ncs-img.png&quot; alt=&quot;&quot;&gt;
+                        &lt;img  class=&quot;opacity_hover&quot; src=&quot;../img/ncs-img.png&quot; alt=&quot;&quot;&gt;
+                        &lt;img  class=&quot;opacity_hover&quot; src=&quot;../img/ncs-img.png&quot; alt=&quot;&quot;&gt;
+                    
+                        &lt;h3&gt;3. 使用RGBA设置透明度&lt;/h3&gt;
+                        &lt;p&gt;RGBA仅设置背景色，不会更改文本的透明度。&lt;/p&gt;
+                        &lt;p&gt;RGBA 颜色值指定为：rgba(red, green, blue, alpha)。 alpha的取值范围为0.0 - 1.0&lt;/p&gt;
+                        &lt;div class=&quot;box_1&quot;&gt;&lt;p&gt;20% opacity&lt;/p&gt;&lt;/div&gt;
+                        &lt;div class=&quot;box_2&quot;&gt;&lt;p&gt;40% opacity&lt;/p&gt;&lt;/div&gt;
+                        &lt;div class=&quot;box_3&quot;&gt;&lt;p&gt;60% opacity&lt;/p&gt;&lt;/div&gt;
+                        &lt;div class=&quot;box_4&quot;&gt;&lt;p&gt;80% opacity&lt;/p&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
 </body>
 </html>
