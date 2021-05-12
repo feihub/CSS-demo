@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS不透明度/透明度</title>
+    <style>
+        .img_1 {
+            opacity: 0.1;
+        }
+        .img_2 {
+            opacity: 0.5;
+        }
+        .img_3 {
+            opacity: 1.0;
+        }
+        .opacity_hover:hover {
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <h3>1. opacity属性的取值范围为0.0 - 1.0，数值越低，透明度越高。</h3>
+    <img class="img_1" src="../img/ncs-img.png" alt="">
+    <img class="img_2" src="../img/ncs-img.png" alt="">
+    <img class="img_3" src="../img/ncs-img.png" alt="">
+
+    <h3>2. opacity属性可与伪类：hover结合，实现鼠标悬停在图片上时更改透明度的效果</h3>
+    <img  class="opacity_hover" src="../img/ncs-img.png" alt="">
+    <img  class="opacity_hover" src="../img/ncs-img.png" alt="">
+    <img  class="opacity_hover" src="../img/ncs-img.png" alt="">
+</body>
+</html>
