@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类:first-child</title>
+    <style>
+        p:first-child {
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <p>这个段落是其父元素<b>body</b>的首个子元素。</p>
+    <p>这个段落不是其父元素的首个子元素。</p>
+
+    <div>
+        <p>这个段落是其父元素<b>div</b>的首个子元素。</p>
+        <p>这个段落不是其父元素的首个子元素。</p>
+    </div>
+    <p>Note：:first-child选择属于其父元素的首个子元素的每个p元素，并为其设置样式</p>
+    <br>
+    <br>
+    Code:
+    <code style="font-size: 16px;">
+        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;伪类:first-child&lt;/title&gt;
+        &lt;style&gt;
+            p:first-child {
+                background-color: cyan;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;这个段落是其父元素&lt;b&gt;body&lt;/b&gt;的首个子元素。&lt;/p&gt;
+        &lt;p&gt;这个段落不是其父元素的首个子元素。&lt;/p&gt;
+
+        &lt;div&gt;
+            &lt;p&gt;这个段落是其父元素&lt;b&gt;div&lt;/b&gt;的首个子元素。&lt;/p&gt;
+            &lt;p&gt;这个段落不是其父元素的首个子元素。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;Note：:first-child选择属于其父元素的首个子元素的每个p元素，并为其设置样式&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
+    </code>
+</body>
+</html>

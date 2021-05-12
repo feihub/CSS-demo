@@ -16,82 +16,101 @@
 </head>
 <body>
     <div class="div_line">
-        <h1>1. 伪类</h1>
-        <table class="table table-bordered">
-            <h4>伪类用于定义元素的特殊状态，常用的伪类有：</h4>
-            <thead>
-                <tr style="background-color: #b5b5c2;">
-                    <th>选择器</th>
-                    <th>例子</th>
-                    <th>描述</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>:active</td>
-                    <td><a href="./pseudo_class/active.html">a:active</a></td>
-                    <td>向被激活的元素添加样式</td>
-                </tr>
-                <tr>
-                    <td>:focus</td>
-                    <td><a href="./pseudo_class/focus.html">input:focus</a></td>
-                    <td>选择获得焦点的input元素。</td>
-                </tr>
-                <tr>
-                    <td>:hover</td>
-                    <td><a href="./pseudo_class/hover.html">a:hover</a></td>
-                    <td>当鼠标悬停在a元素上方时，向元素添加样式</td>
-                </tr>
-                <tr>
-                    <td>:link</td>
-                    <td><a href="./pseudo_class/link.html">a:link</a></td>
-                    <td>向未访问的链接添加样式</td>
-                </tr>
-                <tr>
-                    <td>:visited</td>
-                    <td><a href="./pseudo_class/visited.html">a:visited</a></td>
-                    <td>向已访问的链接添加样式</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <h1>2. 伪元素</h1>
-        <table class="table table-bordered">
-            <h4>伪元素用于向某些选择器设置特殊效果，伪元素有以下几种：</h4>
-            <thead>
-                <tr style="background-color: #b5b5c2;">
-                    <th>选择器</th>
-                    <th>例子</th>
-                    <th>描述</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>::first-letter</td>
-                    <td>p::first-letter</td>
-                    <td>选择每个p元素的首字母</td>
-                </tr>
-                <tr>
-                    <td>::first-line</td>
-                    <td>p::first-line</td>
-                    <td>选择每个p元素的首行</td>
-                </tr>
-                <tr>
-                    <td>::after</td>
-                    <td>p::after</td>
-                    <td>在每个P元素之后添加内容</td>
-                </tr>
-                <tr>
-                    <td>::before</td>
-                    <td>p:before</td>
-                    <td>在每个p元素之前添加内容</td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    <div class="div_line">
+        <div class="pseudo_class">
+            <h1>1. 伪类</h1>
+            <ul style="font-size: 21px;">
+                <li>定义：</li>
+                    <p>伪类用于定义元素的特殊状态</p>
+                <li>语法：</li>
+                        <pre>selector:pseudo-class {
+        property: value;
+    }
+                        </pre>
+            </ul>
+            <table class="table table-bordered">
+                <h4>常用的伪类有：</h4>
+                <thead>
+                    <tr style="background-color: #b5b5c2;">
+                        <th>选择器</th>
+                        <th>例子</th>
+                        <th>描述</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>:active</td>
+                        <td><a href="./pseudo_class/active.html" target="_blank">a:active</a></td>
+                        <td>向被激活的元素添加样式</td>
+                    </tr>
+                    <tr>
+                        <td>:focus</td>
+                        <td><a href="./pseudo_class/focus.html" target="_blank">input:focus</a></td>
+                        <td>选择获得焦点的input元素。</td>
+                    </tr>
+                    <tr>
+                        <td>:hover</td>
+                        <td><a href="./pseudo_class/hover.html" target="_blank">a:hover</a></td>
+                        <td>当鼠标悬停在a元素上方时，向元素添加样式</td>
+                    </tr>
+                    <tr>
+                        <td>:link</td>
+                        <td><a href="./pseudo_class/link.html" target="_blank">a:link</a></td>
+                        <td>向未访问的链接添加样式</td>
+                    </tr>
+                    <tr>
+                        <td>:fisrt-child</td>
+                        <td><a href="./pseudo_class/first_child.html" target="_blank">p:first-child</a></td>
+                        <td>选择属于其父元素的首个子元素的每个p元素，并为其设置样式</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+       
+        <div class="pseudo_element">
+            <h1>2. 伪元素</h1>
+            <ul style="font-size: 21px;">
+                <li>定义：</li>
+                    <p>伪元素用于设置元素指定部分的样式</p>
+                <li>语法：</li>
+                        <pre>selector::pseudo-element {
+        property: value;
+    }
+                        </pre>
+            </ul>
+            <table class="table table-bordered">
+                <h4>伪元素有以下几种：</h4>
+                <thead>
+                    <tr style="background-color: #b5b5c2;">
+                        <th>选择器</th>
+                        <th>例子</th>
+                        <th>描述</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>::first-letter</td>
+                        <td><a href="./pseudo_elements/first_letter.html" target="_blank">p::first-letter</a></td>
+                        <td>选择每个p元素的首字母</td>
+                    </tr>
+                    <tr>
+                        <td>::first-line</td>
+                        <td><a href="./pseudo_elements/first_line.html" target="_blank">p::first-line</a></td>
+                        <td>选择每个p元素的首行</td>
+                    </tr>
+                    <tr>
+                        <td>::after</td>
+                        <td><a href="./pseudo_elements/after.html" target="_blank">p::after</a></td>
+                        <td>在每个P元素之后添加内容</td>
+                    </tr>
+                    <tr>
+                        <td>::before</td>
+                        <td><a href="./pseudo_elements/before.html" target="_blank">p:before</a></td>
+                        <td>在每个p元素之前添加内容</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
     </div>
 </body>
 </html>
