@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图像精灵sprites</title>
+    <style>
+        .nav_list {
+            position: relative;
+        }
+
+        .nav_list li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            top: 0;
+        }
+
+        .nav_list li, .nav_list a {
+            height: 44px;
+            display: block;
+        }
+
+        .home {
+            left: 0px;
+            width: 47px;
+            background: url('./img/sprites.PNG') 0 0;
+            /* backgound:第二个参数定位背景图像的位置*/
+        }
+
+        .prev {
+            left: 62px;
+            width: 47px;
+            background: url('./img/sprites.PNG') -48px 0;
+        }
+        .next {
+            left: 126px;
+            width: 47px;
+            background: url('./img/sprites.PNG') -93px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>1. 什么是图像精灵</h2>
+    <p>CSS Sprites通常被称为css精灵图，也被称为css图片整合和css贴图定位或雪碧图。就是将导航的背景图，按钮的背景图等有规则的合并成一张背景图，即多张图合并为一张整图，然后再利用background-position,gackgroud-repeat等属性进行背景图定位的一种技术。</p>
+    <h2>2. 图像精灵的优点</h2>
+    <p>它可以减轻服务器的负担, 提高网页的加载速度。</p>
+    <p>假如现在有9张小图片，那么就会有9个http请求，但是如果把这9张图放在一张大图里，那么就只需要请求一次。当页面加载的时候,不是去加载每一个单独的图片,而是一次性加载整个组合图,它大大减少了http请求的次数。</p>
+    <div>
+        <img src="./img/sprites_adv.PNG" alt="">
+    </div>
+    <div class="sprites">
+        <p>以下是一个图像精灵的简单例子:</p>
+        <ul class="nav_list">
+            <li class="home"><a href="https://www.baidu.com/"></a></li>
+            <li class="prev"><a href="https://www.google.com/"></a></li>
+            <li class="next"><a href="https://www.sogou.com/"></a></li>
+        </ul>
+    </div>
+    <div style="margin-top: 100px;">
+        <P>Code:</P>
+        <code>
+            <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;图像精灵sprites&lt;/title&gt;
+        &lt;style&gt;
+            .nav_list {
+                position: relative;
+            }
+    
+            .nav_list li {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                position: absolute;
+                top: 0;
+            }
+    
+            .nav_list li, .nav_list a {
+                height: 44px;
+                display: block;
+            }
+    
+            .home {
+                left: 0px;
+                width: 47px;
+                background: url(&#x27;./img/sprites.PNG&#x27;) 0 0;
+                /* backgound:第二个参数定位背景图像的位置*/
+            }
+    
+            .prev {
+                left: 62px;
+                width: 47px;
+                background: url(&#x27;./img/sprites.PNG&#x27;) -48px 0;
+            }
+            .next {
+                left: 126px;
+                width: 47px;
+                background: url(&#x27;./img/sprites.PNG&#x27;) -93px 0;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h2&gt;1. 什么是图像精灵&lt;/h2&gt;
+        &lt;p&gt;CSS Sprites通常被称为css精灵图，也被称为css图片整合和css贴图定位或雪碧图。就是将导航的背景图，按钮的背景图等有规则的合并成一张背景图，即多张图合并为一张整图，然后再利用background-position,gackgroud-repeat等属性进行背景图定位的一种技术。&lt;/p&gt;
+        &lt;h2&gt;2. 图像精灵的优点&lt;/h2&gt;
+        &lt;p&gt;它可以减轻服务器的负担, 提高网页的加载速度。&lt;/p&gt;
+        &lt;p&gt;假如现在有9张小图片，那么就会有9个http请求，但是如果把这9张图放在一张大图里，那么就只需要请求一次。当页面加载的时候,不是去加载每一个单独的图片,而是一次性加载整个组合图,它大大减少了http请求的次数。&lt;/p&gt;
+        &lt;div&gt;
+            &lt;img src=&quot;./img/sprites_adv.PNG&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sprites&quot;&gt;
+            &lt;p&gt;以下是一个图像精灵的简单例子:&lt;/p&gt;
+            &lt;ul class=&quot;nav_list&quot;&gt;
+                &lt;li class=&quot;home&quot;&gt;&lt;a href=&quot;https://www.baidu.com/&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;prev&quot;&gt;&lt;a href=&quot;https://www.google.com/&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;https://www.sogou.com/&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>
