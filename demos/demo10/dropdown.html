@@ -26,6 +26,7 @@
             font-size: 15px;
         }
         .dropdown {
+            width: 40%;
             position: relative;
             display: inline-block;
         }
@@ -36,7 +37,7 @@
         .content {
             /*先隐藏链接内容 当鼠标放到下拉菜单时才显示*/
             display: none; 
-            position: absolute;
+            position:absolute;
             background-color: #f9f9f9;
             min-width: 160px;
             z-index: 1;
@@ -45,6 +46,13 @@
         }
         a:hover{
             background-color: #807b7b;
+        }
+        .code_content {
+            float: right;
+            margin-right: 200px;
+        }
+        .other{
+            margin: 8px;
         }
     </style>
 </head>
@@ -56,14 +64,8 @@
             <a href="https://www.baidu.com/">CSS</a>
             <a href="https://www.baidu.com/">Javascript</a>
         </div>
+        <div class="other">This is Other</div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <div class="code_content">
         <p>Code:</p>
         <code>
@@ -115,6 +117,13 @@
                 a:hover{
                     background-color: #807b7b;
                 }
+                .code_content {
+                    float: right;
+                    margin-right: 200px;
+                }
+                .other{
+                    margin: 8px;
+                }
             &lt;/style&gt;
         &lt;/head&gt;
         &lt;body&gt;
@@ -125,6 +134,7 @@
                     &lt;a href=&quot;https://www.baidu.com/&quot;&gt;CSS&lt;/a&gt;
                     &lt;a href=&quot;https://www.baidu.com/&quot;&gt;Javascript&lt;/a&gt;
                 &lt;/div&gt;
+                &lt;div class=&quot;other&quot;&gt;This is Other&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         &lt;/html&gt;
