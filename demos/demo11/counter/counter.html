@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计数器</title>
+    <style>
+        /* 首先使用counter-reset在body选择器中创建一个计数器 */
+        body {
+            counter-reset: course;
+        }
+        /* 在h2的前面插入内容 */
+        h2::before {
+            /* 递增多个course计数器 */
+            counter-increment: course;
+            /* counter(计数器名) */
+            content: "Course" counter(course) ": ";
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line"style="width: 45%; float: left;">
+        <h1>1. 带计数器的自动编号</h1>
+        <p><b>CSS计数器就像“变量”。变量值可以通过 CSS 规则递增（将跟踪它们的使用次数）。</b></p>
+        <p>在使用CSS计数器之前，必须先使用<b>counter-reset</b>来创建它</p>
+        <h2>CSS教程</h2>
+        <h2>HTML教程</h2>
+        <h2>Javascript教程</h2>
+    </div>
+    <div class="div_line" style="width: 45%; float: left; font-size: 16px;">
+        <p>Code:</p>
+        <code>
+            <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;计数器&lt;/title&gt;
+        &lt;style&gt;
+            /* 首先使用counter-reset在body选择器中创建一个计数器 */
+            body {
+                counter-reset: course;
+            }
+            /* 在h2的前面插入内容 */
+            h2::before {
+                /* 递增多个course计数器 */
+                counter-increment: course;
+                /* counter(计数器名) */
+                content: &quot;Course&quot; counter(course) &quot;: &quot;;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;div_line&quot;&gt;
+            &lt;h1&gt;1. 带计数器的自动编号&lt;/h1&gt;
+            &lt;p&gt;&lt;b&gt;CSS计数器就像“变量”。变量值可以通过 CSS 规则递增（将跟踪它们的使用次数）。&lt;/b&gt;&lt;/p&gt;
+            &lt;p&gt;在使用CSS计数器之前，必须先使用&lt;b&gt;counter-reset&lt;/b&gt;来创建它&lt;/p&gt;
+            &lt;h2&gt;CSS教程&lt;/h2&gt;
+            &lt;h2&gt;HTML教程&lt;/h2&gt;
+            &lt;h2&gt;Javascript教程&lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

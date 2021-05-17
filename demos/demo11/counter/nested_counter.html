@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嵌套计数器</title>
+    <style>
+        /* 在body选择器中创建section计数器 */
+        body {
+            counter-reset: section;
+        }
+        /* 在h1选择器中创建subsection选择器 */
+        h1 {
+            counter-reset: subsection;
+        }
+        h1::before {
+            /* 递增多个section计数器 */
+            counter-increment: section;
+            /* 写入section */
+            content: "Section" counter(section) ": ";
+        }
+        h3::before {
+            /* 递增多个subsection计数器 */
+            counter-increment: subsection;
+            /* 写入section 和 subsection*/
+            content: counter(section) "." counter(subsection) "：";
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line" style="width: 45%; float: left;">
+        <h2>嵌套计数器: </h2>
+        <p>下面的例子为页面（section）创建一个计数器，为每个h1元素（subsection）创建一个计数器。</p>
+        <p>"section" 计数器为每个h1元素计数，同时写入 "Section" 以及 section 计数器的值，"subsection" 计数器为每个h3元素计数，同时写入 section 计数器的值以及 subsection 计数器的值：</p>
+        <h1>CSS教程</h1>
+        <h3>CSS简介</h3>
+        <h3>CSS语法</h2>
+        <h1>HTML教程</h1>
+        <h3>HTML编辑器</h3>
+        <h3>HTML基础</h3>
+        <h1>Javascript教程</h1>
+        <h3>JS语法</h3>
+        <h3>JS数据类型</h3>
+        <h3>JS函数</h3>
+    </div>
+    
+    <div class="div_line" style="width: 45%; float: left;">
+        <p>Code: </p>
+        <code style="font-size: 16px;">
+            <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;嵌套计数器&lt;/title&gt;
+        &lt;style&gt;
+        /* 在body选择器中创建section计数器 */
+        body {
+            counter-reset: section;
+        }
+        /* 在h1选择器中创建subsection选择器 */
+        h1 {
+            counter-reset: subsection;
+        }
+        h1::before {
+            /* 递增多个section计数器 */
+            counter-increment: section;
+            /* 写入section */
+            content: &quot;Section&quot; counter(section) &quot;: &quot;;
+        }
+        h3::before {
+            /* 递增多个subsection计数器 */
+            counter-increment: subsection;
+            /* 写入section 和 subsection*/
+            content: counter(section) &quot;.&quot; counter(subsection) &quot;：&quot;;
+        }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;div_line&quot; style=&quot;width: 45%; float: left;&quot;&gt;
+            &lt;h2&gt;嵌套计数器: &lt;/h2&gt;
+            &lt;p&gt;下面的例子为页面（section）创建一个计数器，为每个h1元素（subsection）创建一个计数器。&lt;/p&gt;
+            &lt;p&gt;&quot;section&quot; 计数器为每个h1元素计数，同时写入 &quot;Section&quot; 以及 section 计数器的值，&quot;subsection&quot; 计数器为每个h3元素计数，同时写入 section 计数器的值以及 subsection 计数器的值：&lt;/p&gt;
+            &lt;h1&gt;CSS教程&lt;/h1&gt;
+            &lt;h3&gt;CSS简介&lt;/h3&gt;
+            &lt;h3&gt;CSS语法&lt;/h2&gt;
+            &lt;h1&gt;HTML教程&lt;/h1&gt;
+            &lt;h3&gt;HTML编辑器&lt;/h3&gt;
+            &lt;h3&gt;HTML基础&lt;/h3&gt;
+            &lt;h1&gt;Javascript教程&lt;/h1&gt;
+            &lt;h3&gt;JS语法&lt;/h3&gt;
+            &lt;h3&gt;JS数据类型&lt;/h3&gt;
+            &lt;h3&gt;JS函数&lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

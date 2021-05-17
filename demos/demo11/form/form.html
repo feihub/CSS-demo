@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS表单</title>
+    <style>
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            /* 将 box-sizing 属性设置为 border-box。这样可以确保元素的总宽度和高度中包括内边距（填充）和最终的边框。 */
+            box-sizing: border-box;
+        }
+        .submit_btn {
+            width: 100%;
+            background-color: #4CAF50;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        .submit_btn:hover {
+            width: 100%;
+            background-color: #2b852e;
+            cursor: pointer;
+        }
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .div_line {
+            width: 45%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line">
+        <form>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="" placeholder="please input your name">
+    
+            <label for="address">Address</label>
+            <input type="text" name="address" id="" placeholder="please enter you address">
+    
+            <label for="country">Country</label>
+            <select name="country" id="">
+                <option value="">China</option>
+                <option value="">Singapore</option>
+                <option value="">Australia</option>
+            </select>
+    
+            <input type="submit" value="Submit" class="submit_btn">
+        </form>
+    </div>
+    <div class="div_line">
+        <p>Code：</p>
+        <code>
+            <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;CSS表单&lt;/title&gt;
+        &lt;style&gt;
+            input[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                /* 将 box-sizing 属性设置为 border-box。这样可以确保元素的总宽度和高度中包括内边距（填充）和最终的边框。 */
+                box-sizing: border-box;
+            }
+            .submit_btn {
+                width: 100%;
+                background-color: #4CAF50;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 5px;
+                color: white;
+            }
+            .submit_btn:hover {
+                width: 100%;
+                background-color: #2b852e;
+                cursor: pointer;
+            }
+            div {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;div_line&quot;&gt;
+            &lt;form&gt;
+                &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+                &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;&quot; placeholder=&quot;please input your name&quot;&gt;
+        
+                &lt;label for=&quot;address&quot;&gt;Address&lt;/label&gt;
+                &lt;input type=&quot;text&quot; name=&quot;address&quot; id=&quot;&quot; placeholder=&quot;please enter you address&quot;&gt;
+        
+                &lt;label for=&quot;country&quot;&gt;Country&lt;/label&gt;
+                &lt;select name=&quot;country&quot; id=&quot;&quot;&gt;
+                    &lt;option value=&quot;&quot;&gt;China&lt;/option&gt;
+                    &lt;option value=&quot;&quot;&gt;Singapore&lt;/option&gt;
+                    &lt;option value=&quot;&quot;&gt;Australia&lt;/option&gt;
+                &lt;/select&gt;
+        
+                &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; class=&quot;submit_btn&quot;&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>
