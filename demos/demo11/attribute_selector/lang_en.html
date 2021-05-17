@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[attribute|value]</title>
+    <style>
+        /* 选择lang属性值以"en"开头的元素并将背景颜色设置为黄色 */
+        [lang|=en] {
+            background:yellow;
+        }
+    </style>
+</head>
+<body>
+    <h3>[lang|en]: 选择lang属性值以"en"开头的元素</h3>
+    <p lang="en">1. 带有lang属性且值以"en"开头的p元素</p>
+    <a lang="en-us">2. 带有lang属性且值以"en"开头的a元素</a>
+    <p lang="zh">3. 带有lang属性且值以"zh"开头的p元素</p>
+    <p>Code:</p>
+    <code>
+        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;[attribute|value]&lt;/title&gt;
+        &lt;style&gt;
+            /* 选择lang属性值以&quot;en&quot;开头的元素并将背景颜色设置为黄色 */
+            [lang|=en] {
+                background:yellow;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h3&gt;[lang|en]: 选择lang属性值以&quot;en&quot;开头的元素&lt;/h3&gt;
+        &lt;p lang=&quot;en&quot;&gt;1. 带有lang属性且值以&quot;en&quot;开头的p元素&lt;/p&gt;
+        &lt;a lang=&quot;en-us&quot;&gt;2. 带有lang属性且值以&quot;en&quot;开头的a元素&lt;/a&gt;
+        &lt;p lang=&quot;zh&quot;&gt;3. 带有lang属性且值以&quot;zh&quot;开头的p元素&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
+    </code>
+</body>
+</html>

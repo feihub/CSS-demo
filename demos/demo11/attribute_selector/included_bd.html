@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[attribute*=value]</title>
+    <style>
+        /* a[href*="baidu"]: 选择其href属性值包含"baidu"的每个a元素 并将背景颜色改为黄色 */
+        a[href*="baidu"] {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h3>a[href*="baidu"]: 选择其href属性值包含"baidu"的每个a元素</h3>
+    <p><a href="baidu.cn">baidu.cn</a></p>
+    <p><a href="https://www.baidu.com/">https://www.baidu.com/</a></p>
+    <p><a href="BAIDU.com">BAIDU.com</a></p>
+    <p>Code: </p>
+    <code style="font-size: 16px;">
+        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;[attribute*=value]&lt;/title&gt;
+        &lt;style&gt;
+            /* a[href*=&quot;baidu&quot;]: 选择其href属性值包含&quot;baidu&quot;的每个a元素 并将背景颜色改为黄色 */
+            a[href*=&quot;baidu&quot;] {
+                background-color: yellow;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h3&gt;a[href*=&quot;baidu&quot;]: 选择其href属性值包含&quot;baidu&quot;的每个a元素&lt;/h3&gt;
+        &lt;p&gt;&lt;a href=&quot;baidu.cn&quot;&gt;baidu.cn&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;https://www.baidu.com/&quot;&gt;https://www.baidu.com/&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;BAIDU.com&quot;&gt;BAIDU.com&lt;/a&gt;&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
+    </code>
+</body>
+</html>

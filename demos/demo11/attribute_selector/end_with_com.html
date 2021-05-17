@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a[href&=".com"]</title>
+    <style>
+        /* 选择href的属性值以".com"结尾的每个a元素 将字体颜色设为红色 */
+        a[href$=".com"] {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>a[href$=".com"]: 选择href的属性值以".com"结尾的每个a元素</h3>
+    <p><a href="www.baidu.com">www.baidu.com</a></p>
+    <p><a href="www.souhu.cn">www.souhu.cn</a></p>
+    <p><a href="123.com">123.com</a></p>
+    <p>Code：</p>
+    <code style="font-size: 16px;">
+        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;a[href&amp;=&quot;.com&quot;]&lt;/title&gt;
+        &lt;style&gt;
+            /* 选择href的属性值以&quot;.com&quot;结尾的每个a元素 将字体颜色设为红色 */
+            a[href$=&quot;.com&quot;] {
+                color: red;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h3&gt;a[href$=&quot;.com&quot;]: 选择href的属性值以&quot;.com&quot;结尾的每个a元素&lt;/h3&gt;
+        &lt;p&gt;&lt;a href=&quot;www.baidu.com&quot;&gt;www.baidu.com&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;www.souhu.cn&quot;&gt;www.souhu.cn&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;123.com&quot;&gt;123.com&lt;/a&gt;&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
+    </code>
+</body>
+</html>
