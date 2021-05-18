@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing</title>
+    <style>
+        .box1 {
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        /* box-sizing属性允许元素的总宽度和高度中包括内边距和边框 */
+        .box2 {
+            width: 500px;
+            height: 200px;
+            padding: 50px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+        .box3 {
+            width: 500px;
+            height: 200px;
+            padding: 50px;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line" style="float: left;width: 45%;">
+        <div class="box1">
+           <p>div1: 宽度=500px, 高度=200px</p>
+        </div>
+        <br>
+        <div class="box2">
+           <p>div2: 宽度=500px, 高度=200px</p>
+           <p>使用box-sizing属性将内边距和边框包含在元素的总宽度和高度中</p>
+        </div>
+        <br>
+        <div class="box3">
+           <p>div3: 宽度=500px, 高度=200px</p> 
+           <p>div3尺寸不同于div1是因为它设置了内边距</p>
+        </div>
+    </div>
+    <div class="div_line" style="float: left;width: 45%;">
+        <p>Code:</p>
+        <code style="font-size: 16px;">
+            <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;Box-Sizing&lt;/title&gt;
+            &lt;style&gt;
+                .box1 {
+                    width: 500px;
+                    height: 200px;
+                    border: 1px solid black;
+                }
+                /* box-sizing属性允许元素的总宽度和高度中包括内边距和边框 */
+                .box2 {
+                    width: 500px;
+                    height: 200px;
+                    padding: 50px;
+                    border: 1px solid red;
+                    box-sizing: border-box;
+                }
+                .box3 {
+                    width: 500px;
+                    height: 200px;
+                    padding: 50px;
+                    border: 1px solid green;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class=&quot;box1&quot;&gt;
+                &lt;p&gt;div1: 宽度=500px, 高度=200px&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;div class=&quot;box2&quot;&gt;
+                &lt;p&gt;div2: 宽度=500px, 高度=200px&lt;/p&gt;
+                &lt;p&gt;使用box-sizing属性将内边距和边框包含在元素的总宽度和高度中&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;div class=&quot;box3&quot;&gt;
+                &lt;p&gt;div3: 宽度=500px, 高度=200px&lt;/p&gt; 
+                &lt;p&gt;div3尺寸不同于div1是因为它设置了内边距&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>
