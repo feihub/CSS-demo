@@ -10,9 +10,11 @@
 <body>
     <div style="width: 45%; float: left;margin-left: 20px;">
         <h1>1. CSS网站布局</h1>
+        <p>网站通常分为页眉、菜单、内容和页脚，以下结构是最常见的结构之一：<a href="./layout/layout.html" target="_blank"><b>EG</b></a></p>
+        <img src="./img/layout.PNG" alt="">
         <h1>2. CSS单位</h1>
-        <p>CSS有几种不同的表示长度的单位，长度单位有两种类型：<b>绝对单位</b>绝对单位和<b>相对单位</b>。</p>
-        <h4><b><a>2.1 绝对单位:</a></b></h4>
+        <p>CSS有几种不同的表示长度的单位，长度单位有两种类型：<b>绝对长度</b>和<b>绝对长度</b>。</p>
+        <h4><b><a href="./unit/absolute_unit.html" target="_blank">2.1 绝对长度:</a></b></h4>
         <p>绝对长度单位是固定的，用任何一个绝对长度表示的长度都将恰好显示为这个尺寸。</p>
         <table class="table table-bordered">
             <thead style="background-color: #c5c2c2;">
@@ -36,11 +38,11 @@
                 </tr>
                 <tr>
                     <th>px</th>
-                    <th>像素(1px = 1/96 of 1in)</th>
+                    <th>像素(1px = 1/96 in)</th>
                 </tr>
                 <tr>
                     <th>pt</th>
-                    <th>点(1pt = 1/72 of 1in)</th>
+                    <th>点(1pt = 1/72 in)</th>
                 </tr>
                 <tr>
                     <th>pc</th>
@@ -48,7 +50,7 @@
                 </tr>
             </tbody>
         </table>
-        <h4><b><a href="">2.2 相对单位:</a></b></h4>
+        <h4><b><a href="./unit/relative_unit.html" target="_blank">2.2 相对长度:</a></b></h4>
         <p>相对长度单位规定相对于另一个长度属性的长度。相对长度单位在不同渲染介质之间缩放表现得更好。</p>
         <table class="table table-bordered">
             <thead style="background-color: #c5c2c2;">
@@ -64,11 +66,11 @@
                 </tr>
                 <tr>
                     <th>em</th>
-                    <th>相对于元素的字体大小（font-size）（2em 表示当前字体大小的 2 倍）</th>
+                    <th>它是描述相对于应用在当前元素的字体尺寸，所以它也是相对长度单位。一般浏览器字体大小默认为16px，则2em == 32px；</th>
                 </tr>
                 <tr>
                     <th>ex</th>
-                    <th>相对于当前字体的 x-height(极少使用)</th>
+                    <th>依赖于英文字母小 x 的高度(极少使用)</th>
                 </tr>
                 <tr>
                     <th>ch</th>
@@ -76,27 +78,80 @@
                 </tr>
                 <tr>
                     <th>rem</th>
-                    <th>相对于根元素的字体大小（font-size）</th>
+                    <th>rem 是根 em（root em）的缩写，rem作用于非根元素时，相对于根元素字体大小；rem作用于根元素字体大小时，相对于其出初始字体大小。</th>
                 </tr>
                 <tr>
                     <th>vw</th>
-                    <th>相对于视口*宽度的 1%</th>
+                    <th>viewpoint width，视窗宽度，1vw=视窗宽度的1%</th>
                 </tr>
                 <tr>
                     <th>vh</th>
-                    <th>相对于视口*宽度的 1%</th>
+                    <th>viewpoint height，视窗高度，1vh=视窗高度的1%</th>
                 </tr>
                 <tr>
                     <th>vmin</th>
-                    <th>相对于视口*较小尺寸的 1％</th>
+                    <th>vw和vh中较小的那个</th>
                 </tr>
                 <tr>
                     <th>vmax</th>
-                    <th>相对于视口*较大尺寸的 1％</th>
+                    <th>vw和vh中较大的那个。</th>
                 </tr>
             </tbody>
         </table>
         <h1>3. CSS特异性</h1>
+        <h4><b>3.1 什么是特异性：</b></h4>
+        <p>如果有两条或两条以上指向同一元素的冲突 CSS 规则，则浏览器将通过计算选择器的权重来决定哪个选择器将获得优先权去覆盖其他选择器的样式设定</p>
+        <h4><b>3.2 特异性层次：</b></h4>
+        <p>以下四种类别定义了选择器的特异性级别：</p>
+        <table class="table table-bordered">
+            <thead style="background-color: #c5c2c2;">
+                <tr>
+                    <th>选择器</th>
+                    <th>级别</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>行内样式</td>
+                    <td>行内（内联）样式直接附加到要设置样式的元素。实例：&lt;h3 style=&quot;color: red;&quot;&gt;...&lt;h3&gt;</td>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td>ID选择器是页面元素的唯一标识符，如#div</td>
+                </tr>
+                <tr>
+                    <td>类、属性和伪类</td>
+                    <td>包括 .classes、[attributes] 和伪类，例如：:hover、:focus 等</td>
+                </tr>
+                <tr>
+                    <td>元素和伪元素</td>
+                    <td>包括元素名称和伪元素，比如 h1、div、::before 和 ::after。</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4><b>3.3 如何计算特异性：</b></h4>
+        <p>从 0 开始，为 style 属性设置为1000点，为每个 ID 添加 100，为每个属性、类或伪类添加 10，为每个元素名称或伪元素添加 1。</p>
+        <img src="./img/img.jpg" alt="">
+        <code>
+            <p>实例：</p>
+            <pre>
+A: h1
+B: #content h1
+C: &lt;div id=&quot;content&quot;&gt;&lt;h1 style=&quot;color: #ffffff&quot;&gt;Heading&lt;/h1&gt;&lt;/div&gt;
+            </pre>
+        </code>
+        <ul>
+            <li>A的特异性为1(一个元素)</li>
+            <li>B的特异性为101(一个ID和一个元素)</li>
+            <li>C的特异性为1000(行内样式)</li>
+        </ul>
+        <h4><b>3.4 其他特异性规则：<a href="./specificity/specificity.html" target="_blank">EG</a></b></h4>
+        <ol>
+            <li>如果将同一规则两次写入外部样式表，那么样式表中后面的规将更靠近要设置样式的元素</li>
+            <li>ID 选择器比属性选择器拥有更高的特异性</li>
+            <li>上下文选择器比单一元素选择器更具体</li>
+            <li>类选择器会击败任意数量的元素选择器</li>
+        </ol>
     </div>
 </body>
 </html>

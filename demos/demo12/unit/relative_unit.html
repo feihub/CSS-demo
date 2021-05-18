@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对长度</title>
+    <style>
+        .div_line {
+            /* 相对于父元素body宽度的45% */
+            width: 45%;
+            float: left;
+        }
+        .p1 {
+            /* 浏览器默认字体大小为16px  2em  = 32px */
+            font-size: 2em;
+        }
+        .p2 {
+            font-size: 40px;
+        }
+        .span1 {
+            font-size: 0.5em;
+        }
+        .p3 {
+            font-size: 30px;
+        }
+        .span2 {
+            font-size: 1ex;
+        }
+        .p4 {
+            font-size: 2rem;
+        }
+        .v_view {
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+        /* viewpoint width，视窗宽度，1vw=视窗宽度的1% */
+        .title1 {
+            font-size: 5vw;
+        }
+        /* viewpoint height，视窗高度，1vh=视窗高度的1%  */
+        .title2 {
+            font-size: 3vh;
+        }
+        /* 做移动页面开发时，如果使用 vw、wh 设置字体大小（比如 5vw），在竖屏和横屏状态下显示的字体大小是不一样的。 */
+        /* 由于 vmin 和 vmax 是当前较小的 vw 和 vh 和当前较大的 vw 和 vh。这里就可以用到 vmin 和 vmax。使得文字大小在横竖屏下保持一致。 */
+        /* vmin为vw和vh中较小的那个 */
+        .title3 {
+            font-size: 10vmin;
+        }
+        /* vmax为vw和vh中较大的那个 */
+        .title4 {
+            font-size: 10vmax;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line">
+        <div class="v_view">
+            <h3>1. em: </h3>
+            <p class="p1">这是段落1(2em),它的高度为：2 x 16 = 32px </p>
+            <p class="p2">p的font-size设置为40px,<span class="span1">p中的span元素的font-size设置为0.5em,则span中的字体大小为：0.5 x 40px = 20px</span></p>
+        </div>
+
+        <div class="v_view">
+            <h3>2. ex: </h3>
+            <p class="p3">p的font-size设置为30px<span class="span2">p中的span元素font-size设置为1ex</span></p>
+        </div>
+
+        <div class="v_view">
+            <h3>3. rem: </h3>
+            <p class="p4">rem作用于非根元素，相对于根元素字体大小(16px)，所以这个段落字体大小为32px。</p>
+        </div>
+
+        <div class="v_view">
+            <h3>4. vw</h3>
+            <p>viewpoint width，视窗宽度，1vw=视窗宽度的1%:</p>
+            <p>调整浏览器的大小查看h1的字体大小如何变化</p>
+            <h1 class="title1">Hello</h1>
+        </div>
+
+        <div class="v_view">
+            <h3>5. vh</h3>
+            <p>viewpoint height，视窗高度，1vh=视窗高度的1% 。</p>
+            <p>调整浏览器的大小查看h1的字体大小如何变化</p>
+            <h1 class="title2">World</h1>
+        </div>
+
+        <div class="v_view">
+            <h3>6. vmin</h3>
+            <p>当前 vw 和 vh 中较小的一个值 </p>
+            <p>调整浏览器的大小查看h1的字体大小如何变化</p>
+            <h1 class="title3">CSS</h1>
+        </div>
+        <div class="v_view">
+            <h3>7. vmax</h3>
+            <p>当前 vw 和 vh 中较大的一个值</p>
+            <p>调整浏览器的大小查看h1的字体大小如何变化</p>
+            <p>做移动页面开发时，如果使用 vw、wh 设置字体大小（比如 5vw），在竖屏和横屏状态下显示的字体大小是不一样的。</p>
+            <p>由于 vmin 和 vmax 是当前较小的 vw 和 vh 和当前较大的 vw 和 vh。这里就可以用到 vmin 和 vmax。使得文字大小在横竖屏下保持一致。</p>
+            <h1 class="title4">HTML</h1>
+        </div>
+    </div>
+    <div class="div_line">
+        <p>Code: </p>
+        <code>
+            <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;UTF-8&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                &lt;title&gt;相对长度&lt;/title&gt;
+                &lt;style&gt;
+                    .div_line {
+                        /* 相对于父元素body宽度的45% */
+                        width: 45%;
+                        float: left;
+                    }
+                    .p1 {
+                        /* 浏览器默认字体大小为16px  2em  = 32px */
+                        font-size: 2em;
+                    }
+                    .p2 {
+                        font-size: 40px;
+                    }
+                    .span1 {
+                        font-size: 0.5em;
+                    }
+                    .p3 {
+                        font-size: 30px;
+                    }
+                    .span2 {
+                        font-size: 1ex;
+                    }
+                    .p4 {
+                        font-size: 2rem;
+                    }
+                    .v_view {
+                        border: 1px solid black;
+                        margin-bottom: 10px;
+                    }
+                    /* viewpoint width，视窗宽度，1vw=视窗宽度的1% */
+                    .title1 {
+                        font-size: 5vw;
+                    }
+                    /* viewpoint height，视窗高度，1vh=视窗高度的1%  */
+                    .title2 {
+                        font-size: 3vh;
+                    }
+                    /* vmin为vw和vh中较小的那个 */
+                    .title3 {
+                        font-size: 10vmin;
+                    }
+                    /* vmax为vw和vh中较大的那个 */
+                    .title4 {
+                        font-size: 10vmax;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;div class=&quot;div_line&quot;&gt;
+                    &lt;div class=&quot;v_view&quot;&gt;
+                        &lt;h3&gt;1. em: &lt;/h3&gt;
+                        &lt;p class=&quot;p1&quot;&gt;这是段落1(2em),它的高度为：2 x 16 = 32px &lt;/p&gt;
+                        &lt;p class=&quot;p2&quot;&gt;p的font-size设置为40px,&lt;span class=&quot;span1&quot;&gt;p中的span元素的font-size设置为0.5em,则span中的字体大小为：0.5 x 40px = 20px&lt;/span&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class=&quot;v_view&quot;&gt;
+                        &lt;h3&gt;2. ex: &lt;/h3&gt;
+                        &lt;p class=&quot;p3&quot;&gt;p的font-size设置为30px&lt;span class=&quot;span2&quot;&gt;p中的span元素font-size设置为1ex&lt;/span&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class=&quot;v_view&quot;&gt;
+                        &lt;h3&gt;3. rem: &lt;/h3&gt;
+                        &lt;p class=&quot;p4&quot;&gt;rem作用于非根元素，相对于根元素字体大小(16px)，所以这个段落字体大小为32px。&lt;/p&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class=&quot;v_view&quot;&gt;
+                        &lt;h3&gt;4. vw&lt;/h3&gt;
+                        &lt;p&gt;viewpoint width，视窗宽度，1vw=视窗宽度的1%:&lt;/p&gt;
+                        &lt;p&gt;调整浏览器的大小查看h1的字体大小如何变化&lt;/p&gt;
+                        &lt;h1 class=&quot;title1&quot;&gt;Hello&lt;/h1&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class=&quot;v_view&quot;&gt;
+                        &lt;h3&gt;5. vh&lt;/h3&gt;
+                        &lt;p&gt;viewpoint height，视窗高度，1vh=视窗高度的1% 。&lt;/p&gt;
+                        &lt;p&gt;调整浏览器的大小查看h1的字体大小如何变化&lt;/p&gt;
+                        &lt;h1 class=&quot;title2&quot;&gt;World&lt;/h1&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class=&quot;v_view&quot;&gt;
+                        &lt;h3&gt;6. vmin&lt;/h3&gt;
+                        &lt;p&gt;当前 vw 和 vh 中较小的一个值 &lt;/p&gt;
+                        &lt;p&gt;调整浏览器的大小查看h1的字体大小如何变化&lt;/p&gt;
+                        &lt;h1 class=&quot;title3&quot;&gt;CSS&lt;/h1&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;v_view&quot;&gt;
+                        &lt;h3&gt;7. vmax&lt;/h3&gt;
+                        &lt;p&gt;v当前 vw 和 vh 中较大的一个值&lt;/p&gt;
+                        &lt;p&gt;调整浏览器的大小查看h1的字体大小如何变化&lt;/p&gt;
+                        &lt;p&gt;做移动页面开发时，如果使用 vw、wh 设置字体大小（比如 5vw），在竖屏和横屏状态下显示的字体大小是不一样的。&lt;/p&gt;
+                        &lt;p&gt;由于 vmin 和 vmax 是当前较小的 vw 和 vh 和当前较大的 vw 和 vh。这里就可以用到 vmin 和 vmax。使得文字大小在横竖屏下保持一致。&lt;/p&gt;
+                        &lt;h1 class=&quot;title4&quot;&gt;HTML&lt;/h1&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./specificity.css">
+    <title>CSS特异性</title>
+    <style>
+        .div_line {
+            width: 45%;
+            float: left;
+        }
+        /* 1. 如果将同一规则两次写入外部样式表，那么样式表中后面的规将更靠近要设置样式的元素 */
+        h1 {
+            background-color: gray;
+            background-color: yellow;
+        }
+        /* 2. ID 选择器比属性选择器拥有更高的特异性 */
+        /* id选择器 */
+        div#box1 {
+            background-color: yellow;
+        }
+        #box1 {
+            background-color: gray;
+        }
+        /* 属性选择器 */
+        div[id=box1] {
+            background-color: red;
+        }
+        /* 3. 上下文选择器比单一元素选择器更具体——嵌入式样式表更靠近要设置样式的元素 */
+        /* 这里的背景颜色不会显示为黄色，而是显示为外部引入的css文件中设置的绿色 */
+        .content {
+            background-color: yellow;
+        }
+        /* 4. 类选择器会击败任意数量的元素选择器 */
+        .title {
+            color: red;
+        }
+        h2 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line">
+        <p>1. 如果将同一规则两次写入外部样式表，那么样式表中后面的规将更靠近要设置样式的元素:</p>
+        <h1>这是Title1</h1>
+
+        <p>2. ID 选择器比属性选择器拥有更高的特异性</p>
+        <div id="box1">这是一个带ID的div</div>
+
+        <p>3. 上下文选择器比单一元素选择器更具体——嵌入式样式表更靠近要设置样式的元素：</p>
+        <p id="content">这是一个段落</p>
+
+        <p>4. 类选择器会击败任意数量的元素选择器</p>
+        <h2 class="title">这是一个标题</h2>
+    </div>
+
+    <div class="div_line">
+        <p>Code:</p>
+        <code>
+            <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;./specificity.css&quot;&gt;
+            &lt;title&gt;CSS特异性&lt;/title&gt;
+            &lt;style&gt;
+                .div_line {
+                    width: 45%;
+                    float: left;
+                }
+                /* 1. 如果将同一规则两次写入外部样式表，那么样式表中后面的规将更靠近要设置样式的元素 */
+                h1 {
+                    background-color: gray;
+                    background-color: yellow;
+                }
+                /* 2. ID 选择器比属性选择器拥有更高的特异性 */
+                /* id选择器 */
+                div#box1 {
+                    background-color: yellow;
+                }
+                #box1 {
+                    background-color: gray;
+                }
+                /* 属性选择器 */
+                div[id=box1] {
+                    background-color: red;
+                }
+                /* 3. 上下文选择器比单一元素选择器更具体——嵌入式样式表更靠近要设置样式的元素 */
+                /* 这里的背景颜色不会显示为黄色，而是显示为外部引入的css文件中设置的绿色 */
+                .content {
+                    background-color: yellow;
+                }
+                /* 4. 类选择器会击败任意数量的元素选择器 */
+                .title {
+                    color: red;
+                }
+                h2 {
+                    color: blue;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class=&quot;div_line&quot;&gt;
+                &lt;p&gt;1. 如果将同一规则两次写入外部样式表，那么样式表中后面的规将更靠近要设置样式的元素:&lt;/p&gt;
+                &lt;h1&gt;这是Title1&lt;/h1&gt;
+        
+                &lt;p&gt;2. ID 选择器比属性选择器拥有更高的特异性&lt;/p&gt;
+                &lt;div id=&quot;box1&quot;&gt;这是一个带ID的div&lt;/div&gt;
+        
+                &lt;p&gt;3. 上下文选择器比单一元素选择器更具体——嵌入式样式表更靠近要设置样式的元素：&lt;/p&gt;
+                &lt;p id=&quot;content&quot;&gt;这是一个段落&lt;/p&gt;
+        
+                &lt;p&gt;4. 类选择器会击败任意数量的元素选择器&lt;/p&gt;
+                &lt;h2 class=&quot;title&quot;&gt;这是一个标题&lt;/h2&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

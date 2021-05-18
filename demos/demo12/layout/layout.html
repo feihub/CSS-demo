@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        /* 设置页眉样式 */
+        .header {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 12px;
+        }
+        /* 设置页脚样式 */
+        .footer {
+            background-color: #eee;
+            text-align: center;
+            padding: 8px;
+        }
+        /* 设置顶部导航栏样式 */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+        }
+        .topnav a{
+            float: left;
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 18px 16px;
+        }
+        .topnav a:hover {
+            color: black;
+            background-color: #ddd;
+        }
+        /* 将三个内容列并排 */
+        .column {
+            float: left;
+            padding: 12px;
+            text-align: center;
+        }
+        /* 设置左，右内容宽度为25% */
+        .side {
+            width: 25%;
+        }
+        /* 设置主内容宽度为50% */
+        .main {
+            width: 50%;
+        }
+        .row:after {
+            /* 清除列之后的浮动 */
+            clear: both;
+            display: table;
+            content: "";
+        }
+        /* 响应式布局 - 创建堆叠而非并排的三列 */
+        @media screen and (max-width: 600px) {
+            .column.side, .column.middle {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>页眉</h3>
+        <p>页眉（header）通常位于网站顶部（或顶部导航菜单的正下方）。它通常包含徽标（logo）或网站名称</p>
+    </div>
+
+    <div class="topnav">
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+    </div>
+
+    <div class="row">
+        <div class="column side">
+            <p>内容</p>
+            <p>CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。</p>
+        </div>
+        <div class="column main">
+            <p>主内容</p>
+            <p>CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。</p>
+            </div>
+        <div class="column side">
+            <p>内容</p>
+            <p>CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>页脚</h3>
+        <p>页脚位于页面底部。它通常包含诸如版权和联系方式之类的信息</p>
+    </div>
+
+    <div>
+        <p>Code: </p>
+        <code>
+            <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;响应式布局&lt;/title&gt;
+            &lt;style&gt;
+                * {
+                    box-sizing: border-box;
+                }
+                body {
+                    margin: 0;
+                }
+                /* 设置页眉样式 */
+                .header {
+                    background-color: #f1f1f1;
+                    text-align: center;
+                    padding: 12px;
+                }
+                /* 设置页脚样式 */
+                .footer {
+                    background-color: #eee;
+                    text-align: center;
+                    padding: 8px;
+                }
+                /* 设置顶部导航栏样式 */
+                .topnav {
+                    overflow: hidden;
+                    background-color: #333;
+                    text-align: center;
+                }
+                .topnav a{
+                    float: left;
+                    display: block;
+                    color: white;
+                    text-decoration: none;
+                    padding: 18px 16px;
+                }
+                .topnav a:hover {
+                    color: black;
+                    background-color: #ddd;
+                }
+                /* 将三个内容列并排 */
+                .column {
+                    float: left;
+                    padding: 12px;
+                    text-align: center;
+                }
+                /* 设置左，右内容宽度为25% */
+                .side {
+                    width: 25%;
+                }
+                /* 设置主内容宽度为50% */
+                .main {
+                    width: 50%;
+                }
+                .row:after {
+                    /* 清除列之后的浮动 */
+                    clear: both;
+                    display: table;
+                    content: &quot;&quot;;
+                }
+                /* 响应式布局 - 创建堆叠而非并排的三列 */
+                @media screen and (max-width: 600px) {
+                    .column.side, .column.middle {
+                        width: 100%;
+                    }
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class=&quot;header&quot;&gt;
+                &lt;h3&gt;页眉&lt;/h3&gt;
+                &lt;p&gt;页眉（header）通常位于网站顶部（或顶部导航菜单的正下方）。它通常包含徽标（logo）或网站名称&lt;/p&gt;
+            &lt;/div&gt;
+        
+            &lt;div class=&quot;topnav&quot;&gt;
+                &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;
+                &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;
+                &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;
+                &lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;
+            &lt;/div&gt;
+        
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;column side&quot;&gt;
+                    &lt;p&gt;内容&lt;/p&gt;
+                    &lt;p&gt;CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;column main&quot;&gt;
+                    &lt;p&gt;主内容&lt;/p&gt;
+                    &lt;p&gt;CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;div class=&quot;column side&quot;&gt;
+                    &lt;p&gt;内容&lt;/p&gt;
+                    &lt;p&gt;CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        
+            &lt;div class=&quot;footer&quot;&gt;
+                &lt;h3&gt;页脚&lt;/h3&gt;
+                &lt;p&gt;页脚位于页面底部。它通常包含诸如版权和联系方式之类的信息&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>
