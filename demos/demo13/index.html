@@ -6,22 +6,100 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Document</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+        .content {
+            padding-left: 25px;
+        }
+    </style>
 </head>
 <body>
     <h1>1. CSS Box Sizing属性</h1>
-    <table class="table table-bordered" style="width: 50%;">
-        <thead style="background-color: #eee;">
-            <tr>
-                <th>属性</th>
-                <th>描述</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href="./box_sizing/box_sizing.html" target="_blank"><b>box-sizing</b></a></td>
-                <td>定义元素宽度和高度的计算方式：它们是否应包含内边距（padding）和边框。</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="content">
+        <table class="table table-bordered" style="width: 45%;">
+            <thead style="background-color: #eee;">
+                <tr>
+                    <th>属性</th>
+                    <th>描述</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="./box_sizing/box_sizing.html" target="_blank"><b>box-sizing</b></a></td>
+                    <td>定义元素宽度和高度的计算方式：它们是否应包含内边距（padding）和边框。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1>2. CSS Flexbox</h1>
+    <div class="content">
+        <p>弹性框布局模块，可以更轻松地设计灵活的响应式布局结构，而无需使用浮动或定位。</p>
+    </div>
+    <br>
+    <h1>3. CSS 媒体查询</h1>
+    <div class="content">
+        <h4>3.1 CSS2 中引入了<code>@media</code>规则，它让为不同媒体类型定义不同样式规则成为可能。</h4>
+    
+        <h4>3.2 CSS3 中的媒体查询扩展了 CSS2 媒体类型的概念：它们并不查找设备类型，而是关注设备的能力。</h4>
+        <p>媒体查询可用于检查许多事情，例如：</p>
+        <ul>
+            <li>视窗的宽度和高度</li>
+            <li>设备的宽度和高度</li>
+            <li>方向(平板电脑/手机处于横向还是纵向模式)</li>
+            <li>分辨率</li>
+        </ul>
+        <br>
+        <h4>3.3 CSS3媒体类型：</h4>
+        <table class="table table-bordered" style=" width: 45%;">
+            <thead style="background-color: #eee;">
+                <tr>
+                    <th>值</th>
+                    <th>描述</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>all</th>
+                    <th>用于所有媒体类型</th>
+                </tr>
+                <tr>
+                    <th>print</th>
+                    <th>用于打印机</th>
+                </tr>
+                <tr>
+                    <th>screen</th>
+                    <th>用于计算机屏幕，平板电脑，智能手机等</th>
+                </tr>
+                <tr>
+                    <th>speech</th>
+                    <th>用于“读出”页面的屏幕阅读器</th>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h4>3.4 媒体查询语法:</h4>
+        <p>如果指定的媒体类型与正在显示文档的设备类型匹配，并且媒体查询中的所有表达式均为<code>true</code>，则查询结果为<code>true</code>。</p>
+        <span>当媒体查询为<code>true</code>时，将应用相应的样式表或样式规则，并遵循正常的级联规则。</span>
+        <code>
+            <pre style=" width: 45%;">
+@media not|only mediatype and (expressions) {
+    CSS-Code;
+}
+            </pre>
+        </code>
+        <h4>3.5 媒体查询实例: </h4>
+        <ol>
+            <li>
+                <a href="./media/media_sample.html" target="_blank">简单媒体查询实例</a>
+                <p>最简单的实例,当视窗宽度<=600px时将背景颜色更改为红色。</p>
+            </li>
+            <li>
+                <a href="./media/flexbox_media.html" target="_blank">复杂媒体查询实例</a>
+                <p>将媒体查询与 flexbox 一起使用，创建一个响应式网站，其中包含弹性导航栏和弹性内容。</p>
+            </li>
+        </ol>
+    </div>
 </body>
 </html>

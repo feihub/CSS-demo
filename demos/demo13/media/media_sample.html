@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单媒体查询实例</title>
+    <style>
+        body {
+            background-color: red;
+        }
+        /* 视窗宽度小于600px时 将背景颜色设为红色 */
+        @media screen and (min-width: 600px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line">
+        <h2>请调整浏览器窗口大小来查看效果</h2>
+        <p>在视窗宽度为600px或更宽时将背景颜色更改为浅绿色（如果视口小于600px，则背景颜色会是红色）：</p>
+    </div>
+</body>
+</html>
