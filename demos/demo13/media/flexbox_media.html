@@ -4,8 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>复杂媒体查询实例</title>
+    <style>
+        /* box-sizing允许将内外边距计算在容器的宽高度内 */
+        * {
+            box-sizing: border-box;
+        }
+        /* 清除浏览器的默认外边距 */
+        body {
+            margin: 0;
+        }
+        /* 页眉 */
+        .header {
+            padding: 18px 16px;
+            background-color: #ddd;
+            text-align: center;
+        }
+        /* 导航栏 */
+        .topnav {
+            display: flex;
+            overflow: hidden;
+            background-color: #555;
+        }
+        /* 设置导航栏链接 */
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 20px 18px;
+        }
+        .topnav a:hover {
+            background-color: #eee;
+            color: black;
+        }
+        /* 页脚 */
+        .footer {
+            padding: 15px 12px;
+            background-color: #ddd;
+            text-align: center;
+        }
+        /* 清除content之后的元素的浮动 如footer */
+        .content:after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+        .content {
+            background-color: #eee;
+            /* 列容器 */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* 将内容并排 */
+        .column {
+            float: left;
+            padding: 20px 20px;
+        }
+        .main {
+            flex: 70%;
+        }
+        .side {
+            flex: 30%;
+        }
+        .content_area {
+            width: 100%;
+            height: 12vh;
+            background-color: #aaa;
+        }
+        /* 响应式布局 当屏幕宽度小于700px时 将导航栏和内容按列堆叠排列 而不是横向并排*/
+        @media screen and (max-width: 600px) {
+            .topnav, .content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="header">
+        <h1>Header</h1>
+        <p>调整浏览器大小以查看视窗变化</p>
+    </div>
+    <div class="topnav">
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+    </div>
+    <div class="content">
+        <div class="column side">
+            <h1>Left content</h1>
+            <h2>Title</h2>
+            <h4>Sub Title</h4>
+            <div class="content_area" style="height:20vh;">Image or Text</div>
+            <p>text content ................................................................................</p>
+            <p>text content ................................................................................</p>
+            <p>text content ................................................................................</p>
+            <p>text content ................................................................................</p>
+            <h3>Sub Title</h3>
+            <p>text content ....................................................................................</p>
+            <div class="content_area">Image or Text</div><br>
+            <div class="content_area">Image or Text</div><br>
+            <div class="content_area">Image or Text</div>
+        </div>
+        <div class="column main">
+            <h1>Main content</h1>
+            <h2>Title</h2>
+            <h4>Sub Title</h4>
+            <p>text content ....................................................................................</p>
+            <p>text content ....................................................................................</p>
+            <p>text content ....................................................................................</p>
+            <p>text content ....................................................................................</p>
+            <p>text content ....................................................................................</p>
+            <p>text content ....................................................................................</p>
+            <p>text content ....................................................................................</p>
+            <div class="content_area" style="width: 100%;height: 30vh;">Image or Text</div><br>
+            <div class="content_area" style="width: 100%;height: 30vh;">Image or Text</div>
+        </div>
+    </div>
+    <div class="footer">
+        <h1>Footer</h1>
+    </div>
 </body>
 </html>
