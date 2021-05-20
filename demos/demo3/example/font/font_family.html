@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>CSS通用字体族</title>
+    <style>
+        .table {
+            font-size: 22px;
+        }
+        .div_line {
+            width: 45%;
+            float: left;
+            padding: 12px 16px;
+        }
+        #roman {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #georgia {
+            font-family: Georgia, serif;
+        }
+        #garamond {
+            font-family: Garamond, serif;
+        }
+        #arial {
+            font-family: Arial, sans-serif;
+        }
+        #verdana {
+            font-family: Verdana, sans-serif;
+        }
+        #helvetica {
+            font-family: Helvetica, sans-serif;
+        }
+        #courier {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #lucida {
+            font-family: 'Lucida Console',monospace;
+        }
+        #monaco {
+            font-family: Monaco,monospace;
+        }
+        #brush {
+            font-family: 'Brush Script MT',cursive;
+        }
+        #handwriting {
+            font-family: 'Lucida Handwriting',cursive;
+        }
+        #copperplate {
+            font-family: Copperplate,fantasy;
+        }
+        #papyrus {
+            font-family: Papyrus,fantasy;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line">
+        <h1>CSS通用字体族</h1>
+        <p>在 CSS 中，我们使用 font-family 属性规定文本的字体。</p>
+        <p>在CSS中，有以下五个通用字体族:</p>
+        <table class="table table-bordered">
+            <thead style="background-color: #bbb;">
+                <tr>
+                    <th>通用字体族</th>
+                    <th>样式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Serif</td>
+                    <td>
+                        <span id="roman">Times New Roman</span><br>
+                        <span id="georgia">Georgia</span><br>
+                        <span id="garamond">Garamond</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sans-serif</td>
+                    <td>
+                        <span id="arial">Arial</span><br>
+                        <span id="verdana">Verdana</span><br>
+                        <span id="helvetica">Helvetica</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Monospace</td>
+                    <td>
+                        <span id="courier">Courier New</span><br>
+                        <span id="lucida">Lucida Console</span><br>
+                        <span id="monaco">Monaco</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cursive</td>
+                    <td>
+                        <span id="brush">Brush Script MT</span><br>
+                        <span id="handwriting">Lucida Handwriting</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fantasy</td>
+                    <td>
+                        <span id="copperplate">Copperplate</span><br>
+                        <span id="papyrus">Papyrus</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="div_line">
+        <p>Code:</p>
+        <code>
+            <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;  
+            &lt;script src=&quot;https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+            &lt;title&gt;CSS通用字体族&lt;/title&gt;
+            &lt;style&gt;
+                .table {
+                    font-size: 22px;
+                }
+                .div_line {
+                    width: 45%;
+                    float: left;
+                    padding: 12px 16px;
+                }
+                #roman {
+                    font-family: &#x27;Times New Roman&#x27;, Times, serif;
+                }
+                #georgia {
+                    font-family: Georgia, serif;
+                }
+                #garamond {
+                    font-family: Garamond, serif;
+                }
+                #arial {
+                    font-family: Arial, sans-serif;
+                }
+                #verdana {
+                    font-family: Verdana, sans-serif;
+                }
+                #helvetica {
+                    font-family: Helvetica, sans-serif;
+                }
+                #courier {
+                    font-family: &#x27;Courier New&#x27;, Courier, monospace;
+                }
+                #lucida {
+                    font-family: &#x27;Lucida Console&#x27;,monospace;
+                }
+                #monaco {
+                    font-family: Monaco,monospace;
+                }
+                #brush {
+                    font-family: &#x27;Brush Script MT&#x27;,cursive;
+                }
+                #handwriting {
+                    font-family: &#x27;Lucida Handwriting&#x27;,cursive;
+                }
+                #copperplate {
+                    font-family: Copperplate,fantasy;
+                }
+                #papyrus {
+                    font-family: Papyrus,fantasy;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class=&quot;div_line&quot;&gt;
+                &lt;h1&gt;CSS通用字体族&lt;/h1&gt;
+                &lt;p&gt;在 CSS 中，我们使用 font-family 属性规定文本的字体。&lt;/p&gt;
+                &lt;p&gt;在CSS中，有以下五个通用字体族:&lt;/p&gt;
+                &lt;table class=&quot;table table-bordered&quot;&gt;
+                    &lt;thead style=&quot;background-color: #bbb;&quot;&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;通用字体族&lt;/th&gt;
+                            &lt;th&gt;样式&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Serif&lt;/td&gt;
+                            &lt;td&gt;
+                                &lt;span id=&quot;roman&quot;&gt;Times New Roman&lt;/span&gt;&lt;br&gt;
+                                &lt;span id=&quot;georgia&quot;&gt;Georgia&lt;/span&gt;&lt;br&gt;
+                                &lt;span id=&quot;garamond&quot;&gt;Garamond&lt;/span&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Sans-serif&lt;/td&gt;
+                            &lt;td&gt;
+                                &lt;span id=&quot;arial&quot;&gt;Arial&lt;/span&gt;&lt;br&gt;
+                                &lt;span id=&quot;verdana&quot;&gt;Verdana&lt;/span&gt;&lt;br&gt;
+                                &lt;span id=&quot;helvetica&quot;&gt;Helvetica&lt;/span&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Monospace&lt;/td&gt;
+                            &lt;td&gt;
+                                &lt;span id=&quot;courier&quot;&gt;Courier New&lt;/span&gt;&lt;br&gt;
+                                &lt;span id=&quot;lucida&quot;&gt;Lucida Console&lt;/span&gt;&lt;br&gt;
+                                &lt;span id=&quot;monaco&quot;&gt;Monaco&lt;/span&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Cursive&lt;/td&gt;
+                            &lt;td&gt;
+                                &lt;span id=&quot;brush&quot;&gt;Brush Script MT&lt;/span&gt;&lt;br&gt;
+                                &lt;span id=&quot;handwriting&quot;&gt;Lucida Handwriting&lt;/span&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Fantasy&lt;/td&gt;
+                            &lt;td&gt;
+                                &lt;span id=&quot;copperplate&quot;&gt;Copperplate&lt;/span&gt;&lt;br&gt;
+                                &lt;span id=&quot;papyrus&quot;&gt;Papyrus&lt;/span&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

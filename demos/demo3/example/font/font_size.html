@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS字体大小</title>
+    <style>
+        .div_line {
+            width: 45%;
+            float: left;
+        }
+        .absolute_size {
+            font-size: 50px;
+        }
+        .relative_size {
+            font-size: 2em;
+        }
+        .p1 {
+            font-size: 3vh;
+        }
+        .p2 {
+            font-size: 2vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line">
+        <h1>CSS字体大小</h1>
+        <p><b>font-size </b>属性用于设置字体的大小</p>
+        <p class="absolute_size">1. 使用绝对长度单位px来设置字体大小</p>
+        <p class="relative_size">2. 使用相对长度单位em来设置字体大小</p>
+        <div class="response_size" style="border: 1px solid black;">
+            <p style="font-size: 4vw;">3. 响应式字体大小（请调整浏览器窗口大小，以查看字体变化）</p>
+            <p class="p1">使用vh 单位， 字体大小会根据浏览器窗口的高度变化而变大或变小</p>
+            <p class="p2">使用vw 单位， 字体大小会根据浏览器窗口的宽度变化而变大或变小</p>
+        </div>
+    </div>
+    <div class="div_line">
+        <p>Code:</p>
+        <code>
+            <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;CSS字体大小&lt;/title&gt;
+            &lt;style&gt;
+                .div_line {
+                    width: 45%;
+                    float: left;
+                }
+                .absolute_size {
+                    font-size: 50px;
+                }
+                .relative_size {
+                    font-size: 2em;
+                }
+                .p1 {
+                    font-size: 3vh;
+                }
+                .p2 {
+                    font-size: 2vw;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class=&quot;div_line&quot;&gt;
+                &lt;h1&gt;CSS字体大小&lt;/h1&gt;
+                &lt;p&gt;&lt;b&gt;font-size &lt;/b&gt;属性用于设置字体的大小&lt;/p&gt;
+                &lt;p class=&quot;absolute_size&quot;&gt;1. 使用绝对长度单位px来设置字体大小&lt;/p&gt;
+                &lt;p class=&quot;relative_size&quot;&gt;2. 使用相对长度单位em来设置字体大小&lt;/p&gt;
+                &lt;div class=&quot;response_size&quot; style=&quot;border: 1px solid black;&quot;&gt;
+                    &lt;p style=&quot;font-size: 4vw;&quot;&gt;3. 响应式字体大小（请调整浏览器窗口大小，以查看字体变化）&lt;/p&gt;
+                    &lt;p class=&quot;p1&quot;&gt;使用vh 单位， 字体大小会根据浏览器窗口的高度变化而变大或变小&lt;/p&gt;
+                    &lt;p class=&quot;p2&quot;&gt;使用vw 单位， 字体大小会根据浏览器窗口的宽度变化而变大或变小&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

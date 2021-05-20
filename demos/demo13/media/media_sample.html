@@ -5,21 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>简单媒体查询实例</title>
     <style>
-        body {
-            background-color: red;
+        /* box-sizing允许将内外边距计算在容器的宽高度内 */
+        * {
+            box-sizing: border-box;
         }
-        /* 视窗宽度小于600px时 将背景颜色设为红色 */
+        body {
+            background-color: yellow;
+        }
+        .div_line {
+            overflow: auto;
+        }
+        .media_nav {
+            float: none;
+            width: auto;
+        }
+        /* 清除默认内外边距 */
+        .media_items {
+            margin: 0;
+            padding: 0;
+        }
+        .items {
+            list-style-type: none;
+            color: white;
+            background-color: #4CAF50;
+            margin: 4px;
+            padding: 4px;
+            border-radius: 5px;
+            width: 20vh;
+            text-align: center;
+        }
         @media screen and (min-width: 600px) {
+        /* 视窗宽度大于等于600px时 将背景颜色设为白色 */
             body {
-                background-color: lightgreen;
+                background-color: white;
+            }
+        /* 视窗宽度大于等于600px时 将顶部的菜单置于左侧 */
+            .media_nav {
+                float: left;
             }
         }
     </style>
 </head>
 <body>
     <div class="div_line">
-        <h2>请调整浏览器窗口大小来查看效果</h2>
-        <p>在视窗宽度为600px或更宽时将背景颜色更改为浅绿色（如果视口小于600px，则背景颜色会是红色）：</p>
+        <div class="media_nav">
+            <ul class="media_items">
+                <li class="items">Item</li>
+                <li class="items">Item</li>
+                <li class="items">Item</li>
+                <li class="items">Item</li>
+            </ul>
+        </div>
+        <div class="right_content">
+            <h2>请调整浏览器窗口大小来查看效果</h2>
+            <p>在视窗宽度为600px或更宽时将背景颜色更改为白色，且将顶部的菜单置于左侧（如果视口小于600px，则背景颜色会是黄色，菜单位于顶部）：</p>
+        </div>
+    </div>
+    <div>
+        <p>Code:</p>
+        <code style="font-size: 16px;">
+            <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;简单媒体查询实例&lt;/title&gt;
+            &lt;style&gt;
+                * {
+                    box-sizing: border-box;
+                }
+                body {
+                    background-color: yellow;
+                }
+                .div_line {
+                    overflow: auto;
+                }
+                .media_nav {
+                    float: none;
+                    width: auto;
+                }
+                .media_items {
+                    margin: 0;
+                    padding: 0;
+                }
+                .items {
+                    list-style-type: none;
+                    color: white;
+                    background-color: #4CAF50;
+                    margin: 4px;
+                    padding: 2px;
+                    border-radius: 5px;
+                    width: 20vh;
+                    /* height: 2vh; */
+                    text-align: center;
+                }
+                @media screen and (min-width: 600px) {
+                /* 视窗宽度大于等于600px时 将背景颜色设为白色 */
+                    body {
+                        background-color: white;
+                    }
+                /* 视窗宽度大于等于600px时 将顶部的菜单置于左侧 */
+                    .media_nav {
+                        float: left;
+                    }
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class=&quot;div_line&quot;&gt;
+                &lt;div class=&quot;media_nav&quot;&gt;
+                    &lt;ul class=&quot;media_items&quot;&gt;
+                        &lt;li class=&quot;items&quot;&gt;Item&lt;/li&gt;
+                        &lt;li class=&quot;items&quot;&gt;Item&lt;/li&gt;
+                        &lt;li class=&quot;items&quot;&gt;Item&lt;/li&gt;
+                        &lt;li class=&quot;items&quot;&gt;Item&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;right_content&quot;&gt;
+                    &lt;h2&gt;请调整浏览器窗口大小来查看效果&lt;/h2&gt;
+                    &lt;p&gt;在视窗宽度为600px或更宽时将背景颜色更改为白色，且将顶部的菜单置于左侧（如果视口小于600px，则背景颜色会是黄色，菜单位于顶部）：&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+            </pre>
+        </code>
     </div>
 </body>
 </html>

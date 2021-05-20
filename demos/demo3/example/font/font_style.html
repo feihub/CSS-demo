@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS字体样式</title>
+    <style>
+        .div_line {
+            width: 45%;
+            float: left;
+        }
+        /* 1. CSS字体样式 */
+        .font_normal {
+            font-style: normal;
+        }
+        .font_italic {
+            font-style: italic;
+        }
+        .font_oblique {
+            font-style: oblique;
+        }
+        /* 2. 字体粗细 */
+        .font1 {
+            font-weight: normal;
+        }
+        .font2 {
+            font-weight: bold;
+        }
+        /* 3. 字体变体 small-caps */
+        .variant {
+            font-variant: small-caps;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line">
+        <h1>1. CSS字体样式</h1>
+        <p><b>font-style </b>属性主要用来设置斜体文本，它有以下三个值:</p>
+        <ul>
+            <li class="font_normal">normal - 文本正常显示</li>
+            <li  class="font_italic">italic - 文本斜体显示</li>
+            <li class="font_oblique">oblique - 文本为倾斜 （倾斜与斜体非常相似，但支持较少）</li>
+        </ul>
+        <br>
+        <h1>2. 字体粗细</h1>
+        <p><b>font-weight </b>属性用于设置字体的粗细</p>
+        <p class="font1">这是一段粗细正常的文本</p>
+        <p class="font2">这是一段字体更粗的文本</p>
+        <br>
+        <h1>3. 字体变体</h1>
+        <p><b>font-variant </b>属性设置是否以small-caps字体（小写大写字母）显示文本</p>
+        <p>在 small-caps 字体中，所有小写字母都将转换为大写字母。但是，转换后的大写字母的字体大小小于文本中原始大写字母的字体大小。</p>
+        <h1 class="variant">NCS Making IT Happen</h1>
+    </div>
+    <div class="div_line">
+        <p>Code:</p>
+        <code>
+            <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;CSS字体样式&lt;/title&gt;
+            &lt;style&gt;
+                .div_line {
+                    width: 45%;
+                    float: left;
+                }
+                /* 1. CSS字体样式 */
+                .font_normal {
+                    font-style: normal;
+                }
+                .font_italic {
+                    font-style: italic;
+                }
+                .font_oblique {
+                    font-style: oblique;
+                }
+                /* 2. 字体粗细 */
+                .font1 {
+                    font-weight: normal;
+                }
+                .font2 {
+                    font-weight: bold;
+                }
+                /* 3. 字体变体 small-caps */
+                .variant {
+                    font-variant: small-caps;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class=&quot;div_line&quot;&gt;
+                &lt;h1&gt;1. CSS字体样式&lt;/h1&gt;
+                &lt;p&gt;&lt;b&gt;font-style &lt;/b&gt;属性主要用来设置斜体文本，它有以下三个值:&lt;/p&gt;
+                &lt;ul&gt;
+                    &lt;li class=&quot;font_normal&quot;&gt;normal - 文本正常显示&lt;/li&gt;
+                    &lt;li  class=&quot;font_italic&quot;&gt;italic - 文本斜体显示&lt;/li&gt;
+                    &lt;li class=&quot;font_oblique&quot;&gt;oblique - 文本为倾斜 （倾斜与斜体非常相似，但支持较少）&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;br&gt;
+                &lt;h1&gt;2. 字体粗细&lt;/h1&gt;
+                &lt;p&gt;&lt;b&gt;font-weight &lt;/b&gt;属性用于设置字体的粗细&lt;/p&gt;
+                &lt;p class=&quot;font1&quot;&gt;这是一段粗细正常的文本&lt;/p&gt;
+                &lt;p class=&quot;font2&quot;&gt;这是一段字体更粗的文本&lt;/p&gt;
+                &lt;br&gt;
+                &lt;h1&gt;3. 字体变体&lt;/h1&gt;
+                &lt;p&gt;&lt;b&gt;font-variant &lt;/b&gt;属性设置是否以small-caps字体（小写大写字母）显示文本&lt;/p&gt;
+                &lt;p&gt;在 small-caps 字体中，所有小写字母都将转换为大写字母。但是，转换后的大写字母的字体大小小于文本中原始大写字母的字体大小。&lt;/p&gt;
+                &lt;h1 class=&quot;variant&quot;&gt;NCS Making IT Happen&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

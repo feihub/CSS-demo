@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS文字间距</title>
+    <style>
+        .div_line {
+            width: 45%;
+            float: left;
+        }
+        /* 1.文字缩进 */
+        .p1 {
+            text-indent: 25px;
+        }
+        /* 2. 字母间距 */
+        .letter1 {
+            letter-spacing: 8px;
+        }
+        .letter2 {
+            letter-spacing: -4px;
+        }
+        /* 3. 行高 */
+        .line1 {
+            line-height: 0.5;
+        }
+        .line2 {
+            line-height: 2.5;
+        }
+        /* 4. 字间距 */
+        .word1 {
+            word-spacing: -1px;
+        }
+        .word2 {
+            word-spacing: 13px;
+        }
+        /* 5. 空白 */
+        .space {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line">
+        <h1>CSS文字间距</h1>
+        <h2>1. 文字缩进</h2>
+        <p><b>text-indent </b>属性用于指定文本第一行的缩进:</p>
+        <p>1. 默认段落：CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。</p>
+        <p class="p1">2.设置首行缩进的段落：CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。</p>
+        
+        <h2>2. 字母间距</h2>
+        <p><b>letter-spacing </b>属性用于指定文本中字符之间的间距:(其值可以为负)</p>
+        <h1 class="letter1">NCS MAKING IT HAPPEN</h1>
+        <h1 class="letter2">NCS MAKING IT HAPPEN</h1>
+        
+        <h2>3. 行高</h2>
+        <p><b>line-height </b>属性用于指定行之间的间距:</p>
+        <p class="line1">
+            line-height小的段落<br>
+            line-height小的段落
+        </p>
+        <p class="line2">
+            line-height大的段落<br>
+            line-height大的段落
+        </p>
+
+        <h2>4. 字间距</h2>
+        <p><b>word-spacing </b>属性用于指定文本中单词之间的间距:(其值可以为负)</p>
+        <h3 class="word1">文 字 间 距 较 小 的 标 题</h3>
+        <h3 class="word2">文 字 间 距 较 大 的 标 题</h3>
+
+        <h2>5. 空白</h2>
+        <p><b>white-spacing  </b>属性指定元素内部空白的处理方式</p>
+        <p>1. 默认段落：</p>
+        <p>NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen </p>
+        <p>2. 设置了 white-space 的段落：</p>
+        <p class="space">NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen </p>
+    </div>
+    <div class="div_line">
+        <p>Code: </p>
+        <code>
+            <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;CSS文字间距&lt;/title&gt;
+            &lt;style&gt;
+                .div_line {
+                    width: 45%;
+                    float: left;
+                }
+                /* 1.文字缩进 */
+                .p1 {
+                    text-indent: 25px;
+                }
+                /* 2. 字母间距 */
+                .letter1 {
+                    letter-spacing: 8px;
+                }
+                .letter2 {
+                    letter-spacing: -4px;
+                }
+                /* 3. 行高 */
+                .line1 {
+                    line-height: 0.5;
+                }
+                .line2 {
+                    line-height: 2.5;
+                }
+                /* 4. 字间距 */
+                .word1 {
+                    word-spacing: -1px;
+                }
+                .word2 {
+                    word-spacing: 13px;
+                }
+                /* 5. 空白 */
+                .space {
+                    white-space: nowrap;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class=&quot;div_line&quot;&gt;
+                &lt;h1&gt;CSS文字间距&lt;/h1&gt;
+                &lt;h2&gt;1. 文字缩进&lt;/h2&gt;
+                &lt;p&gt;&lt;b&gt;text-indent &lt;/b&gt;属性用于指定文本第一行的缩进:&lt;/p&gt;
+                &lt;p&gt;1. 默认段落：CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。&lt;/p&gt;
+                &lt;p class=&quot;p1&quot;&gt;2.设置首行缩进的段落：CSS是Cascading Style Sheets（层叠样式表单）的缩写，它是一种用来表现HTML或XML 等文件式样的计算机语言。 CSS的作用就是为网页设置外观，相当于给HTML文档穿上了华丽的衣服。 CSS目前最新版本为CSS3，能够真正做到网页表现与内容分离的一种样式设计语言。&lt;/p&gt;
+                
+                &lt;h2&gt;2. 字母间距&lt;/h2&gt;
+                &lt;p&gt;&lt;b&gt;letter-spacing &lt;/b&gt;属性用于指定文本中字符之间的间距:(其值可以为负)&lt;/p&gt;
+                &lt;h1 class=&quot;letter1&quot;&gt;NCS MAKING IT HAPPEN&lt;/h1&gt;
+                &lt;h1 class=&quot;letter2&quot;&gt;NCS MAKING IT HAPPEN&lt;/h1&gt;
+                
+                &lt;h2&gt;3. 行高&lt;/h2&gt;
+                &lt;p&gt;&lt;b&gt;line-height &lt;/b&gt;属性用于指定行之间的间距:&lt;/p&gt;
+                &lt;p class=&quot;line1&quot;&gt;
+                    line-height小的段落&lt;br&gt;
+                    line-height小的段落
+                &lt;/p&gt;
+                &lt;p class=&quot;line2&quot;&gt;
+                    line-height大的段落&lt;br&gt;
+                    line-height大的段落
+                &lt;/p&gt;
+        
+                &lt;h2&gt;4. 字间距&lt;/h2&gt;
+                &lt;p&gt;&lt;b&gt;word-spacing &lt;/b&gt;属性用于指定文本中单词之间的间距:(其值可以为负)&lt;/p&gt;
+                &lt;h3 class=&quot;word1&quot;&gt;文 字 间 距 较 小 的 标 题&lt;/h3&gt;
+                &lt;h3 class=&quot;word2&quot;&gt;文 字 间 距 较 大 的 标 题&lt;/h3&gt;
+        
+                &lt;h2&gt;5. 空白&lt;/h2&gt;
+                &lt;p&gt;&lt;b&gt;white-spacing  &lt;/b&gt;属性指定元素内部空白的处理方式&lt;/p&gt;
+                &lt;p&gt;1. 默认段落：&lt;/p&gt;
+                &lt;p&gt;NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen &lt;/p&gt;
+                &lt;p&gt;2. 设置了 white-space 的段落：&lt;/p&gt;
+                &lt;p class=&quot;space&quot;&gt;NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen NCS Making IT Happen &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>
