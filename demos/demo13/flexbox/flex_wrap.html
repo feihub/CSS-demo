@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Flex Wrap</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap; /*使flex在必要时换行*/
+            background-color: #ccc;
+        }
+        .flex-container > div {
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h3><code>flex-wrap </code>属性规定 flex 项目将在必要时进行换行,请调整浏览器窗口大小以查看flex项目的变化</h3>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+    </div>
+    <br>
+    <code>
+        <pre>
+            <p>Code:</p>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;  
+        &lt;script src=&quot;https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+        &lt;title&gt;Flex Wrap&lt;/title&gt;
+        &lt;style&gt;
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #ccc;
+            }
+            .flex-container &gt; div {
+                background-color: white;
+                margin: 10px;
+                padding: 20px;
+            }
+    
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h3&gt;&lt;code&gt;flex-wrap &lt;/code&gt;属性规定 flex 项目将在必要时进行换行,请调整浏览器窗口大小以查看flex项目的变化&lt;/h3&gt;
+        &lt;div class=&quot;flex-container&quot;&gt;
+            &lt;div&gt;1&lt;/div&gt;
+            &lt;div&gt;2&lt;/div&gt;
+            &lt;div&gt;3&lt;/div&gt;
+            &lt;div&gt;4&lt;/div&gt;
+            &lt;div&gt;5&lt;/div&gt;
+            &lt;div&gt;6&lt;/div&gt;
+            &lt;div&gt;7&lt;/div&gt;
+            &lt;div&gt;8&lt;/div&gt;
+            &lt;div&gt;9&lt;/div&gt;
+            &lt;div&gt;10&lt;/div&gt;
+            &lt;div&gt;11&lt;/div&gt;
+            &lt;div&gt;12&lt;/div&gt;
+            &lt;div&gt;13&lt;/div&gt;
+            &lt;div&gt;14&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
+    </code>
+</body>
+</html>

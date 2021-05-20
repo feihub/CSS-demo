@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>justify content</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+        .div_line {
+            width: 45%;
+            float: left;
+            padding: 20px;
+        }
+        .flex {
+            display: flex;
+            flex-direction: row;
+            background-color: #ccc;
+            justify-content: center;
+        }
+        .flex > div {
+            margin: 10px;
+            padding: 20px;
+            width: 50px;
+            background-color: white;
+        }
+        /* 居中对齐 */
+        .container1 {
+            justify-content: center;
+        }
+        /* 向开头对齐 */
+        .container2 {
+            justify-content: flex-start;
+        }
+        /* 向末端对齐 */
+        .container3 {
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_line">
+        <h1><code>justify-content</code>属性用于对齐 flex 项目</h1>
+        <h3><code>center</code> 值将 flex 项目在容器中居中对齐</h3>
+        <div class="flex container1">
+            <div>1</div>
+        </div>
+        <h3><code>flex-start</code> 值将 flex 项目在容器的开头对齐（默认）:</h3>
+        <div class="flex container2">
+            <div>2</div>
+        </div>
+        <h3><code>flex-end</code> 值将 flex 项目在容器的末尾对齐（默认）:</h3>
+        <div class="flex container3">
+            <div>3</div>
+        </div>
+    </div>
+    <div class="div_line">
+        <h3>Code:</h3>
+        <code>
+            <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;  
+        &lt;script src=&quot;https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+        &lt;title&gt;justify content&lt;/title&gt;
+        &lt;style&gt;
+            body {
+                padding: 20px;
+            }
+            .flex {
+                display: flex;
+                flex-direction: row;
+                background-color: #ccc;
+                justify-content: center;
+            }
+            .flex &gt; div {
+                margin: 10px;
+                padding: 20px;
+                width: 50px;
+                background-color: white;
+            }
+            /* 居中对齐 */
+            .container1 {
+                justify-content: center;
+            }
+            /* 向开头对齐 */
+            .container2 {
+                justify-content: flex-start;
+            }
+            /* 向末端对齐 */
+            .container3 {
+                justify-content: flex-end;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;div_line&quot;&gt;
+            &lt;h1&gt;&lt;code&gt;justify-content&lt;/code&gt;属性用于对齐 flex 项目&lt;/h1&gt;
+            &lt;h3&gt;&lt;code&gt;center&lt;/code&gt; 值将 flex 项目在容器中居中对齐&lt;/h3&gt;
+            &lt;div class=&quot;flex container1&quot;&gt;
+                &lt;div&gt;1&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;h3&gt;&lt;code&gt;flex-start&lt;/code&gt; 值将 flex 项目在容器的开头对齐（默认）:&lt;/h3&gt;
+            &lt;div class=&quot;flex container2&quot;&gt;
+                &lt;div&gt;2&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;h3&gt;&lt;code&gt;flex-end&lt;/code&gt; 值将 flex 项目在容器的末尾对齐（默认）:&lt;/h3&gt;
+            &lt;div class=&quot;flex container3&quot;&gt;
+                &lt;div&gt;3&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+        </code>
+    </div>
+</body>
+</html>

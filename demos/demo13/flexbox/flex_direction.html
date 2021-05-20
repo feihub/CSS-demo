@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-direction</title>
+    <style>
+        .flex-container {
+            /* 通过将 display 属性设置为 flex，flex 容器将可伸缩 */
+            display: flex;
+            background-color: #aaa;
+            /* flex-direction: column; 垂直堆叠弹性项目（从上到下） */
+            flex-direction: column;
+        }
+        /* > 子选择器 */
+        .flex-container > div {
+            margin: 20px;
+            padding: 30px;
+            width: 30px;
+            background-color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>如需使用 Flexbox 模型，首先需定义flex容器</h3>
+    <p>弹性布局中必须有一个 display 属性设置为 flex 的父元素</p>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p>Code:</p>
+    <code style="font-size: 16px;">
+        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;flex-direction&lt;/title&gt;
+        &lt;style&gt;
+            .flex-container {
+                /* 通过将 display 属性设置为 flex，flex 容器将可伸缩 */
+                display: flex;
+                background-color: #aaa;
+                /* flex-direction: column; 垂直堆叠弹性项目（从上到下） */
+                flex-direction: column;
+            }
+            /* &gt; 子选择器 */
+            .flex-container &gt; div {
+                margin: 20px;
+                padding: 30px;
+                width: 30px;
+                background-color: white;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h3&gt;如需使用 Flexbox 模型，首先需定义flex容器&lt;/h3&gt;
+        &lt;p&gt;弹性布局中必须有一个 display 属性设置为 flex 的父元素&lt;/p&gt;
+        &lt;div class=&quot;flex-container&quot;&gt;
+            &lt;div&gt;1&lt;/div&gt;
+            &lt;div&gt;2&lt;/div&gt;
+            &lt;div&gt;3&lt;/div&gt;
+        &lt;/div&gt;
+    
+    &lt;/body&gt;
+        </pre>
+    </code>
+</body>
+</html>
