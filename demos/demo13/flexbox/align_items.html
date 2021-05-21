@@ -7,34 +7,161 @@
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>align items</title>
     <style>
+        body {
+            padding: 20px;
+        }
         .div_line {
             width: 45%;
             float: left;
         }
-        .flex-container {
+        .flex {
             display: flex;
-            /* align-items: center; */
-            flex-direction: row;
+            height: 200px;
+            /* flex-direction: row; */
             background-color: #ccc;
         }
-        .flex-container > div {
-            margin: 20px;
-            padding: 30px;
+        .flex > div {
+            margin: 10px;
+            padding: 20px;
             width: 80px;
             text-align: center;
             background-color: white;
+        }
+        .container1 {
+            align-items: center;
+        }
+        .container2 {
+            align-items: flex-start;
+        }
+        .container3 {
+            align-items: flex-end;
+        }
+        .container4 {
+            align-items: stretch;
+        }
+        .container5 {
+            align-items: baseline;
+            text-align: center;
+            line-height: 75px;
         }
     </style>
 </head>
 <body>
     <div class="div_line">
-        <h3><code>align-items</code>属性用于垂直对齐 flex 项目</h3>
-        <div class="flex-container">
+        <h1><code>align-items</code>属性用于垂直对齐 flex 项目</h1>
+        <h3><code>center</code> 值将 flex 项目在容器中间对齐</h3>
+        <div class="flex container1">
             <div>1</div>
             <div>2</div>
-            <div>3</div>
-            <div>4</div>
         </div>
+        <h3><code>flex-start</code> 值将 flex 项目在容器顶部对齐:</h3>
+        <div class="flex container2">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <h3><code>flex-end</code> 值将弹性项目在容器底部对齐:</h3>
+        <div class="flex container3">
+            <div>1</div>
+            <div>2</div>
+        </div>        
+        <h3><code>stretch</code> 值拉伸 flex 项目以填充容器（默认）:</h3>
+        <div class="flex container4">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <h3><code>baseline</code> 值使 flex 项目基线对齐：</h3>
+        <div class="flex container5">
+            <div><h1>1</h1></div>
+            <div><h6>2</h6></div>
+            <div><small>3</small></div>
+        </div>
+    </div>
+    <div class="div_line" style="padding-left: 20px;">
+        <code>
+            <pre>
+                <p>Code:</p>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;  
+            &lt;script src=&quot;https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+            &lt;title&gt;align items&lt;/title&gt;
+            &lt;style&gt;
+                body {
+                    padding: 20px;
+                }
+                .div_line {
+                    width: 45%;
+                    float: left;
+                }
+                .flex {
+                    display: flex;
+                    height: 200px;
+                    /* flex-direction: row; */
+                    background-color: #ccc;
+                }
+                .flex &gt; div {
+                    margin: 10px;
+                    padding: 20px;
+                    width: 80px;
+                    text-align: center;
+                    background-color: white;
+                }
+                .container1 {
+                    align-items: center;
+                }
+                .container2 {
+                    align-items: flex-start;
+                }
+                .container3 {
+                    align-items: flex-end;
+                }
+                .container4 {
+                    align-items: stretch;
+                }
+                .container5 {
+                    align-items: baseline;
+                    text-align: center;
+                    line-height: 75px;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class=&quot;div_line&quot;&gt;
+                &lt;h1&gt;&lt;code&gt;align-items&lt;/code&gt;属性用于垂直对齐 flex 项目&lt;/h1&gt;
+                &lt;h3&gt;&lt;code&gt;center&lt;/code&gt; 值将 flex 项目在容器中间对齐&lt;/h3&gt;
+                &lt;div class=&quot;flex container1&quot;&gt;
+                    &lt;div&gt;1&lt;/div&gt;
+                    &lt;div&gt;2&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;h3&gt;&lt;code&gt;flex-start&lt;/code&gt; 值将 flex 项目在容器顶部对齐:&lt;/h3&gt;
+                &lt;div class=&quot;flex container2&quot;&gt;
+                    &lt;div&gt;1&lt;/div&gt;
+                    &lt;div&gt;2&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;h3&gt;&lt;code&gt;flex-end&lt;/code&gt; 值将弹性项目在容器底部对齐:&lt;/h3&gt;
+                &lt;div class=&quot;flex container3&quot;&gt;
+                    &lt;div&gt;1&lt;/div&gt;
+                    &lt;div&gt;2&lt;/div&gt;
+                &lt;/div&gt;        
+                &lt;h3&gt;&lt;code&gt;stretch&lt;/code&gt; 值拉伸 flex 项目以填充容器（默认）:&lt;/h3&gt;
+                &lt;div class=&quot;flex container4&quot;&gt;
+                    &lt;div&gt;1&lt;/div&gt;
+                    &lt;div&gt;2&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;h3&gt;&lt;code&gt;baseline&lt;/code&gt; 值使 flex 项目基线对齐：&lt;/h3&gt;
+                &lt;div class=&quot;flex container5&quot;&gt;
+                    &lt;div&gt;&lt;h1&gt;1&lt;/h1&gt;&lt;/div&gt;
+                    &lt;div&gt;&lt;h6&gt;2&lt;/h6&gt;&lt;/div&gt;
+                    &lt;div&gt;&lt;small&gt;3&lt;/small&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+            </pre>
+        </code>
     </div>
 </body>
 </html>

@@ -4,8 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox</title>
+    <title>Flexbox实例</title>
+    <style>
+        /* box-sizing允许将内外边距计算在容器的宽高度内 */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .header {
+            background-color: #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            border: 1px solid #aaa;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .column {
+            /* 创建并排的4列 */
+            flex: 25%;
+            max-width: 25%;
+            padding: 4px;
+
+        }
+        /* 响应式布局 - 当屏幕小于800px时 创建两列而不是四列布局 */
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+        /* 响应式布局 - 当屏幕小于600px时 使图片上下堆叠 */
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="div_line">
+        <!-- Header -->
+        <div class="header">
+            <h2>响应式图像网格</h2>
+            <h3>请调整浏览器窗口以查看视图的变化</h3>
+        </div>
+        <!-- photo grid -->
+        <div class="container">
+            <div class="column">
+                <img src="../img/ncs-img_1.png" alt="">
+                <img src="../img/ncs-img_2.jfif" alt="">
+                <img src="../img/ncs_img_3.jpg" alt="">
+                <img src="../img/ncs-img_2.jfif" alt="">
+                <img src="../img/ncs-img_1.png" alt="">
+                <img src="../img/ncs_img_3.jpg" alt="">
+            </div>
+            <div class="column">
+                <img src="../img/ncs_img_3.jpg" alt="">
+                <img src="../img/ncs-img_2.jfif" alt="">
+                <img src="../img/ncs-img_1.png" alt="">
+                <img src="../img/ncs-img_1.png" alt="">
+                <img src="../img/ncs_img_3.jpg" alt="">
+                <img src="../img/ncs-img_2.jfif" alt="">
+            </div>
+            <div class="column">
+                <img src="../img/ncs-img_2.jfif" alt="">
+                <img src="../img/ncs-img_1.png" alt="">
+                <img src="../img/ncs_img_3.jpg" alt="">
+                <img src="../img/ncs-img_2.jfif" alt="">
+                <img src="../img/ncs-img_1.png" alt="">
+                <img src="../img/ncs_img_3.jpg" alt="">
+            </div>
+            <div class="column">
+                <img src="../img/ncs-img_1.png" alt="">
+                <img src="../img/ncs-img_2.jfif" alt="">
+                <img src="../img/ncs_img_3.jpg" alt="">
+                <img src="../img/ncs-img_2.jfif" alt="">
+                <img src="../img/ncs-img_1.png" alt="">
+                <img src="../img/ncs_img_3.jpg" alt="">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
