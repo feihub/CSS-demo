@@ -8,10 +8,18 @@
     <title>Document</title>
     <style>
         body {
-            margin: 20px;
+            margin: 10px;
         }
         .content {
             padding-left: 25px;
+        }
+        .grid_layout {
+            display: flex;
+        }
+        .item {
+            margin: 3px;
+            padding: 2px 12px;
+            border: 1px solid #aaa;
         }
     </style>
 </head>
@@ -35,7 +43,7 @@
     </div>
     <h1>2. CSS Flexbox</h1>
     <div class="content">
-        <h3>弹性框布局模块，可以更轻松地设计灵活的响应式布局结构，而无需使用浮动或定位。</h3>
+        <h4>2.1 弹性框布局模块，可以更轻松地设计灵活的响应式布局结构，而无需使用浮动或定位。</h4>
         <p>以下是flex布局的一些主要属性：</p>
         <table class="table table-bordered" style="width: 45%;">
             <thead style="background-color: #bbb;">
@@ -73,7 +81,7 @@
                 </tr>
             </tbody>
         </table>
-        <h3>实例：使用 flexbox 创建响应式图像库 <a href="./flexbox/flexbox.html">EG</a></h3>
+        <h4>2.2 实例：使用 flexbox 创建响应式图像库 <a href="./flexbox/flexbox.html">EG</a></h4>
     </div>
     <br>
     <h1>3. CSS 媒体查询</h1>
@@ -138,6 +146,87 @@
                 <p>将媒体查询与 flexbox 结合起来，创建一个响应式网站，其中包含弹性导航栏和弹性内容。</p>
             </li>
         </ol>
+    </div>
+    <h1>4. CSS 响应式设计</h1>
+    <div class="content">
+        <h4>4.1 什么是响应式设计</h4>
+        <ul>
+            <li>响应式 Web 设计让你的网页能在所有设备上完美显示。</li>
+            <li>响应式 Web 设计只使用 HTML 和 CSS。</li>
+            <li>响应式 Web 设计不是一个程序或Javascript脚本。</li>
+        </ul>
+        <br>
+        <h4>4.2 设置视口</h4>
+        <p>可以通过<code>meta</code>标签来控制视口</p>
+        <code>
+            <pre style="width: 45%;">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</pre>
+        </code>
+        <p>它为浏览器提供了关于如何控制页面尺寸和缩放比例的指令。
+            width=device-width 部分将页面的宽度设置为跟随设备的屏幕宽度（视设备而定）。
+            当浏览器首次加载页面时，initial-scale=1.0 部分设置初始缩放级别。
+        </p>
+    </div>
+
+    <h1>5. CSS网格</h1>
+    <div class="content">
+        <h4>5.1 CSS 网格布局模块提供了带有行和列的基于网格的布局系统，它由一个父元素及一个或多个子元素组成。它使网页设计变得更加容易，而无需使用浮动和定位。</h4>
+
+        <div class="grid_layout">
+            <div class="item column">
+                <p><b>网格列 (Grid Columns): 网格项的垂直线被称为列:</b></p>
+                <img src="./img/grid_column.png" alt="" style="width: 26vw; height: 26vw;">
+            </div>
+            <div class="item row">
+                <p><b> 网格行 (Grid Rows): 网格项的水平线被称为行:</b></p>
+                <img src="./img/grid_row.png" alt="" style="width: 26vw; height: 26vw;">
+            </div>
+            <div class="item gap">
+                <p><b> 网格间隙 (Grid Gaps)：每列/行之间的间隔称为间隙:</b></p>
+                <img src="./img/grid_gap.png" alt="" style="width: 26vw; height: 26vw;">
+            </div>
+        </div>
+        <br>
+        <h4>5.2 网格布局有以下几种属性:</h4>
+        <table class="table table-bordered" style="width: 50%;">
+            <thead style="background-color: #ccc;">
+                <tr>
+                    <th>属性</th>
+                    <th>描述</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>grid-column-gap</code></td>
+                    <td>设置每列的间隙</td>
+                </tr>
+                <tr>
+                    <td><code>grid-row-gap</code></td>
+                    <td>设置每行的间隙</td>
+                </tr>
+                <tr>
+                    <td><code>grid-column-gap</code></td>
+                    <td><code>grid-row-gap</code>和<code>grid-column-gap</code>属性的简写属性</td>
+                </tr>
+                <tr>
+                    <td><code>grid-column-start</code></td>
+                    <td>设置网格从第几列开始</td>
+                </tr>
+                <tr>
+                    <td><code>grid-column-end</code></td>
+                    <td>设置网格到第几列结束</td>
+                </tr>
+                <tr>
+                    <td><code>grid-row-start</code></td>
+                    <td>设置网格从第几行开始</td>
+                </tr>
+                <tr>
+                    <td><code>grid-row-end</code></td>
+                    <td>设置网格到第几行结束</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h4>5.3 网格布局实例<a href="./grid/grid_layout.html" target="_blank"> EG</a></h4>
     </div>
 </body>
 </html>
