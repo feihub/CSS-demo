@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS响应式设计 - 方向</title>
+    <style>
+        body {
+            background-color: green;
+        }
+        /* 如果方向为横向模式（landscape mode），则背景色设为灰色 */
+        @media only screen and (orientation: landscape) {
+            body {
+                background-color: #aaa;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>如果方向为横向模式（landscape mode），则背景色设为灰色：</h1>
+    <h2>请调整浏览器窗口大小以查看变化</h2>
+</body>
+</html>

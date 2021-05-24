@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS响应式设计 - 媒体查询</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .rwd_media {
+            padding: 30px;
+            background-color: #aaa;
+        }
+        /* 超小型设备（600px及以下的手机） */
+        @media only screen and (max-width: 600px) {
+            .rwd_media {background: red;}
+        }
+        /* 小型设备（纵向平板电脑和大型手机，600 像素及以上） */
+        @media only screen and (min-width: 600px) {
+            .rwd_media {
+                background-color: teal;
+            }
+        }
+        /* 中型设备（横向平板电脑，768 像素及以上） */
+        @media only screen and (min-width: 768px) {
+            .rwd_media {
+                background-color: violet;
+            }
+        }
+        /* 大型设备（笔记本电脑/台式机，992px 及以上） */
+        @media only screen and (min-width: 992px) {
+            .rwd_media {
+                background-color: powderblue;
+            }
+        }
+        /* 超大型设备（大型笔记本电脑和台式机，1200px 及以上） */
+        @media only screen and (min-width: 1200px) {
+            .rwd_media {
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>典型媒体查询断点</h1>
+    <h3 class="rwd_media">请调整浏览器窗口大小以查看不同屏幕尺寸下样式的变化</h3>
+    <code>
+        <pre>
+            <p>Code:</p>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;CSS响应式设计 - 媒体查询&lt;/title&gt;
+        &lt;style&gt;
+            * {
+                margin: 0;
+            }
+            .rwd_media {
+                padding: 30px;
+                background-color: #aaa;
+            }
+            /* 超小型设备（600px及以下的手机） */
+            @media only screen and (max-width: 600px) {
+                .rwd_media {background: red;}
+            }
+            /* 小型设备（纵向平板电脑和大型手机，600 像素及以上） */
+            @media only screen and (min-width: 600px) {
+                .rwd_media {
+                    background-color: teal;
+                }
+            }
+            /* 中型设备（横向平板电脑，768 像素及以上） */
+            @media only screen and (min-width: 768px) {
+                .rwd_media {
+                    background-color: violet;
+                }
+            }
+            /* 大型设备（笔记本电脑/台式机，992px 及以上） */
+            @media only screen and (min-width: 992px) {
+                .rwd_media {
+                    background-color: powderblue;
+                }
+            }
+            /* 超大型设备（大型笔记本电脑和台式机，1200px 及以上） */
+            @media only screen and (min-width: 1200px) {
+                .rwd_media {
+                    background-color: pink;
+                }
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;典型媒体查询断点&lt;/h1&gt;
+        &lt;h3 class=&quot;rwd_media&quot;&gt;请调整浏览器窗口大小以查看不同屏幕尺寸下样式的变化&lt;/h3&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
+    </code>
+</body>
+</html>
