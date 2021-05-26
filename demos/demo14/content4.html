@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>content4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .grid-item {
+            text-align: start;
+            height: 800px;
+            overflow: scroll;
+        }
+
+        .img {
+            border-radius: 50%;
+        }
+
+        .img2 {
+            border: 1px solid red;
+            width: 150px;
+        }
+
+        .img3 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .img4 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .polaroid {
+            width: 80%;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+        }
+
+        .polaroidtext {
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .img6 {
+            opacity: 0.3;
+        }
+
+        .img7container {
+            position: relative;
+        }
+
+        .img7texttopleft {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .img7 {
+            width: 100%;
+            height: auto;
+            opacity: 0.8;
+        }
+
+        .img8 {
+            filter: grayscale(100%);
+        }
+
+        .img9container {
+            position: relative;
+            width: 50%;
+        }
+
+        .img9 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .img9overlay {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: #008CBA;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .img9container:hover .img9overlay {
+            bottom: 0;
+            height: 100%;
+        }
+
+        .img9text {
+            white-space: nowrap;
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .img10:hover {
+            transform: scaleX(-1);
+        }
+
+        .img11responsive {
+            padding: 0 6px;
+            width: 24.99999%;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .img11responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .img11responsive {
+                width: 100%;
+            }
+        }
+
+        /* --------------------  img12 ---------------------- */
+
+        #img12 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #img12:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 1500px;
+        }
+
+        /* Caption of Modal Image */
+        #img12caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #img12caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0.1)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .img13 {
+            width: 200px;
+        }
+
+        .img13-1 {
+            width: 200px;
+            height: 300px;
+        }
+
+        .img13-2 {
+            width: 200px;
+            height: 300px;
+            object-fit: fill;
+        }
+
+        .img13-3 {
+            width: 200px;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        .img13-4 {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .img13-5 {
+            width: 200px;
+            height: 300px;
+            object-fit: none;
+        }
+
+        .img13-6 {
+            width: 200px;
+            height: 300px;
+            object-fit: scale-down;
+        }
+
+        .img13-7 {
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <ul>
+                <li>
+                    <div>CSS 图像样式</div>
+                    <div>使用 border-radius 属性创建圆形图像</div>
+                    <img class="img" src='coffee.jpg'>
+                    <div>使用 border 属性添加边框</div>
+                    <img class="img2" src='coffee.jpg'>
+                    <div>响应式图像会自动调整以适合屏幕尺寸</div>
+                    <img class="img3" src='coffee.jpg'>
+                    <div>居中图像</div>
+                    <img class="img4" src='coffee.jpg'>
+                    <div>宝丽来图片 / 卡片</div>
+                    <div class="polaroid">
+                        <img class="img4" src='coffee.jpg' alt="Tulip" style="width:100%">
+                        <div class="polaroidtext">
+                            <p>黄色郁金香</p>
+                        </div>
+                    </div>
+                    <div>透明图像</div>
+                    <img class="img6" src='coffee.jpg'>
+
+                    <div>图像文本</div>
+                    <div class="img7container">
+                        <img class="img7" src='coffee.jpg'>
+                        <div class="img7texttopleft">Top Left</div>
+                    </div>
+                    <div>图像滤镜</div>
+                    <img class="img8" src='coffee.jpg'>
+                    <div>图像悬停叠加</div>
+                    <div class="img9container">
+                        <img class="img9" src='coffee.jpg'>
+                        <div class="img9overlay">
+                            <div class="img9text">Hello World</div>
+                        </div>
+                    </div>
+                    <div>翻转图像</div>
+                    <img class="img10" src='coffee.jpg'>
+                    <div>响应式图库</div>
+                    <img class="img11responsive" src='coffee.jpg'>
+                    <div>图像模态</div>
+                    <img id="img12" class="img12" src='coffee.jpg' style="width: 50%;">
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <span class="close">×</span>
+                        <img class="modal-content" id="img12-2">
+                        <div id="img12caption"></div>
+                    </div>
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('myModal');
+
+                        // Get the image and insert it inside the modal - use its "alt" text as a caption
+                        var img = document.getElementById('img12');
+                        var modalImg = document.getElementById("img12-2");
+                        var captionText = document.getElementById("img12caption");
+                        img.onclick = function () {
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function () {
+                            modal.style.display = "none";
+                        }
+                    </script>
+                </li>
+                <li>
+                    <div>CSS object-fit</div>
+                    <div>CSS object-fit 属性用于规定应如何调整 img 或 video 的大小来适应其容器</div>
+                    <ul>
+                        <li>fill - 默认值。调整替换后的内容大小，以填充元素的内容框。如有必要，将拉伸或挤压物体以适应该对象。</li>
+                        <li>contain - 缩放替换后的内容以保持其纵横比，同时将其放入元素的内容框。</li>
+                        <li>cover - 调整替换内容的大小，以在填充元素的整个内容框时保持其长宽比。该对象将被裁剪以适应。</li>
+                        <li>none - 不对替换的内容调整大小。</li>
+                        <li>scale-down - 调整内容大小就像没有指定内容或包含内容一样（将导致较小的具体对象尺寸）</li>
+                    </ul>
+                    <img class="img13" src='coffee.jpg'>
+                    <img class="img13-1" src='coffee.jpg'>
+                    <div>fill</div>
+                    <img class="img13-2" src='coffee.jpg'>
+                    <div>contain</div>
+                    <img class="img13-3" src='coffee.jpg'>
+                    <div>cover</div>
+                    <img class="img13-4" src='coffee.jpg'>
+                    <div>none</div>
+                    <img class="img13-5" src='coffee.jpg'>
+                    <div>scale-down</div>
+                    <img class="img13-6" src='coffee.jpg'>
+                    <img class="img13-7" src='coffee.jpg'>
+                </li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <code>
+                <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;content4&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;style&gt;
+        .grid-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .grid-item {
+            text-align: start;
+            height: 800px;
+            overflow: scroll;
+        }
+
+        .img {
+            border-radius: 50%;
+        }
+
+        .img2 {
+            border: 1px solid red;
+            width: 150px;
+        }
+
+        .img3 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .img4 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .polaroid {
+            width: 80%;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+        }
+
+        .polaroidtext {
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .img6 {
+            opacity: 0.3;
+        }
+
+        .img7container {
+            position: relative;
+        }
+
+        .img7texttopleft {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .img7 {
+            width: 100%;
+            height: auto;
+            opacity: 0.8;
+        }
+
+        .img8 {
+            filter: grayscale(100%);
+        }
+
+        .img9container {
+            position: relative;
+            width: 50%;
+        }
+
+        .img9 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .img9overlay {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: #008CBA;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .img9container:hover .img9overlay {
+            bottom: 0;
+            height: 100%;
+        }
+
+        .img9text {
+            white-space: nowrap;
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .img10:hover {
+            transform: scaleX(-1);
+        }
+
+        .img11responsive {
+            padding: 0 6px;
+            width: 24.99999%;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .img11responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .img11responsive {
+                width: 100%;
+            }
+        }
+
+        /* --------------------  img12 ---------------------- */
+
+        #img12 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #img12:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 1500px;
+        }
+
+        /* Caption of Modal Image */
+        #img12caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #img12caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0.1)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .img13 {
+            width: 200px;
+        }
+
+        .img13-1 {
+            width: 200px;
+            height: 300px;
+        }
+
+        .img13-2 {
+            width: 200px;
+            height: 300px;
+            object-fit: fill;
+        }
+
+        .img13-3 {
+            width: 200px;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        .img13-4 {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .img13-5 {
+            width: 200px;
+            height: 300px;
+            object-fit: none;
+        }
+
+        .img13-6 {
+            width: 200px;
+            height: 300px;
+            object-fit: scale-down;
+        }
+
+        .img13-7 {
+            width: auto;
+            height: auto;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;grid-container&quot;&gt;
+        &lt;div class=&quot;grid-item&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 图像样式&lt;/div&gt;
+                    &lt;div&gt;使用 border-radius 属性创建圆形图像&lt;/div&gt;
+                    &lt;img class=&quot;img&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;使用 border 属性添加边框&lt;/div&gt;
+                    &lt;img class=&quot;img2&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;响应式图像会自动调整以适合屏幕尺寸&lt;/div&gt;
+                    &lt;img class=&quot;img3&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;居中图像&lt;/div&gt;
+                    &lt;img class=&quot;img4&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;宝丽来图片 / 卡片&lt;/div&gt;
+                    &lt;div class=&quot;polaroid&quot;&gt;
+                        &lt;img class=&quot;img4&quot; src=&#x27;coffee.jpg&#x27; alt=&quot;Tulip&quot; style=&quot;width:100%&quot;&gt;
+                        &lt;div class=&quot;polaroidtext&quot;&gt;
+                            &lt;p&gt;黄色郁金香&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;透明图像&lt;/div&gt;
+                    &lt;img class=&quot;img6&quot; src=&#x27;coffee.jpg&#x27;&gt;
+
+                    &lt;div&gt;图像文本&lt;/div&gt;
+                    &lt;div class=&quot;img7container&quot;&gt;
+                        &lt;img class=&quot;img7&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                        &lt;div class=&quot;img7texttopleft&quot;&gt;Top Left&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;图像滤镜&lt;/div&gt;
+                    &lt;img class=&quot;img8&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;图像悬停叠加&lt;/div&gt;
+                    &lt;div class=&quot;img9container&quot;&gt;
+                        &lt;img class=&quot;img9&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                        &lt;div class=&quot;img9overlay&quot;&gt;
+                            &lt;div class=&quot;img9text&quot;&gt;Hello World&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;翻转图像&lt;/div&gt;
+                    &lt;img class=&quot;img10&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;响应式图库&lt;/div&gt;
+                    &lt;img class=&quot;img11responsive&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;图像模态&lt;/div&gt;
+                    &lt;img id=&quot;img12&quot; class=&quot;img12&quot; src=&#x27;coffee.jpg&#x27; style=&quot;width: 50%;&quot;&gt;
+                    &lt;!-- The Modal --&gt;
+                    &lt;div id=&quot;myModal&quot; class=&quot;modal&quot;&gt;
+                        &lt;span class=&quot;close&quot;&gt;×&lt;/span&gt;
+                        &lt;img class=&quot;modal-content&quot; id=&quot;img12-2&quot;&gt;
+                        &lt;div id=&quot;img12caption&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;script&gt;
+                        // Get the modal
+                        var modal = document.getElementById(&#x27;myModal&#x27;);
+
+                        // Get the image and insert it inside the modal - use its &quot;alt&quot; text as a caption
+                        var img = document.getElementById(&#x27;img12&#x27;);
+                        var modalImg = document.getElementById(&quot;img12-2&quot;);
+                        var captionText = document.getElementById(&quot;img12caption&quot;);
+                        img.onclick = function () {
+                            modal.style.display = &quot;block&quot;;
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+
+                        // Get the &lt;span&gt; element that closes the modal
+                        var span = document.getElementsByClassName(&quot;close&quot;)[0];
+
+                        // When the user clicks on &lt;span&gt; (x), close the modal
+                        span.onclick = function () {
+                            modal.style.display = &quot;none&quot;;
+                        }
+                    &lt;/script&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS object-fit&lt;/div&gt;
+                    &lt;div&gt;CSS object-fit 属性用于规定应如何调整 img 或 video 的大小来适应其容器&lt;/div&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;fill - 默认值。调整替换后的内容大小，以填充元素的内容框。如有必要，将拉伸或挤压物体以适应该对象。&lt;/li&gt;
+                        &lt;li&gt;contain - 缩放替换后的内容以保持其纵横比，同时将其放入元素的内容框。&lt;/li&gt;
+                        &lt;li&gt;cover - 调整替换内容的大小，以在填充元素的整个内容框时保持其长宽比。该对象将被裁剪以适应。&lt;/li&gt;
+                        &lt;li&gt;none - 不对替换的内容调整大小。&lt;/li&gt;
+                        &lt;li&gt;scale-down - 调整内容大小就像没有指定内容或包含内容一样（将导致较小的具体对象尺寸）&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;img class=&quot;img13&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;img class=&quot;img13-1&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;fill&lt;/div&gt;
+                    &lt;img class=&quot;img13-2&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;contain&lt;/div&gt;
+                    &lt;img class=&quot;img13-3&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;cover&lt;/div&gt;
+                    &lt;img class=&quot;img13-4&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;none&lt;/div&gt;
+                    &lt;img class=&quot;img13-5&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;div&gt;scale-down&lt;/div&gt;
+                    &lt;img class=&quot;img13-6&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                    &lt;img class=&quot;img13-7&quot; src=&#x27;coffee.jpg&#x27;&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;grid-item&quot;&gt;
+            &lt;code&gt;
+                &lt;pre&gt;
+
+
+                &lt;/pre&gt;
+            &lt;/code&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+                </pre>
+            </code>
+        </div>
+    </div>
+</body>
+
+</html>

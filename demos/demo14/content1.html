@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>content1</title>
+
+    <style>
+        .body {
+            overflow: hidden;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .grid-item {
+            text-align: start;
+            height: 800px;
+            overflow: scroll;
+        }
+
+        .corners1 {
+            border-radius: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: coral;
+        }
+
+        .corners2 {
+            border-radius: 5px 10px 15px 20px;
+            width: 60px;
+            height: 60px;
+            background-color: coral;
+        }
+
+        .corners3 {
+            border-top-right-radius: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: coral;
+        }
+
+        .borderimg {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(border.png) 30 round;
+        }
+
+        .borderimg2 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(border.png) 30 stretch;
+        }
+
+        .grad {
+            background-image: linear-gradient(to right, red, yellow);
+        }
+
+        .grad2 {
+            background-image: radial-gradient(circle, red, yellow, green);
+            width: 200px;
+            height: 300px;
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(sansation_light.woff);
+        }
+
+        .webfont {
+            font-family: myFirstFont;
+        }
+
+        .transform2D {
+            transform: translate(50px, 100px) rotate(20deg) scale(1.5, 1.5);
+            background-color: teal;
+        }
+
+        .transform3D {
+            transform: translate(50px, 100px) rotateX(150deg) rotateY(130deg) rotateZ(90deg);
+            background-color: tomato;
+        }
+
+        .transition1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s, height 4s;
+        }
+
+        .transition1:hover {
+            height: 150px;
+            width: 300px;
+        }
+
+        @keyframes example {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        .animation {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+            /* 如果需要在可悬停文本下面显示点线 */
+        }
+
+        /* Tooltip 文本 */
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+
+            /* 定位工具提示文本 - 请看下面的例子 */
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* 将鼠标悬停在工具提示容器上时，显示工具提示文本 */
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        .textbody {
+            margin-top: 200px;
+        }
+
+        .text {
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            word-break: keep-all;
+            writing-mode: horizontal-tb;
+        }
+
+        .text2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            word-break: keep-all;
+            writing-mode: vertical-rl;
+        }
+
+        .textshadow {
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        .textshadow2 {
+            color: yellow;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+        .boxshadow {
+            box-shadow: 5px 5px;
+            background-color: yellow;
+        }
+
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .pagination a.active {
+            background-color: gray;
+            color: white;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: gold;
+        }
+
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 2px;
+            transition-duration: 0.4s;
+        }
+
+        .button:hover {
+            background-color: #4CAF50;
+            /* Green */
+            color: white;
+        }
+
+        .column {
+            column-count: 6;
+            /* 列之间的间隔。 */
+            column-gap: 40px;
+            /* 列之间的规则样式： */
+            column-rule-style: solid;
+            /* 列之间的规则宽度 */
+            column-rule-width: 1px;
+            /* 列之间的规则的颜色 */
+            column-rule-color: lightblue;
+            /* 元素应跨越多少列 */
+            column-span: 2;
+            /* 列指定建议的最佳宽度 */
+            column-width: 100px;
+            width: 500px;
+        }
+
+        .resize {
+            resize: horizontal;
+            overflow: auto;
+            border: coral 1px solid;
+        }
+
+        .outlineOffset {
+            /* margin: 20px; */
+            border: 1px solid black;
+            outline: 4px solid red;
+            outline-offset: 15px;
+        }
+    </style>
+
+</head>
+
+<body class="body">
+    <div class="grid-container">
+        <div class="grid-item">
+            <ul>
+                <li>
+                    <div>CSS 圆角</div>
+                    <div>通过 CSS border-radius 属性，可以实现任何元素的“圆角”样式。</div>
+                    <img class="corners1">
+                    <img class="corners2">
+                    <img class="corners3">
+                </li>
+                <li>
+                    <div>CSS 边框图像</div>
+                    <div>通过使用 CSS border-image 属性，可以设置图像用作围绕元素的边框。</div>
+                    <div class="borderimg">this is div1</div>
+                    <div class="borderimg2">this is div1</div>
+                </li>
+                <li>
+                    <div>CSS 渐变</div>
+                    <div>CSS 渐变使您可以显示两种或多种指定颜色之间的平滑过渡。线性渐变（向下/向上/向左/向右/对角线）</div>
+                    <div class="grad">this is div1</div>
+                    <div>CSS 径向渐变,径向渐变由其中心定义。如需创建径向渐变，您还必须定义至少两个色标。</div>
+                    <div class="grad2">this is div1</div>
+                </li>
+                <li>
+                    <div>CSS网络字体</div>
+                    <div>您的“自有”字体在 CSS @font-face 规则中进行定义</div>
+                    <div class="webfont">this is div1</div>
+                </li>
+                <li>
+                    <div>CSS 2D 转换</div>
+                    <div>CSS 转换（transforms）允许您移动、旋转、缩放和倾斜元素。</div>
+                    <div class="transform2D">this is transform2D</div>
+                </li>
+                <li>
+                    <div>CSS 3D 转换</div>
+                    <div>CSS 还支持 3D 转换</div>
+                    <div class="transform3D">this is transform3D</div>
+                </li>
+                <li>
+                    <div>CSS 过渡</div>
+                    <div>CSS 过渡允许您在给定的时间内平滑地改变属性值。</div>
+                    <div class="transition1">this is transition</div>
+                </li>
+                <li>
+                    <div>CSS 动画</div>
+                    <div>CSS 可实现 HTML 元素的动画效果，而不使用 JavaScript 或 Flash！</div>
+                    <div class="animation">this is 动画</div>
+                </li>
+
+                <li>
+                    <div>CSS 工具提示</div>
+                    <div>通过 CSS 创建工具提示（Tooltip）</div>
+                    <div class="tooltip">this is tooltip
+                        <span class="tooltiptext">Tooltip text</span>
+                    </div>
+                </li>
+
+                <li class='textbody'>
+                    <div>CSS 文本效果</div>
+                    <div>CSS 文本溢出、整字换行、换行规则以及书写模式</div>
+                    <div class="text">This paragraph contains some text. This line will-break-at-hyphens.</div>
+                    <div class="text2">This paragraph contains some text. This line will-break-at-hyphens.</div>
+                </li>
+                <li>
+                    <div>CSS 阴影效果</div>
+                    <div>text-shadow</div>
+                    <div class="textshadow">this is div1</div>
+                    <div class="textshadow2">this is div2</div>
+                    <div>box-shadow</div>
+                    <div class="boxshadow">boxshadow</div>
+                </li>
+                <li>
+                    <div>CSS 按钮</div>
+                    <div>学习如何使用 CSS 设置按钮样式</div>
+                    <div><button class="button"> this is button </button></div>
+                </li>
+                <li>
+                    <div>CSS 分页</div>
+                    <div class="pagination">
+                        <a href="#">«</a>
+                        <a href="#" class='active'>1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">»</a>
+                    </div>
+                </li>
+                <li>
+                    <div>CSS 多列</div>
+                    <div class="column">CSS 多列 CSS 多列 CSS 多列 CSS 多列CSS 多列 CSS 多列CSS 多列CSS 多列CSS 多列CSS 多列CSS 多列CSS
+                        多列CSS
+                        多列CSS 多列CSS 多列CSS 多列CSS 多列CSS 多列CSS 多列CSS 多列</div>
+                </li>
+                <li>
+                    <div>CSS 用户界面</div>
+                    <div>resize</div>
+                    <div class="resize">this is resize</div>
+                    <div>outline-offset</div>
+                    <div class="outlineOffset">轮廓与边框不同！与边框不同，轮廓线是在元素边框之外绘制的，并且可能与其他内容重叠。</div>
+                </li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <code>
+                <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;content1&lt;/title&gt;
+
+    &lt;style&gt;
+        .body {
+            overflow: hidden;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .grid-item {
+            text-align: start;
+            height: 800px;
+            overflow: scroll;
+        }
+
+        .corners1 {
+            border-radius: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: coral;
+        }
+
+        .corners2 {
+            border-radius: 5px 10px 15px 20px;
+            width: 60px;
+            height: 60px;
+            background-color: coral;
+        }
+
+        .corners3 {
+            border-top-right-radius: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: coral;
+        }
+
+        .borderimg {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(border.png) 30 round;
+        }
+
+        .borderimg2 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(border.png) 30 stretch;
+        }
+
+        .grad {
+            background-image: linear-gradient(to right, red, yellow);
+        }
+
+        .grad2 {
+            background-image: radial-gradient(circle, red, yellow, green);
+            width: 200px;
+            height: 300px;
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(sansation_light.woff);
+        }
+
+        .webfont {
+            font-family: myFirstFont;
+        }
+
+        .transform2D {
+            transform: translate(50px, 100px) rotate(20deg) scale(1.5, 1.5);
+            background-color: teal;
+        }
+
+        .transform3D {
+            transform: translate(50px, 100px) rotateX(150deg) rotateY(130deg) rotateZ(90deg);
+            background-color: tomato;
+        }
+
+        .transition1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s, height 4s;
+        }
+
+        .transition1:hover {
+            height: 150px;
+            width: 300px;
+        }
+
+        @keyframes example {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        .animation {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+            /* 如果需要在可悬停文本下面显示点线 */
+        }
+
+        /* Tooltip 文本 */
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+
+            /* 定位工具提示文本 - 请看下面的例子 */
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* 将鼠标悬停在工具提示容器上时，显示工具提示文本 */
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        .textbody {
+            margin-top: 200px;
+        }
+
+        .text {
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            word-break: keep-all;
+            writing-mode: horizontal-tb;
+        }
+
+        .text2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            word-break: keep-all;
+            writing-mode: vertical-rl;
+        }
+
+        .textshadow {
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        .textshadow2 {
+            color: yellow;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+        .boxshadow {
+            box-shadow: 5px 5px;
+            background-color: yellow;
+        }
+
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .pagination a.active {
+            background-color: gray;
+            color: white;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: gold;
+        }
+
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 2px;
+            transition-duration: 0.4s;
+        }
+
+        .button:hover {
+            background-color: #4CAF50;
+            /* Green */
+            color: white;
+        }
+
+        .column {
+            column-count: 6;
+            /* 列之间的间隔。 */
+            column-gap: 40px;
+            /* 列之间的规则样式： */
+            column-rule-style: solid;
+            /* 列之间的规则宽度 */
+            column-rule-width: 1px;
+            /* 列之间的规则的颜色 */
+            column-rule-color: lightblue;
+            /* 元素应跨越多少列 */
+            column-span: 2;
+            /* 列指定建议的最佳宽度 */
+            column-width: 100px;
+            width: 500px;
+        }
+
+        .resize {
+            resize: horizontal;
+            overflow: auto;
+            border: coral 1px solid;
+        }
+
+        .outlineOffset {
+            /* margin: 20px; */
+            border: 1px solid black;
+            outline: 4px solid red;
+            outline-offset: 15px;
+        }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body class=&quot;body&quot;&gt;
+    &lt;div class=&quot;grid-container&quot;&gt;
+        &lt;div class=&quot;grid-item&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 圆角&lt;/div&gt;
+                    &lt;div&gt;通过 CSS border-radius 属性，可以实现任何元素的“圆角”样式。&lt;/div&gt;
+                    &lt;img class=&quot;corners1&quot;&gt;
+                    &lt;img class=&quot;corners2&quot;&gt;
+                    &lt;img class=&quot;corners3&quot;&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 边框图像&lt;/div&gt;
+                    &lt;div&gt;通过使用 CSS border-image 属性，可以设置图像用作围绕元素的边框。&lt;/div&gt;
+                    &lt;div class=&quot;borderimg&quot;&gt;this is div1&lt;/div&gt;
+                    &lt;div class=&quot;borderimg2&quot;&gt;this is div1&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 渐变&lt;/div&gt;
+                    &lt;div&gt;CSS 渐变使您可以显示两种或多种指定颜色之间的平滑过渡。线性渐变（向下/向上/向左/向右/对角线）&lt;/div&gt;
+                    &lt;div class=&quot;grad&quot;&gt;this is div1&lt;/div&gt;
+                    &lt;div&gt;CSS 径向渐变,径向渐变由其中心定义。如需创建径向渐变，您还必须定义至少两个色标。&lt;/div&gt;
+                    &lt;div class=&quot;grad2&quot;&gt;this is div1&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS网络字体&lt;/div&gt;
+                    &lt;div&gt;您的“自有”字体在 CSS @font-face 规则中进行定义&lt;/div&gt;
+                    &lt;div class=&quot;webfont&quot;&gt;this is div1&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 2D 转换&lt;/div&gt;
+                    &lt;div&gt;CSS 转换（transforms）允许您移动、旋转、缩放和倾斜元素。&lt;/div&gt;
+                    &lt;div class=&quot;transform2D&quot;&gt;this is transform2D&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 3D 转换&lt;/div&gt;
+                    &lt;div&gt;CSS 还支持 3D 转换&lt;/div&gt;
+                    &lt;div class=&quot;transform3D&quot;&gt;this is transform3D&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 过渡&lt;/div&gt;
+                    &lt;div&gt;CSS 过渡允许您在给定的时间内平滑地改变属性值。&lt;/div&gt;
+                    &lt;div class=&quot;transition1&quot;&gt;this is transition&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 动画&lt;/div&gt;
+                    &lt;div&gt;CSS 可实现 HTML 元素的动画效果，而不使用 JavaScript 或 Flash！&lt;/div&gt;
+                    &lt;div class=&quot;animation&quot;&gt;this is 动画&lt;/div&gt;
+                &lt;/li&gt;
+
+                &lt;li&gt;
+                    &lt;div&gt;CSS 工具提示&lt;/div&gt;
+                    &lt;div&gt;通过 CSS 创建工具提示（Tooltip）&lt;/div&gt;
+                    &lt;div class=&quot;tooltip&quot;&gt;this is tooltip
+                        &lt;span class=&quot;tooltiptext&quot;&gt;Tooltip text&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+
+                &lt;li class=&#x27;textbody&#x27;&gt;
+                    &lt;div&gt;CSS 文本效果&lt;/div&gt;
+                    &lt;div&gt;CSS 文本溢出、整字换行、换行规则以及书写模式&lt;/div&gt;
+                    &lt;div class=&quot;text&quot;&gt;This paragraph contains some text. This line will-break-at-hyphens.&lt;/div&gt;
+                    &lt;div class=&quot;text2&quot;&gt;This paragraph contains some text. This line will-break-at-hyphens.&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 阴影效果&lt;/div&gt;
+                    &lt;div&gt;text-shadow&lt;/div&gt;
+                    &lt;div class=&quot;textshadow&quot;&gt;this is div1&lt;/div&gt;
+                    &lt;div class=&quot;textshadow2&quot;&gt;this is div2&lt;/div&gt;
+                    &lt;div&gt;box-shadow&lt;/div&gt;
+                    &lt;div class=&quot;boxshadow&quot;&gt;boxshadow&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 按钮&lt;/div&gt;
+                    &lt;div&gt;学习如何使用 CSS 设置按钮样式&lt;/div&gt;
+                    &lt;div&gt;&lt;button class=&quot;button&quot;&gt; this is button &lt;/button&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 分页&lt;/div&gt;
+                    &lt;div class=&quot;pagination&quot;&gt;
+                        &lt;a href=&quot;#&quot;&gt;«&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&#x27;active&#x27;&gt;1&lt;/a&gt;
+                        &lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;
+                        &lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;
+                        &lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;
+                        &lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;
+                        &lt;a href=&quot;#&quot;&gt;6&lt;/a&gt;
+                        &lt;a href=&quot;#&quot;&gt;»&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 多列&lt;/div&gt;
+                    &lt;div class=&quot;column&quot;&gt;CSS 多列 CSS 多列 CSS 多列 CSS 多列CSS 多列 CSS 多列CSS 多列CSS 多列CSS 多列CSS 多列CSS 多列CSS
+                        多列CSS
+                        多列CSS 多列CSS 多列CSS 多列CSS 多列CSS 多列CSS 多列CSS 多列&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 用户界面&lt;/div&gt;
+                    &lt;div&gt;resize&lt;/div&gt;
+                    &lt;div class=&quot;resize&quot;&gt;this is resize&lt;/div&gt;
+                    &lt;div&gt;outline-offset&lt;/div&gt;
+                    &lt;div class=&quot;outlineOffset&quot;&gt;轮廓与边框不同！与边框不同，轮廓线是在元素边框之外绘制的，并且可能与其他内容重叠。&lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;grid-item&quot;&gt;
+            &lt;code&gt;
+                &lt;pre&gt;
+
+
+                &lt;/pre&gt;
+            &lt;/code&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+                </pre>
+            </code>
+        </div>
+    </div>
+</body>
+
+</html>

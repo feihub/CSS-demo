@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>content2</title>
+    <style>
+        .body {
+            overflow: hidden;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .grid-item {
+            text-align: start;
+            height: 800px;
+            overflow: scroll;
+        }
+
+        :root {
+            --blue: #1e90ff;
+            --red: #ec0c0c;
+            --green: #c79406c2;
+        }
+
+        .var {
+            background-color: var(--blue);
+            height: 50px;
+        }
+
+        .var2 {
+            background-color: var(--red);
+            height: 50px;
+        }
+
+
+        .var3 {
+            --blue: #00ff37;
+            background-color: var(--blue);
+            color: var(--red);
+            border: 1px solid var(--red);
+            padding: 5px;
+            height: 50px;
+        }
+
+        .var4 {
+            background-color: var(--green);
+            padding: 5px;
+            height: 50px;
+        }
+    </style>
+
+    <script>
+        // 获取根元素
+        var r = document.querySelector(':root');
+
+        // 创建获取变量值的函数
+        function myFunction_get() {
+            // 获取根的样式（属性和值）
+            var rs = getComputedStyle(r);
+            // 弹出 --blue 变量的值
+            alert("The value of --green is: " + rs.getPropertyValue('--green'));
+        }
+
+        // 创建设置变量值的函数
+        function myFunction_set() {
+            // 把变量 --blue 的值设置为另一个值（在这里是 "lightblue"）
+            r.style.setProperty('--green', 'lightblue');
+        }
+    </script>
+</head>
+
+<body class="body">
+    <div class="grid-container">
+        <div class="grid-item">
+            <ul>
+                <li>
+                    <div>CSS 变量</div>
+                    <div>var() 函数用于插入 CSS 变量的值。</div>
+                    <div class="var">this is var</div>
+                    <div class="var2">this is var2</div>
+                    <div class="var3">this is var3</div>
+                    <div class="var4">this is var3</div>
+                    <button type="button" onclick="myFunction_get()">使用 JavaScript 来获取 CSS 变量</button>
+                    <button type="button" onclick="myFunction_set()">使用 JavaScript 来更改 CSS 变量</button>
+                </li>
+
+        </div>
+        <div class="grid-item">
+            <code>
+                <pre>
+                    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;content2&lt;/title&gt;
+    &lt;style&gt;
+        .body {
+            overflow: hidden;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .grid-item {
+            text-align: start;
+            height: 800px;
+            overflow: scroll;
+        }
+
+        :root {
+            --blue: #1e90ff;
+            --red: #ec0c0c;
+            --green: #c79406c2;
+        }
+
+        .var {
+            background-color: var(--blue);
+            height: 50px;
+        }
+
+        .var2 {
+            background-color: var(--red);
+            height: 50px;
+        }
+
+
+        .var3 {
+            --blue: #00ff37;
+            background-color: var(--blue);
+            color: var(--red);
+            border: 1px solid var(--red);
+            padding: 5px;
+            height: 50px;
+        }
+
+        .var4 {
+            background-color: var(--green);
+            padding: 5px;
+            height: 50px;
+        }
+    &lt;/style&gt;
+
+    &lt;script&gt;
+        // 获取根元素
+        var r = document.querySelector(&#x27;:root&#x27;);
+
+        // 创建获取变量值的函数
+        function myFunction_get() {
+            // 获取根的样式（属性和值）
+            var rs = getComputedStyle(r);
+            // 弹出 --blue 变量的值
+            alert(&quot;The value of --green is: &quot; + rs.getPropertyValue(&#x27;--green&#x27;));
+        }
+
+        // 创建设置变量值的函数
+        function myFunction_set() {
+            // 把变量 --blue 的值设置为另一个值（在这里是 &quot;lightblue&quot;）
+            r.style.setProperty(&#x27;--green&#x27;, &#x27;lightblue&#x27;);
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body class=&quot;body&quot;&gt;
+    &lt;div class=&quot;grid-container&quot;&gt;
+        &lt;div class=&quot;grid-item&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;div&gt;CSS 变量&lt;/div&gt;
+                    &lt;div&gt;var() 函数用于插入 CSS 变量的值。&lt;/div&gt;
+                    &lt;div class=&quot;var&quot;&gt;this is var&lt;/div&gt;
+                    &lt;div class=&quot;var2&quot;&gt;this is var2&lt;/div&gt;
+                    &lt;div class=&quot;var3&quot;&gt;this is var3&lt;/div&gt;
+                    &lt;div class=&quot;var4&quot;&gt;this is var3&lt;/div&gt;
+                    &lt;button type=&quot;button&quot; onclick=&quot;myFunction_get()&quot;&gt;使用 JavaScript 来获取 CSS 变量&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; onclick=&quot;myFunction_set()&quot;&gt;使用 JavaScript 来更改 CSS 变量&lt;/button&gt;
+                &lt;/li&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;grid-item&quot;&gt;
+            &lt;code&gt;
+                &lt;pre&gt;
+                 
+                &lt;/pre&gt;
+            &lt;/code&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+                </pre>
+            </code>
+        </div>
+    </div>
+</body>
+
+</html>

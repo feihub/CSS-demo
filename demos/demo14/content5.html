@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>content5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .grid-item {
+            text-align: start;
+            height: 800px;
+            overflow: scroll;
+        }
+
+        .bg1 {
+            background-image: url(flower.gif), url(paper.jpg);
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            height: 200px;
+        }
+
+        .bg2 {
+            background: url(flower.gif);
+            background-size: 100px 80px;
+            background-repeat: no-repeat;
+            height: 200px;
+        }
+
+        .bg3 {
+            background: url(flower.gif);
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 50px;
+        }
+
+        .bg4 {
+            background: url(flower.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 200px;
+        }
+
+        .bg5 {
+            background: url(coffee.jpg) no-repeat center;
+            background-size: cover;
+            height: 500px;
+            position: relative;
+            color: white;
+        }
+
+        .bg6 {
+            border: 10px solid black;
+            padding: 35px;
+            background: url(coffee.jpg);
+            background-repeat: no-repeat;
+            background-origin: content-box;
+        }
+
+        .bg7 {
+            border: 10px dotted black;
+            padding: 35px;
+            background: yellow;
+            background-clip: content-box;
+        }
+
+        .color1 {
+            background-color: rgba(255, 0, 0, 0.3);
+            height: 50px;
+        }
+
+        .color2 {
+            background-color: hsl(120, 100%, 50%);
+            height: 50px;
+        }
+
+        .color3 {
+            background-color: hsla(120, 100%, 50%, 0.3);
+            height: 50px;
+        }
+
+        .color4 {
+            background-color: hsl(120, 100%, 50%);
+            height: 50px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <ul>
+                <li>
+                    <h1>CSS 多重背景</h1>
+                    <div class="bg1">this is CSS 多重背景</div>
+                    <div class="bg2">this is CSS background-size</div>
+                    <div class="bg3">this is CSS background-size contain</div>
+                    <div class="bg4">this is CSS background-size cover</div>
+                    <div class="bg5">this is CSS background-size Hero Image</div>
+                    <div>CSS background-origin</div>
+                    <ul>
+                        <li>border-box - 背景图片从边框的左上角开始</li>
+                        <li>padding-box -背景图像从内边距边缘的左上角开始（默认）</li>
+                        <li>content-box - 背景图片从内容的左上角开始</li>
+                    </ul>
+                    <div class="bg6">CSS background-origin 属性指定背景图像的位置。</div>
+                    <div>CSS background-clip</div>
+                    <ul>
+                        <li>border-box - 背景绘制到边框的外部边缘（默认）</li>
+                        <li>padding-box -背景绘制到内边距的外边缘</li>
+                        <li>content-box - 在内容框中绘制背景</li>
+                    </ul>
+                    <div class="bg7">CSS background-clip 属性指定背景的绘制区域</div>
+                    
+                </li>
+                <li>
+                    <h1>CSS 颜色</h1>
+                    <div class="color1">this is color1 RGBA 颜色</div>
+                    <div class="color2">this is color2 HSL 颜色</div>
+                    <div class="color3">this is color3 HSLA 颜色</div>
+                    <div class="color4">this is color4 HSL 颜色 不透明度</div>
+                </li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <code>
+                <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;content5&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;style&gt;
+        .grid-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .grid-item {
+            text-align: start;
+            height: 800px;
+            overflow: scroll;
+        }
+
+        .bg1 {
+            background-image: url(flower.gif), url(paper.jpg);
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            height: 200px;
+        }
+
+        .bg2 {
+            background: url(flower.gif);
+            background-size: 100px 80px;
+            background-repeat: no-repeat;
+            height: 200px;
+        }
+
+        .bg3 {
+            background: url(flower.gif);
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 50px;
+        }
+
+        .bg4 {
+            background: url(flower.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 200px;
+        }
+
+        .bg5 {
+            background: url(coffee.jpg) no-repeat center;
+            background-size: cover;
+            height: 500px;
+            position: relative;
+            color: white;
+        }
+
+        .bg6 {
+            border: 10px solid black;
+            padding: 35px;
+            background: url(coffee.jpg);
+            background-repeat: no-repeat;
+            background-origin: content-box;
+        }
+
+        .bg7 {
+            border: 10px dotted black;
+            padding: 35px;
+            background: yellow;
+            background-clip: content-box;
+        }
+
+        .color1 {
+            background-color: rgba(255, 0, 0, 0.3);
+            height: 50px;
+        }
+
+        .color2 {
+            background-color: hsl(120, 100%, 50%);
+            height: 50px;
+        }
+
+        .color3 {
+            background-color: hsla(120, 100%, 50%, 0.3);
+            height: 50px;
+        }
+
+        .color4 {
+            background-color: hsl(120, 100%, 50%);
+            height: 50px;
+            opacity: 0.6;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;grid-container&quot;&gt;
+        &lt;div class=&quot;grid-item&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;h1&gt;CSS 多重背景&lt;/h1&gt;
+                    &lt;div class=&quot;bg1&quot;&gt;this is CSS 多重背景&lt;/div&gt;
+                    &lt;div class=&quot;bg2&quot;&gt;this is CSS background-size&lt;/div&gt;
+                    &lt;div class=&quot;bg3&quot;&gt;this is CSS background-size contain&lt;/div&gt;
+                    &lt;div class=&quot;bg4&quot;&gt;this is CSS background-size cover&lt;/div&gt;
+                    &lt;div class=&quot;bg5&quot;&gt;this is CSS background-size Hero Image&lt;/div&gt;
+                    &lt;div&gt;CSS background-origin&lt;/div&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;border-box - 背景图片从边框的左上角开始&lt;/li&gt;
+                        &lt;li&gt;padding-box -背景图像从内边距边缘的左上角开始（默认）&lt;/li&gt;
+                        &lt;li&gt;content-box - 背景图片从内容的左上角开始&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;div class=&quot;bg6&quot;&gt;CSS background-origin 属性指定背景图像的位置。&lt;/div&gt;
+                    &lt;div&gt;CSS background-clip&lt;/div&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;border-box - 背景绘制到边框的外部边缘（默认）&lt;/li&gt;
+                        &lt;li&gt;padding-box -背景绘制到内边距的外边缘&lt;/li&gt;
+                        &lt;li&gt;content-box - 在内容框中绘制背景&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;div class=&quot;bg7&quot;&gt;CSS background-clip 属性指定背景的绘制区域&lt;/div&gt;
+                    
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;h1&gt;CSS 颜色&lt;/h1&gt;
+                    &lt;div class=&quot;color1&quot;&gt;this is color1 RGBA 颜色&lt;/div&gt;
+                    &lt;div class=&quot;color2&quot;&gt;this is color2 HSL 颜色&lt;/div&gt;
+                    &lt;div class=&quot;color3&quot;&gt;this is color3 HSLA 颜色&lt;/div&gt;
+                    &lt;div class=&quot;color4&quot;&gt;this is color4 HSL 颜色 不透明度&lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;grid-item&quot;&gt;
+            &lt;code&gt;
+                &lt;pre&gt;
+
+
+                &lt;/pre&gt;
+            &lt;/code&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+                </pre>
+            </code>
+        </div>
+    </div>
+</body>
+
+</html>
