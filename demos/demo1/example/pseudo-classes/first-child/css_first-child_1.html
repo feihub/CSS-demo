@@ -15,11 +15,15 @@
 </head>
 
 <body>
-
+    <h3>选择器匹配作为任何元素的第一个子元素的任何 p 元素：</h3>
     <div>
         <p>这是一段文本。</p>
 
         <p>这是一段文本。</p>
+        <div>
+            <p>这是一段在div里的文本1。</p>
+            <p>这是一段在div里的文本2。</p>
+        </div>
     </div>
 
     <div>
@@ -30,7 +34,7 @@
                 &lt;head&gt;
                     &lt;style&gt;
                     p:first-child {
-                    color: blue;
+                        color: blue;
                     } 
                     &lt;/style&gt;
                 &lt;/head&gt;
@@ -39,6 +43,11 @@
                     &lt;p&gt;这是一段文本。&lt;/p&gt;
         
                     &lt;p&gt;这是一段文本。&lt;/p&gt;
+
+                    &lt;div&gt;
+                        &lt;p&gt;这是一段在div里的文本1。&lt;/p&gt;
+                        &lt;p&gt;这是一段在div里的文本2。&lt;/p&gt;
+                    &lt;/div&gt;
     
                 &lt;/body&gt;
                 &lt;/html&gt;
